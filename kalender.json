@@ -2,8 +2,8 @@
   "tahun": 2026,
   "versi": "TEST-BASE-002",
   "kaldik_skb": [
-    { "y": 2026, "b": 5, "h": 15, "tipe": 2, "id": 502, "j": "Mei Event 1" },
-    { "y": 2026, "b": 6, "h": 14, "tipe": 2, "id": 623, "j": "Juni Event 1" },
-    { "y": 2026, "b": 8, "h": 28,  "tipe": 2, "id": 803, "j": "Agustus Event 1" }
+    { "y": 2026, "b": 5, "h": 16, "tipe": 2, "id": 502, "j": "Mei Event 1" },
+    { "y": 2026, "b": 6, "h": 18, "tipe": 2, "id": 623, "j": "Juni Event 1" },
+    { "y": 2026, "b": 8, "h": 25,  "tipe": 2, "id": 803, "j": "Agustus Event 1" }
   ]
 }
