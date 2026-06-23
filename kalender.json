@@ -1,15 +1,175 @@
 {
   "skema": 2,
   "tahun": 2026,
-  "versi": "2026-v2-sync-3bulan",
+  "versi": "2026-tes-visual-grid-v1",
   "peristiwa": [
-    { "th": 2026, "bl": 1, "hr": 1, "tp": 1, "id": 101, "jd": "Tahun Baru Masehi" },
-    { "th": 2026, "bl": 5, "hr": 1, "tp": 1, "id": 501, "jd": "Hari Buruh" },
-    { "th": 2026, "bl": 5, "hr": 2, "tp": 5, "id": 502, "jd": "Hardiknas" },
-    { "th": 2026, "bl": 5, "hr": 20, "tp": 1, "id": 320, "jd": "Libur Mei SKB" },
-    { "th": 2026, "bl": 6, "hr": 1, "tp": 1, "id": 601, "jd": "Lahir Pancasila" },
-    { "th": 2026, "bl": 6, "hr": 12, "tp": 4, "id": 623, "jd": "Agenda Akademik" },
-    { "th": 2026, "bl": 6, "hr": 22, "tp": 5, "id": 622, "jd": "HUT DKI Jakarta" },
-    { "th": 2026, "bl": 8, "hr": 17, "tp": 1, "id": 817, "jd": "HUT RI Merdeka" }
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 1,
+      "tp": 1,
+      "id": 601,
+      "jd": "Lahir Pancasila"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 5,
+      "tp": 3,
+      "id": 605,
+      "jd": "Tes Hijriah Saja"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 6,
+      "tp": 5,
+      "id": 606,
+      "jd": "Tes Umum Saja"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 12,
+      "tp": 4,
+      "id": 612,
+      "jd": "Tes Akademik"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 15,
+      "tp": 1,
+      "id": 6151,
+      "jd": "Tes Libur Nasional"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 15,
+      "tp": 5,
+      "id": 6152,
+      "jd": "Tes Umum di Libur"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 16,
+      "tp": 2,
+      "id": 6161,
+      "jd": "Tes Libur Daerah"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 16,
+      "tp": 3,
+      "id": 6162,
+      "jd": "Tes Hijriah di Libur"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 17,
+      "tp": 3,
+      "id": 6171,
+      "jd": "Tes Hijriah Kombinasi"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 17,
+      "tp": 5,
+      "id": 6172,
+      "jd": "Tes Umum Kombinasi"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 18,
+      "tp": 1,
+      "id": 6181,
+      "jd": "Tes Libur Komplet"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 18,
+      "tp": 3,
+      "id": 6182,
+      "jd": "Tes Hijriah Komplet"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 18,
+      "tp": 5,
+      "id": 6183,
+      "jd": "Tes Umum Komplet"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 20,
+      "tp": 5,
+      "id": 6201,
+      "jd": "Tes Umum Banyak A"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 20,
+      "tp": 6,
+      "id": 6202,
+      "jd": "Tes Internasional"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 24,
+      "tp": 2,
+      "id": 6241,
+      "jd": "Tes Today Libur"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 24,
+      "tp": 3,
+      "id": 6242,
+      "jd": "Tes Today Hijriah"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 24,
+      "tp": 5,
+      "id": 6243,
+      "jd": "Tes Today Umum"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 30,
+      "tp": 5,
+      "id": 630,
+      "jd": "Tes Baris Akhir Satu"
+    },
+    {
+      "th": 2026,
+      "bl": 7,
+      "hr": 31,
+      "tp": 3,
+      "id": 7311,
+      "jd": "Tes Akhir Hijriah"
+    },
+    {
+      "th": 2026,
+      "bl": 7,
+      "hr": 31,
+      "tp": 5,
+      "id": 7312,
+      "jd": "Tes Akhir Umum"
+    }
   ]
 }
