@@ -1,12 +1,13 @@
 {
   "tahun": 2026,
-  "versi": "2026",
+  "versi": "2026-v2",
+  "skema": 2,
   "kaldik_skb": [
     {
       "y": 2026,
       "b": 5,
       "h": 20,
-      "tipe": 3,
+      "tipe": 1,
       "id": 320,
       "j": "Libur Mei SKB"
     },
@@ -14,9 +15,33 @@
       "y": 2026,
       "b": 6,
       "h": 12,
-      "tipe": 2,
+      "tipe": 4,
       "id": 623,
       "j": "Agenda Akademik"
+    },
+    {
+      "y": 2026,
+      "b": 7,
+      "h": 15,
+      "tipe": 3,
+      "id": 715,
+      "j": "Puasa Muharram"
+    },
+    {
+      "y": 2026,
+      "b": 8,
+      "h": 21,
+      "tipe": 5,
+      "id": 821,
+      "j": "Event Umum"
+    },
+    {
+      "y": 2026,
+      "b": 9,
+      "h": 8,
+      "tipe": 6,
+      "id": 908,
+      "j": "Hari Literasi Internasional"
     }
   ]
 }
