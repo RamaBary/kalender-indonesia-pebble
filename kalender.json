@@ -1,7 +1,7 @@
 {
   "skema": 2,
   "tahun": 2026,
-  "versi": "2026-v2-range-test-9-31",
+  "versi": "2026-v10-2-1-range-today-test",
   "peristiwa": [
     {
       "th": 2026,
@@ -82,6 +82,36 @@
       "tp": 1,
       "id": 622,
       "jd": "Libur Tunggal B"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 24,
+      "bs": 6,
+      "sd": 27,
+      "tp": 1,
+      "id": 624,
+      "jd": "Libur Range Today Test"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 26,
+      "bs": 6,
+      "sd": 26,
+      "tp": 3,
+      "id": 626,
+      "jd": "Puasa Muharram Today"
+    },
+    {
+      "th": 2026,
+      "bl": 6,
+      "hr": 26,
+      "bs": 6,
+      "sd": 26,
+      "tp": 5,
+      "id": 627,
+      "jd": "Hari Pohon Today"
     },
     {
       "th": 2026,
