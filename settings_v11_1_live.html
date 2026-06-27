@@ -678,13 +678,44 @@
       .month-repeat-layout { grid-template-columns: 1fr; }
       .month-box .month-grid { grid-template-columns: repeat(4, 1fr); }
     }
+  
+    .banner {
+      min-height: 78px;
+      background: linear-gradient(135deg, #fff3d7, #fff9ea);
+    }
+
+    .banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .page-loading {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: #f4f1e5;
+      color: #6f6a57;
+      font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      z-index: 9999;
+      transition: opacity .12s ease;
+    }
+
+    .page-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
   </style>
 </head>
 <body>
+  <div id="pageLoading" class="page-loading">Memuat pengaturan...</div>
+
   <main class="wrap">
     <header>
       <div class="banner">
-        <img src="header-banner_v11_1.jpg" alt="Kalender Indonesia">
+        <img decoding="async" src="header-banner_v11_1_q70.jpg" alt="Kalender Indonesia">
       </div>
       <div class="top-title">
         <h1 data-i18n="settings_title">Pengaturan</h1>
@@ -850,6 +881,27 @@
   </main>
 
   <script>
+
+    window.addEventListener("load", function () {
+      var loader = document.getElementById("pageLoading");
+      if (loader) {
+        loader.className += " hidden";
+        setTimeout(function () {
+          if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+        }, 180);
+      }
+    });
+
+    setTimeout(function () {
+      var loader = document.getElementById("pageLoading");
+      if (loader) {
+        loader.className += " hidden";
+        setTimeout(function () {
+          if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+        }, 180);
+      }
+    }, 1400);
+
     const T = {
       id: {
         settings_title: "Pengaturan",
