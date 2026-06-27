@@ -567,6 +567,72 @@
       text-align: center;
     }
 
+
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background: rgba(17,24,39,.30);
+      z-index: 9999;
+    }
+
+    .modal-overlay.show {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(320px, 100%);
+      background: #fffdf8;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 18px 42px rgba(15,23,42,.22);
+      padding: 18px 18px 16px;
+      text-align: center;
+    }
+
+    .modal-spinner {
+      width: 26px;
+      height: 26px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      border: 3px solid #e5e0d2;
+      border-top-color: var(--purple);
+      animation: spin .75s linear infinite;
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 850;
+      margin: 0 0 5px;
+      color: var(--ink);
+    }
+
+    .modal-desc {
+      font-size: 12.5px;
+      line-height: 1.35;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .modal-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .modal-actions.one {
+      grid-template-columns: 1fr;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -678,44 +744,23 @@
       .month-repeat-layout { grid-template-columns: 1fr; }
       .month-box .month-grid { grid-template-columns: repeat(4, 1fr); }
     }
-  
-    .banner {
-      min-height: 78px;
-      background: linear-gradient(135deg, #fff3d7, #fff9ea);
-    }
-
-    .banner img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .page-loading {
-      position: fixed;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      background: #f4f1e5;
-      color: #6f6a57;
-      font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      z-index: 9999;
-      transition: opacity .12s ease;
-    }
-
-    .page-loading.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-
   </style>
 </head>
 <body>
-  <div id="pageLoading" class="page-loading">Memuat pengaturan...</div>
+
+  <div id="statusModal" class="modal-overlay" aria-live="polite">
+    <div class="modal-box">
+      <div id="modalSpinner" class="modal-spinner"></div>
+      <div id="modalTitle" class="modal-title">Sinkron data...</div>
+      <p id="modalDesc" class="modal-desc">Mohon tunggu sebentar.</p>
+      <div id="modalActions" class="modal-actions" style="display:none"></div>
+    </div>
+  </div>
 
   <main class="wrap">
     <header>
       <div class="banner">
-        <img decoding="async" src="header-banner_v11_1.jpg" alt="Kalender Indonesia">
+        <img src="header-banner_v11_1.jpg" alt="Kalender Indonesia">
       </div>
       <div class="top-title">
         <h1 data-i18n="settings_title">Pengaturan</h1>
@@ -852,7 +897,7 @@
         </button>
         <button id="btnSync" class="action-btn sync">
           <span class="aicon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9a9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/><path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 8h5V3"/></svg></span>
-          <span><strong data-i18n="sync">Sync</strong><span data-i18n="sync_desc">Mengunduh ulang kalender publik dari GitHub.</span></span>
+          <span><strong data-i18n="sync">Sync</strong><span data-i18n="sync_desc">Mengunduh ulang kalender publik terbaru.</span></span>
         </button>
         <button id="btnReset" class="action-btn danger">
           <span class="aicon"><svg viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v5"/><path d="M14 11v5"/></svg></span>
@@ -873,7 +918,7 @@
         <div><h2 data-i18n="support_dev">Dukung Developer</h2><p data-i18n="support_hint">Dukungan sukarela membantu perawatan data kalender, server statis, dan pengembangan fitur, dan mungkin segelas kopi! :)</p></div>
       </div>
       <div class="btn-wide">
-        <a class="support-link support" href="#" target="_blank" rel="noopener" data-i18n="support_button">Support Developer</a>
+        <a id="btnSupport" class="support-link support" href="#" data-i18n="support_button">Support Developer</a>
       </div>
     </section>
 
@@ -881,27 +926,6 @@
   </main>
 
   <script>
-
-    window.addEventListener("load", function () {
-      var loader = document.getElementById("pageLoading");
-      if (loader) {
-        loader.className += " hidden";
-        setTimeout(function () {
-          if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
-        }, 180);
-      }
-    });
-
-    setTimeout(function () {
-      var loader = document.getElementById("pageLoading");
-      if (loader) {
-        loader.className += " hidden";
-        setTimeout(function () {
-          if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
-        }, 180);
-      }
-    }, 1400);
-
     const T = {
       id: {
         settings_title: "Pengaturan",
@@ -941,7 +965,7 @@
         save: "Simpan",
         save_desc: "Menyimpan filter dan event pribadi.",
         sync: "Sync",
-        sync_desc: "Mengunduh ulang kalender publik dari GitHub.",
+        sync_desc: "Mengunduh ulang kalender publik terbaru.",
         reset: "Reset",
         reset_desc: "Hapus cache kalender lokal, lalu sync ulang.",
         backup: "Backup",
@@ -955,7 +979,14 @@
         fill_event_alert: "Isi judul dan tanggal dulu.",
         saved_notice: "Pengaturan disimpan.",
         backup_notice: "Backup JSON akan diaktifkan pada tahap berikutnya.",
-        reset_confirm: "Hapus cache lokal dan sync ulang?",
+        sync_progress: "Sinkron data...",
+        sync_progress_desc: "Perintah sync akan dikirim ke Kalender Indonesia.",
+        reset_progress: "Reset cache...",
+        reset_progress_desc: "Cache lokal akan dihapus, lalu data akan disinkronkan ulang.",
+        backup_title: "Backup Event Pribadi",
+        backup_desc: "Tahap berikutnya: Export JSON dan Import JSON dalam satu jendela.",
+        support_title: "Support Developer",
+        support_desc: "Tombol dukungan akan diaktifkan setelah tautan final tersedia.",
         footer: "Pengaturan akan dikirim ke Kalender Indonesia."
       },
       en: {
@@ -996,7 +1027,7 @@
         save: "Save",
         save_desc: "Save filters and personal events.",
         sync: "Sync",
-        sync_desc: "Download the public calendar from GitHub.",
+        sync_desc: "Download the latest public calendar data.",
         reset: "Reset",
         reset_desc: "Clear local calendar cache, then sync again.",
         backup: "Backup",
@@ -1010,7 +1041,14 @@
         fill_event_alert: "Fill title and date first.",
         saved_notice: "Settings saved.",
         backup_notice: "JSON backup will be enabled in the next stage.",
-        reset_confirm: "Clear local cache and sync again?",
+        sync_progress: "Syncing data...",
+        sync_progress_desc: "The sync command will be sent to Kalender Indonesia.",
+        reset_progress: "Resetting cache...",
+        reset_progress_desc: "Local cache will be cleared, then data will be synced again.",
+        backup_title: "Personal Event Backup",
+        backup_desc: "Next stage: Export JSON and Import JSON in one panel.",
+        support_title: "Support Developer",
+        support_desc: "The support link will be enabled after the final URL is ready.",
         footer: "Settings will be sent to Kalender Indonesia."
       }
     };
@@ -1260,6 +1298,63 @@
       renderEvents();
     }
 
+
+    function showStatusModal(title, desc, options) {
+      const modal = document.getElementById("statusModal");
+      const titleEl = document.getElementById("modalTitle");
+      const descEl = document.getElementById("modalDesc");
+      const spinner = document.getElementById("modalSpinner");
+      const actions = document.getElementById("modalActions");
+
+      titleEl.textContent = title;
+      descEl.textContent = desc;
+      spinner.style.display = options && options.noSpinner ? "none" : "block";
+      actions.innerHTML = "";
+      actions.style.display = "none";
+      actions.className = "modal-actions";
+
+      if (options && options.buttons && options.buttons.length) {
+        actions.style.display = "grid";
+        if (options.buttons.length === 1) actions.className = "modal-actions one";
+        options.buttons.forEach(btn => {
+          const el = document.createElement("button");
+          el.textContent = btn.label;
+          el.className = btn.className || "ghost";
+          el.addEventListener("click", btn.onClick);
+          actions.appendChild(el);
+        });
+      }
+
+      modal.className = "modal-overlay show";
+    }
+
+    function hideStatusModal() {
+      const modal = document.getElementById("statusModal");
+      if (modal) modal.className = "modal-overlay";
+    }
+
+    function closePebbleWithStatus(action) {
+      readUiToSettings();
+      saveSettingsLocal();
+
+      if (action === "sync") {
+        showStatusModal(T[getLang()].sync_progress, T[getLang()].sync_progress_desc);
+      } else if (action === "reset") {
+        showStatusModal(T[getLang()].reset_progress, T[getLang()].reset_progress_desc);
+      }
+
+      setTimeout(() => closePebble(action), 650);
+    }
+
+    function showInfoModal(title, desc) {
+      showStatusModal(title, desc, {
+        noSpinner: true,
+        buttons: [
+          { label: "OK", className: "primary", onClick: hideStatusModal }
+        ]
+      });
+    }
+
     function closePebble(action) {
       readUiToSettings();
       settings.action = action;
@@ -1302,13 +1397,18 @@
 
     document.getElementById("btnTambahEvent").addEventListener("click", addOrUpdatePersonalEvent);
     document.getElementById("btnSave").addEventListener("click", () => closePebble("save"));
-    document.getElementById("btnSync").addEventListener("click", () => closePebble("sync"));
-    document.getElementById("btnReset").addEventListener("click", () => {
-      if (confirm(T[getLang()].reset_confirm)) closePebble("reset");
-    });
+    document.getElementById("btnSync").addEventListener("click", () => closePebbleWithStatus("sync"));
+    document.getElementById("btnReset").addEventListener("click", () => closePebbleWithStatus("reset"));
     document.getElementById("btnBackup").addEventListener("click", () => {
-      alert(T[getLang()].backup_notice);
+      showInfoModal(T[getLang()].backup_title, T[getLang()].backup_desc);
     });
+    const btnSupport = document.getElementById("btnSupport");
+    if (btnSupport) {
+      btnSupport.addEventListener("click", (e) => {
+        e.preventDefault();
+        showInfoModal(T[getLang()].support_title, T[getLang()].support_desc);
+      });
+    }
 
     settings = loadSettings();
     applySettingsToUi();
