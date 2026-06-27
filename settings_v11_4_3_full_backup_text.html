@@ -1,0 +1,1800 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Kalender Indonesia — Settings</title>
+  <style>
+    :root {
+      --bg: #f4f1e5;
+      --card: #fffdf8;
+      --ink: #111827;
+      --muted: #667085;
+      --line: #e5e0d2;
+      --red: #d9283f;
+      --green: #15a36f;
+      --blue: #3079df;
+      --dark: #4b5563;
+      --purple: #7445d8;
+      --purple-soft: #f0e8ff;
+      --cream: #f3ead2;
+      --shadow: 0 8px 22px rgba(15, 23, 42, .10);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(217,40,63,.10), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(116,69,216,.11), transparent 30%),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    .wrap {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 16px 12px 28px;
+    }
+
+    .banner {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.75);
+      background: linear-gradient(135deg, #fff6da, #fff1cd);
+      margin-bottom: 14px;
+      min-height: 96px;
+    }
+
+    .banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .banner-fallback {
+      min-height: 98px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 20px;
+      color: #10233b;
+    }
+
+    .banner-fallback .fake-cal {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      border: 4px solid var(--red);
+      position: relative;
+    }
+
+    .banner-fallback .fake-cal:before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      right: 9px;
+      top: 19px;
+      height: 4px;
+      background: var(--red);
+      box-shadow: 0 12px 0 var(--red);
+    }
+
+    .banner-fallback strong {
+      display: block;
+      font-size: 26px;
+      line-height: .95;
+      color: var(--red);
+    }
+
+    .banner-fallback span {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 5px;
+    }
+
+    .top-title {
+      text-align: center;
+      margin: 0 0 14px;
+    }
+
+    .top-title h1 {
+      margin: 0 0 4px;
+      font-size: 22px;
+      letter-spacing: -.3px;
+    }
+
+    .top-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .card {
+      background: rgba(255,253,248,.97);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 12px 0;
+      overflow: hidden;
+    }
+
+    .section-head {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 15px 16px 10px;
+    }
+
+    .section-head h2 {
+      font-size: 15px;
+      line-height: 1.2;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .section-head p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      background: var(--purple-soft);
+      color: var(--purple);
+    }
+
+    .icon.round {
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 6px rgba(116,69,216,.10);
+      background: #f2ebff;
+    }
+
+    .icon svg {
+      width: 23px;
+      height: 23px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.05;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .row {
+      min-height: 57px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 16px;
+      border-top: 1px solid rgba(228,224,211,.82);
+    }
+
+    .label strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.22;
+    }
+
+    .label span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.28;
+    }
+
+    .event-name {
+      display: flex;
+      gap: 11px;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .event-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: white;
+      flex: 0 0 auto;
+      box-shadow: 0 4px 10px rgba(15,23,42,.14);
+      overflow: hidden;
+    }
+
+    .event-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.05;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .bg-red { background: var(--red); }
+    .bg-green { background: var(--green); }
+    .bg-blue { background: var(--blue); }
+    .bg-dark { background: var(--dark); }
+    .bg-purple { background: var(--purple); }
+
+    .switch {
+      position: relative;
+      width: 50px;
+      height: 30px;
+      flex: 0 0 auto;
+    }
+
+    .switch input { display: none; }
+
+    .slider {
+      position: absolute;
+      inset: 0;
+      background: #c7c2b3;
+      border-radius: 999px;
+      transition: .18s ease;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.17);
+    }
+
+    .slider:before {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      left: 2px;
+      top: 2px;
+      background: white;
+      border-radius: 50%;
+      transition: .18s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,.24);
+    }
+
+    input:checked + .slider { background: var(--green); }
+    input:checked + .slider:before { transform: translateX(20px); }
+    input.red:checked + .slider { background: var(--red); }
+    input.blue:checked + .slider { background: var(--blue); }
+    input.dark:checked + .slider { background: var(--dark); }
+    input.purple:checked + .slider { background: var(--purple); }
+
+    .pill-grid {
+      display: grid;
+      gap: 8px;
+      padding: 4px 16px 16px;
+    }
+
+    .lang-grid { grid-template-columns: 1fr 1fr; }
+    .month-grid { grid-template-columns: repeat(4, 1fr); padding-top: 0; }
+
+    .pill input { display: none; }
+
+    .pill span {
+      display: block;
+      text-align: center;
+      padding: 10px 8px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fffefb;
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 13px;
+      transition: .16s ease;
+      user-select: none;
+    }
+
+    .pill input:checked + span {
+      background: var(--purple);
+      color: white;
+      border-color: var(--purple);
+      box-shadow: 0 4px 12px rgba(116,69,216,.22);
+    }
+
+    .month-box .pill input:checked + span {
+      font-weight: 600;
+    }
+
+    .fields {
+      padding: 4px 16px 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fffefb;
+      padding: 12px 12px;
+      color: var(--ink);
+      font: inherit;
+      outline: none;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .btn-wide {
+      padding: 14px 16px 16px;
+    }
+
+    button, .support-link {
+      border: 0;
+      border-radius: 13px;
+      padding: 12px 10px;
+      font-weight: 850;
+      font-size: 12.5px;
+      cursor: pointer;
+      min-width: 0;
+      text-decoration: none;
+      text-align: center;
+      color: var(--ink);
+      background: var(--cream);
+      border: 1px solid var(--line);
+    }
+
+    .primary {
+      color: white;
+      background: linear-gradient(135deg, var(--red), #ef4058);
+      border-color: transparent;
+      box-shadow: var(--shadow);
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 0 16px 16px;
+    }
+
+    .action-btn {
+      border-radius: 17px;
+      padding: 15px 12px;
+      min-height: 84px;
+      display: grid;
+      grid-template-columns: 36px minmax(0, 1fr);
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+      background: #fffefb;
+      border: 1px solid var(--line);
+      box-shadow: 0 4px 12px rgba(15,23,42,.06);
+    }
+
+    .action-btn .aicon {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: var(--purple);
+      background: var(--purple-soft);
+    }
+
+    .action-btn svg {
+      width: 23px;
+      height: 23px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .action-btn strong {
+      display: block;
+      font-size: 14px;
+      line-height: 1.15;
+    }
+
+    .action-btn span span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11.2px;
+      line-height: 1.28;
+      font-weight: 600;
+    }
+
+    .danger .aicon { color: #374151; background: #eef0f4; }
+    .sync .aicon { color: var(--blue); background: #eaf1ff; }
+    .save .aicon { color: var(--red); background: #fff0f3; }
+    .backup .aicon { color: var(--purple); background: var(--purple-soft); }
+
+    .support {
+      color: white;
+      background: linear-gradient(135deg, var(--purple), #b758ff);
+      border-color: transparent;
+      box-shadow: var(--shadow);
+      display: block;
+      padding: 13px 16px;
+      font-size: 14px;
+    }
+
+    .event-list {
+      margin: 0 16px 12px;
+      padding: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fffefb;
+      overflow: hidden;
+    }
+
+    .event-item {
+      padding: 10px 12px;
+      border-top: 1px solid rgba(228,224,211,.82);
+      display: grid;
+      grid-template-columns: auto minmax(0,1fr) auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .date-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: var(--purple-soft);
+      color: var(--purple);
+      display: grid;
+      place-items: center;
+      line-height: 1;
+      flex: 0 0 auto;
+    }
+
+    .date-badge strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 2px;
+      text-align: center;
+    }
+
+    .date-badge span {
+      display: block;
+      font-size: 12px;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .event-main {
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .event-main strong {
+      display: block;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 850;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .event-main span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .event-main .tag,
+    .tag {
+      display: inline-block;
+      color: #fff !important;
+      background: var(--purple) !important;
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 9.5px;
+      font-weight: 900;
+      line-height: 1.2;
+      height: fit-content;
+      white-space: nowrap;
+      border: 0;
+      vertical-align: 1px;
+    }
+
+    .event-item:first-child {
+      border-top: 0;
+    }
+
+    .event-actions {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .tiny {
+      width: 34px;
+      height: 34px;
+      padding: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      background: #fffefb;
+      color: var(--purple);
+      border: 1px solid rgba(116,69,216,.35);
+    }
+
+    .tiny.delete {
+      color: var(--red);
+      border-color: rgba(217,40,63,.35);
+      background: #fff7f8;
+    }
+
+    .tiny svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+      padding: 0 16px 12px;
+    }
+
+
+    .empty-list {
+      padding: 13px 12px;
+      color: var(--muted);
+      font-size: 12.5px;
+      text-align: center;
+    }
+
+
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background: rgba(17,24,39,.30);
+      z-index: 9999;
+    }
+
+    .modal-overlay.show {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(320px, 100%);
+      background: #fffdf8;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 18px 42px rgba(15,23,42,.22);
+      padding: 18px 18px 16px;
+      text-align: center;
+    }
+
+    .modal-spinner {
+      width: 26px;
+      height: 26px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      border: 3px solid #e5e0d2;
+      border-top-color: var(--purple);
+      animation: spin .75s linear infinite;
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 850;
+      margin: 0 0 5px;
+      color: var(--ink);
+    }
+
+    .modal-desc {
+      font-size: 12.5px;
+      line-height: 1.35;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .modal-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .modal-actions.one {
+      grid-template-columns: 1fr;
+    }
+
+
+    .backup-textarea {
+      width: 100%;
+      min-height: 150px;
+      max-height: 260px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fffdf8;
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      line-height: 1.4;
+      padding: 10px;
+      box-sizing: border-box;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    .backup-textarea:focus {
+      border-color: rgba(37, 99, 235, .45);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, .10);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 11px;
+      padding: 12px 4px 0;
+    }
+
+
+    .filter-box {
+      margin: 0 16px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fffefb;
+      overflow: hidden;
+    }
+
+    .filter-box .row {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .filter-box .row:first-child {
+      border-top: 0;
+    }
+
+    .personal-form-box {
+      margin: 0 16px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fffefb;
+      overflow: hidden;
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .personal-form-box .fields {
+      padding: 0;
+    }
+
+    .month-repeat-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 128px;
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .month-box {
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fffdf8;
+      padding: 8px;
+    }
+
+    .month-box-title {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin: 0 0 7px;
+    }
+
+    .month-box .month-grid {
+      padding: 0;
+      gap: 5px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .month-box .pill span {
+      padding: 7px 5px;
+      border-radius: 9px;
+      font-size: 11.5px;
+      font-weight: 500;
+    }
+
+    .yearly-box {
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fffdf8;
+      padding: 10px;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .yearly-box strong {
+      display: block;
+      font-size: 12px;
+      line-height: 1.15;
+    }
+
+    .yearly-box span {
+      display: block;
+      color: var(--muted);
+      font-size: 10.5px;
+      line-height: 1.22;
+    }
+
+    .yearly-box .switch {
+      transform: scale(.86);
+      transform-origin: center;
+    }
+
+
+    .freeze-head {
+      position: sticky;
+      top: 0;
+      z-index: 70;
+      margin: -16px calc(50% - 50vw) 12px;
+      padding: 12px 0 10px;
+      background:
+        linear-gradient(180deg, rgba(244,241,229,.90), rgba(244,241,229,.78));
+      -webkit-backdrop-filter: blur(12px) saturate(1.06);
+      backdrop-filter: blur(12px) saturate(1.06);
+      border-bottom: 1px solid rgba(229,224,210,.62);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, .045);
+    }
+
+    .freeze-inner {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 12px;
+    }
+
+    .freeze-head .banner {
+      margin-bottom: 10px;
+      min-height: 0;
+    }
+
+    .freeze-head .banner img {
+      aspect-ratio: 560 / 143;
+    }
+
+    .freeze-head .top-title {
+      margin-bottom: 0;
+    }
+
+    .page-loading {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at top left, rgba(217,40,63,.10), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(116,69,216,.12), transparent 35%),
+        var(--bg);
+      color: #6f6a57;
+      transition: opacity .16s ease;
+    }
+
+    .page-loading.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .page-loading-box {
+      width: min(78vw, 260px);
+      padding: 18px 16px;
+      border: 1px solid rgba(229,224,210,.88);
+      border-radius: 18px;
+      background: rgba(255,253,248,.94);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .page-loading-spinner {
+      width: 26px;
+      height: 26px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      border: 3px solid #eadfca;
+      border-top-color: var(--red);
+      animation: spin .8s linear infinite;
+    }
+
+    .page-loading-box strong {
+      display: block;
+      color: #111827;
+      font-size: 14px;
+      line-height: 1.25;
+      margin-bottom: 3px;
+    }
+
+    .page-loading-box span {
+      display: block;
+      font-size: 12px;
+      line-height: 1.35;
+      color: var(--muted);
+    }
+
+    @media (max-width: 390px) {
+      .action-grid { grid-template-columns: 1fr; }
+      .month-repeat-layout { grid-template-columns: 1fr; }
+      .month-box .month-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="pageLoading" class="page-loading" aria-live="polite">
+    <div class="page-loading-box">
+      <div class="page-loading-spinner"></div>
+      <strong>Kalender Indonesia</strong>
+      <span>Memuat pengaturan...</span>
+    </div>
+  </div>
+
+
+  <div id="statusModal" class="modal-overlay" aria-live="polite">
+    <div class="modal-box">
+      <div id="modalSpinner" class="modal-spinner"></div>
+      <div id="modalTitle" class="modal-title">Sinkron data...</div>
+      <p id="modalDesc" class="modal-desc">Mohon tunggu sebentar.</p>
+      <div id="modalActions" class="modal-actions" style="display:none"></div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <header class="freeze-head">
+      <div class="freeze-inner">
+        <div class="banner">
+          <img src="header-banner_mobile_560_q58.jpg" width="560" height="143" alt="Kalender Indonesia">
+        </div>
+        <div class="top-title">
+          <h1 data-i18n="settings_title">Pengaturan</h1>
+          <p data-i18n="settings_sub">Pratinjau halaman pengaturan. Belum terhubung ke Pebble.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="section-head">
+        <div class="icon round">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="8.4"/>
+            <path d="M8.7 4.5c-1.4 1.3-1.2 2.9.4 3.8c1 .6 2.1.4 2.8 1.4c.6.9-.1 1.8.7 2.6c.6.6 1.8.5 2.5 1.2c.8.8.4 1.8-.3 2.7c-.7.9-1.4 1.7-1.2 3"/>
+            <path d="M5.1 10.2c1.4-.1 2.3.4 2.8 1.5c.4 1-.2 2.1.5 2.9c.8 1 2 .7 2.7 1.8c.4.6.2 1.4-.1 2.2"/>
+            <path d="M15.7 5.2c1.6.8 2.6 2 3.2 3.5c-.9.5-2 .5-2.8-.1c-.9-.7-1.5-1.9-.4-3.4z"/>
+          </svg>
+        </div>
+        <div><h2 data-i18n="language">Bahasa</h2><p data-i18n="language_hint">Pilih bahasa tampilan</p></div>
+      </div>
+      <div class="pill-grid lang-grid">
+        <label class="pill"><input type="radio" name="bahasa" value="id" checked><span>Indonesia</span></label>
+        <label class="pill"><input type="radio" name="bahasa" value="en"><span>English</span></label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M4 5h16l-6 7v5l-4 2v-7z"/></svg>
+        </div>
+        <div><h2 data-i18n="filter_event">Filter Event</h2><p data-i18n="filter_hint">Pilih kategori yang tampil di jam</p></div>
+      </div>
+
+      <div class="filter-box">
+      <div class="row">
+        <div class="event-name"><div class="event-icon bg-red"><svg viewBox="0 0 24 24"><path d="M7 20V4"/><path d="M7 5c4-2 6 2 10 0v8c-4 2-6-2-10 0"/><path d="M4 20h6"/></svg></div><div class="label"><strong data-i18n="libn">Libur Nasional</strong><span data-i18n="libn_hint">Hari libur nasional</span></div></div>
+        <label class="switch"><input class="red" type="checkbox" data-setting="filter_libn" checked><span class="slider"></span></label>
+      </div>
+
+      <div class="row">
+        <div class="event-name"><div class="event-icon bg-red"><svg viewBox="0 0 24 24"><g fill="white" stroke="none"><circle cx="9.8" cy="11.2" r="2.2"/><circle cx="13.3" cy="11.2" r="2.2"/><circle cx="11.55" cy="8.5" r="2.2"/><circle cx="11.55" cy="13.9" r="2.2"/><circle cx="11.55" cy="11.2" r="1.35" fill="#d9283f"/><circle cx="17.2" cy="8.2" r="1.25"/><circle cx="19.1" cy="8.2" r="1.25"/><circle cx="18.15" cy="6.75" r="1.25"/><circle cx="18.15" cy="9.65" r="1.25"/><circle cx="18.15" cy="8.2" r=".7" fill="#d9283f"/></g></svg></div><div class="label"><strong data-i18n="libd">Libur Daerah</strong><span data-i18n="libd_hint">Hari libur daerah</span></div></div>
+        <label class="switch"><input class="red" type="checkbox" data-setting="filter_libd" checked><span class="slider"></span></label>
+      </div>
+
+      <div class="row">
+        <div class="event-name"><div class="event-icon bg-green"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.6 3.5l4.4-.5l-.5 4.4l3.5 2.6l-4.1 1.8l-1.8 4.1l-4.1-2.4l-4.1 2.4l-1.8-4.1L2 12.8l3.5-2.6L5 5.8l4.4.5z" transform="scale(.82) translate(2.55 1.8)" stroke-width="2.55"/><path d="M9 9h6v6H9z" transform="rotate(45 12 12)" stroke-width="2.35"/><path d="M12 7.1v9.8M7.1 12h9.8" stroke-width="1.9"/></svg></div><div class="label"><strong data-i18n="hijr">Hijriah</strong><span data-i18n="hijr_hint">Tanggal penting kalender Hijriah</span></div></div>
+        <label class="switch"><input type="checkbox" data-setting="filter_hijr" checked><span class="slider"></span></label>
+      </div>
+
+      <div class="row">
+        <div class="event-name"><div class="event-icon bg-blue"><svg viewBox="0 0 24 24"><path d="M3 8l9-4l9 4l-9 4z"/><path d="M7 10v5c3 2 7 2 10 0v-5"/><path d="M21 8v6"/></svg></div><div class="label"><strong data-i18n="akdm">Akademik</strong><span data-i18n="akdm_hint">Kalender sekolah/kampus</span></div></div>
+        <label class="switch"><input class="blue" type="checkbox" data-setting="filter_akdm" checked><span class="slider"></span></label>
+      </div>
+
+      <div class="row">
+        <div class="event-name"><div class="event-icon bg-dark"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M3.5 20c.6-4 3-6 5.5-6s4.9 2 5.5 6"/><path d="M13.5 15c2.5.3 4.4 2.1 5 5"/></svg></div><div class="label"><strong data-i18n="umum">Umum</strong><span data-i18n="umum_hint">Event umum non-libur</span></div></div>
+        <label class="switch"><input class="dark" type="checkbox" data-setting="filter_umum" checked><span class="slider"></span></label>
+      </div>
+
+      <div class="row">
+        <div class="event-name"><div class="event-icon bg-dark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M4 12h16"/><path d="M12 3.5c2.8 3.4 2.8 13.6 0 17"/><path d="M12 3.5c-2.8 3.4-2.8 13.6 0 17"/><path d="M6.5 7.5c2.4 1.2 4.3.5 5.5-.5c1.9 1.4 3.6 1.3 5.5.5"/><path d="M6.5 16.5c2.4-1.2 4.3-.5 5.5.5c1.9-1.4 3.6-1.3 5.5-.5"/></svg></div><div class="label"><strong data-i18n="intl">Internasional</strong><span data-i18n="intl_hint">International events</span></div></div>
+        <label class="switch"><input class="dark" type="checkbox" data-setting="filter_intl" checked><span class="slider"></span></label>
+      </div>
+
+      <div class="row">
+        <div class="event-name"><div class="event-icon bg-purple"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21c.8-5 3.4-7 7-7s6.2 2 7 7"/></svg></div><div class="label"><strong data-i18n="prib">Pribadi</strong><span data-i18n="prib_hint">Catatan lokal pengguna</span></div></div>
+        <label class="switch"><input class="purple" type="checkbox" data-setting="filter_prib" checked><span class="slider"></span></label>
+      </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21c.8-5 3.4-7 7-7s6.2 2 7 7"/></svg>
+        </div>
+        <div><h2 data-i18n="personal_event">Event Pribadi</h2><p data-i18n="personal_hint">Tersimpan lokal untuk pengguna ini</p></div>
+      </div>
+
+      <div id="eventList" class="event-list"></div>
+
+
+      <div class="personal-form-box">
+        <div class="fields">
+          <input id="judul_event" type="text" data-placeholder-id="event_title_ph" placeholder="Judul event, contoh: Ulang Tahun Ibu">
+          <div class="grid2">
+            <input id="tgl_mulai" type="number" min="1" max="31" data-placeholder-id="date_ph" placeholder="Tgl">
+            <input id="tgl_selesai" type="number" min="1" max="31" data-placeholder-id="until_ph" placeholder="s.d.">
+          </div>
+        </div>
+
+        <div class="month-repeat-layout">
+          <div class="month-box">
+            <div class="pill-grid month-grid">
+              <label class="pill"><input type="radio" name="bulan"><span>Jan</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Feb</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Mar</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Apr</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Mei</span></label>
+              <label class="pill"><input type="radio" name="bulan" checked><span>Jun</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Jul</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Agu</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Sep</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Okt</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Nov</span></label>
+              <label class="pill"><input type="radio" name="bulan"><span>Des</span></label>
+            </div>
+          </div>
+
+          <div class="yearly-box">
+            <strong data-i18n="yearly">Berulang Tahunan</strong>
+            <label class="switch"><input class="purple" type="checkbox" checked><span class="slider"></span></label>
+            <span data-i18n="yearly_hint">Muncul otomatis tiap tahun</span>
+          </div>
+        </div>
+
+        <button id="btnTambahEvent" class="primary" style="width: 100%;" data-i18n="add_personal">Tambah Event Pribadi</button>
+      </div>
+
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M17.5 19H7a5 5 0 1 1 1.1-9.9a6 6 0 0 1 11.4 2.5A3.8 3.8 0 0 1 17.5 19z"/></svg>
+        </div>
+        <div><h2 data-i18n="sync_backup">Sinkronisasi & Backup</h2><p data-i18n="sync_hint">Kelola data lokal dan kalender publik</p></div>
+      </div>
+
+      <div class="action-grid">
+        <button id="btnSave" class="action-btn save">
+          <span class="aicon"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5l5-5"/><path d="M5 21h14"/></svg></span>
+          <span><strong data-i18n="save">Simpan</strong><span data-i18n="save_desc">Menyimpan filter dan event pribadi.</span></span>
+        </button>
+        <button id="btnSync" class="action-btn sync">
+          <span class="aicon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9a9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/><path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 8h5V3"/></svg></span>
+          <span><strong data-i18n="sync">Sync</strong><span data-i18n="sync_desc">Mengunduh ulang kalender publik terbaru.</span></span>
+        </button>
+        <button id="btnReset" class="action-btn danger">
+          <span class="aicon"><svg viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v5"/><path d="M14 11v5"/></svg></span>
+          <span><strong data-i18n="reset">Reset</strong><span data-i18n="reset_desc">Hapus cache kalender lokal, lalu sync ulang.</span></span>
+        </button>
+        <button id="btnBackup" class="action-btn backup">
+          <span class="aicon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15l3 3l3-3"/></svg></span>
+          <span><strong data-i18n="backup">Backup</strong><span data-i18n="backup_desc">Export/import event pribadi pengguna.</span></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        </div>
+        <div><h2 data-i18n="support_dev">Dukung Developer</h2><p data-i18n="support_hint">Dukungan sukarela membantu perawatan data kalender, server statis, pengembangan fitur, dan mungkin hanya untuk segelas kopi dan roti! :)</p></div>
+      </div>
+      <div class="btn-wide">
+        <a id="btnSupport" class="support-link support" href="#" data-i18n="support_button">Support Developer</a>
+      </div>
+    </section>
+
+    <footer data-i18n="footer">Pengaturan akan dikirim ke Kalender Indonesia.</footer>
+  </main>
+
+  <script>
+
+    (function () {
+      var loadStart = Date.now();
+      var hidden = false;
+
+      function hidePageLoading() {
+        if (hidden) return;
+        hidden = true;
+
+        var elapsed = Date.now() - loadStart;
+        var delay = Math.max(0, 700 - elapsed);
+
+        setTimeout(function () {
+          var loader = document.getElementById("pageLoading");
+          if (!loader) return;
+
+          loader.className += " hide";
+
+          setTimeout(function () {
+            if (loader && loader.parentNode) {
+              loader.parentNode.removeChild(loader);
+            }
+          }, 220);
+        }, delay);
+      }
+
+      if (document.readyState === "complete") {
+        hidePageLoading();
+      } else {
+        window.addEventListener("load", hidePageLoading);
+      }
+
+      setTimeout(hidePageLoading, 2500);
+    })();
+
+    const T = {
+      id: {
+        settings_title: "Pengaturan",
+        settings_sub: "Pengaturan filter, sinkronisasi, dan event pribadi.",
+        language: "Bahasa",
+        language_hint: "Pilih bahasa tampilan",
+        filter_event: "Filter Event",
+        filter_hint: "Pilih kategori yang tampil di jam",
+        libn: "Libur Nasional",
+        libn_hint: "Hari libur nasional",
+        libd: "Libur Daerah",
+        libd_hint: "Hari libur daerah",
+        hijr: "Hijriah",
+        hijr_hint: "Tanggal penting kalender Hijriah",
+        akdm: "Akademik",
+        akdm_hint: "Kalender sekolah/kampus",
+        umum: "Umum",
+        umum_hint: "Event umum non-libur",
+        intl: "Internasional",
+        intl_hint: "Peristiwa internasional",
+        prib: "Pribadi",
+        prib_hint: "Catatan lokal pengguna",
+        personal_event: "Event Pribadi",
+        personal_hint: "Tersimpan lokal untuk pengguna ini",
+        event_title_ph: "Judul event, contoh: Ulang Tahun Ibu",
+        month_title: "Bulan",
+        date_ph: "Tgl",
+        until_ph: "s.d.",
+        yearly: "Berulang Tahunan",
+        yearly_hint: "Muncul otomatis tiap tahun",
+        add_personal: "Tambah Event Pribadi",
+        sample_birthday: "Ulang Tahun Ibu",
+        sample_note: "17–18 Catatan keluarga panjang",
+        yearly_short: "Setiap tahun",
+        sync_backup: "Sinkronisasi & Backup",
+        sync_hint: "Kelola data lokal dan kalender publik",
+        save: "Simpan",
+        save_desc: "Menyimpan filter dan event pribadi.",
+        sync: "Sync",
+        sync_desc: "Mengunduh ulang kalender publik terbaru.",
+        reset: "Reset",
+        reset_desc: "Hapus cache kalender lokal, lalu sync ulang.",
+        backup: "Backup",
+        backup_desc: "Export/import event pribadi pengguna.",
+        backup_panel_desc: "Backup sementara memakai copy-paste JSON agar stabil di webview.",
+        backup_export: "Export",
+        backup_import: "Import",
+        backup_close: "Tutup",
+        backup_copy: "Copy",
+        backup_apply: "Import",
+        backup_save: "Simpan ke Jam",
+        backup_export_title: "Export event pribadi",
+        backup_export_desc: "Salin JSON berikut sebagai backup event pribadi.",
+        backup_import_title: "Import event pribadi",
+        backup_import_desc: "Paste JSON backup event pribadi ke kotak berikut.",
+        backup_copy_ok_title: "Data tercopy",
+        backup_copy_ok_desc: "JSON backup sudah disalin ke clipboard.",
+        backup_copy_fail_title: "Copy manual",
+        backup_copy_fail_desc: "Clipboard diblokir webview. Pilih semua teks, lalu salin manual.",
+        backup_import_ok_title: "Import berhasil",
+        backup_import_ok_desc: "Event pribadi sudah dipulihkan. Tekan Simpan ke Jam untuk mengirim ke Pebble.",
+        backup_import_fail_title: "Import gagal",
+        backup_import_fail_desc: "JSON tidak valid atau bukan backup Kalender Indonesia.",
+        backup_empty_title: "Backup kosong",
+        backup_empty_desc: "Belum ada event pribadi untuk diexport.",
+        support_dev: "Dukung Developer",
+        support_hint: "Dukungan sukarela membantu perawatan data kalender, server statis, pengembangan fitur, dan mungkin hanya untuk segelas kopi dan roti! :)",
+        support_button: "Support Developer",
+        empty_personal: "Belum ada event pribadi.",
+        one_time: "Sekali",
+        save_personal: "Simpan Event Pribadi",
+        fill_event_title: "Event belum lengkap",
+        fill_event_alert: "Isi judul dan tanggal dulu.",
+        saved_notice: "Pengaturan disimpan.",
+        backup_notice: "Backup JSON akan diaktifkan pada tahap berikutnya.",
+        sync_progress: "Sinkron data...",
+        sync_progress_desc: "Perintah sync akan dikirim ke Kalender Indonesia.",
+        reset_progress: "Reset cache...",
+        reset_progress_desc: "Cache lokal akan dihapus, lalu data akan disinkronkan ulang.",
+        backup_title: "Backup Event Pribadi",
+        backup_desc: "Backup sementara memakai copy-paste JSON agar stabil di webview.",
+        support_title: "Support Developer",
+        support_desc: "Tombol dukungan akan diaktifkan setelah tautan final tersedia.",
+        footer: "Pengaturan akan dikirim ke Kalender Indonesia."
+      },
+      en: {
+        settings_title: "Settings",
+        settings_sub: "Settings for filters, sync, and personal events.",
+        language: "Language",
+        language_hint: "Choose display language",
+        filter_event: "Event Filter",
+        filter_hint: "Choose categories shown on the watch",
+        libn: "National Holidays",
+        libn_hint: "National holiday events",
+        libd: "Local Holidays",
+        libd_hint: "Local holiday events",
+        hijr: "Hijri",
+        hijr_hint: "Important Islamic calendar dates",
+        akdm: "Academic",
+        akdm_hint: "School/campus calendar",
+        umum: "General",
+        umum_hint: "General non-holiday events",
+        intl: "International",
+        intl_hint: "International events",
+        prib: "Personal",
+        prib_hint: "Local personal notes",
+        personal_event: "Personal Events",
+        personal_hint: "Stored locally for this user",
+        event_title_ph: "Event title, e.g. Mom's Birthday",
+        month_title: "Month",
+        date_ph: "Date",
+        until_ph: "Until",
+        yearly: "Yearly Repeat",
+        yearly_hint: "Appears automatically every year",
+        add_personal: "Add Personal Event",
+        sample_birthday: "Mom's Birthday",
+        sample_note: "17–18 Long family note",
+        yearly_short: "Every year",
+        sync_backup: "Sync & Backup",
+        sync_hint: "Manage local data and public calendar",
+        save: "Save",
+        save_desc: "Save filters and personal events.",
+        sync: "Sync",
+        sync_desc: "Download the latest public calendar data.",
+        reset: "Reset",
+        reset_desc: "Clear local calendar cache, then sync again.",
+        backup: "Backup",
+        backup_desc: "Export/import personal events.",
+        backup_panel_desc: "Temporary backup uses JSON copy-paste for better webview stability.",
+        backup_export: "Export",
+        backup_import: "Import",
+        backup_close: "Close",
+        backup_copy: "Copy",
+        backup_apply: "Import",
+        backup_save: "Save to Watch",
+        backup_export_title: "Export personal events",
+        backup_export_desc: "Copy this JSON as your personal event backup.",
+        backup_import_title: "Import personal events",
+        backup_import_desc: "Paste the personal event backup JSON into this box.",
+        backup_copy_ok_title: "Copied",
+        backup_copy_ok_desc: "Backup JSON has been copied to clipboard.",
+        backup_copy_fail_title: "Copy manually",
+        backup_copy_fail_desc: "Clipboard is blocked by the webview. Select all text, then copy manually.",
+        backup_import_ok_title: "Import complete",
+        backup_import_ok_desc: "Personal events have been restored. Tap Save to Watch to send them to Pebble.",
+        backup_import_fail_title: "Import failed",
+        backup_import_fail_desc: "Invalid JSON or not a Kalender Indonesia backup.",
+        backup_empty_title: "Empty backup",
+        backup_empty_desc: "There are no personal events to export yet.",
+        support_dev: "Support Developer",
+        support_hint: "Voluntary support helps maintain calendar data, static hosting, feature development, and maybe just a cup of coffee and bread! :)",
+        support_button: "Support Developer",
+        empty_personal: "No personal events yet.",
+        one_time: "One time",
+        save_personal: "Save Personal Event",
+        fill_event_title: "Incomplete event",
+        fill_event_alert: "Fill title and date first.",
+        saved_notice: "Settings saved.",
+        backup_notice: "JSON backup will be enabled in the next stage.",
+        sync_progress: "Syncing data...",
+        sync_progress_desc: "The sync command will be sent to Kalender Indonesia.",
+        reset_progress: "Resetting cache...",
+        reset_progress_desc: "Local cache will be cleared, then data will be synced again.",
+        backup_title: "Personal Event Backup",
+        backup_desc: "Temporary backup uses JSON copy-paste for better webview stability.",
+        support_title: "Support Developer",
+        support_desc: "The support link will be enabled after the final URL is ready.",
+        footer: "Settings will be sent to Kalender Indonesia."
+      }
+    };
+
+    const LOCAL_SETTINGS_KEY = "kalender_indonesia_settings_v11";
+    const bulanPendek = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+    let editingId = null;
+    let settings = defaultSettings();
+
+    function defaultSettings() {
+      return {
+        bahasa: "id",
+        filter_libn: 1,
+        filter_libd: 1,
+        filter_hijr: 1,
+        filter_akdm: 1,
+        filter_umum: 1,
+        filter_intl: 1,
+        filter_prib: 1,
+        personal_events: []
+      };
+    }
+
+    function mergeSettings(src) {
+      const out = defaultSettings();
+      if (!src || typeof src !== "object") return out;
+      Object.keys(out).forEach(k => {
+        if (typeof src[k] !== "undefined") out[k] = src[k];
+      });
+      if (!Array.isArray(out.personal_events)) out.personal_events = [];
+      return out;
+    }
+
+    function readQuerySettings() {
+      const raw = location.search.replace(/^\?/, "").split("&").find(part => part.indexOf("settings=") === 0);
+      if (!raw) return null;
+      try {
+        return JSON.parse(decodeURIComponent(raw.substring(9)));
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function loadSettings() {
+      const fromQuery = readQuerySettings();
+      if (fromQuery) return mergeSettings(fromQuery);
+      try {
+        const raw = localStorage.getItem(LOCAL_SETTINGS_KEY);
+        if (raw) return mergeSettings(JSON.parse(raw));
+      } catch (e) {}
+      return defaultSettings();
+    }
+
+    function saveSettingsLocal() {
+      try {
+        localStorage.setItem(LOCAL_SETTINGS_KEY, JSON.stringify(settings));
+      } catch (e) {}
+    }
+
+    function getLang() {
+      return settings.bahasa === "en" ? "en" : "id";
+    }
+
+    function setLang(lang) {
+      settings.bahasa = lang === "en" ? "en" : "id";
+      document.documentElement.lang = settings.bahasa;
+      localStorage.setItem("kalender_indonesia_lang_preview", settings.bahasa);
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (T[settings.bahasa][key]) el.textContent = T[settings.bahasa][key];
+      });
+
+      document.querySelectorAll("[data-placeholder-id]").forEach(el => {
+        const key = el.getAttribute("data-placeholder-id");
+        if (T[settings.bahasa][key]) el.placeholder = T[settings.bahasa][key];
+      });
+
+      renderEvents();
+      const btnTambah = document.getElementById("btnTambahEvent");
+      if (btnTambah) btnTambah.textContent = editingId ? T[getLang()].save_personal : T[getLang()].add_personal;
+    }
+
+    function applySettingsToUi() {
+      const langRadio = document.querySelector('input[name="bahasa"][value="' + getLang() + '"]');
+      if (langRadio) langRadio.checked = true;
+
+      document.querySelectorAll("[data-setting]").forEach(input => {
+        const key = input.getAttribute("data-setting");
+        input.checked = settings[key] ? true : false;
+      });
+
+      setLang(getLang());
+    }
+
+    function readUiToSettings() {
+      const lang = document.querySelector('input[name="bahasa"]:checked');
+      settings.bahasa = lang ? lang.value : "id";
+
+      document.querySelectorAll("[data-setting]").forEach(input => {
+        const key = input.getAttribute("data-setting");
+        settings[key] = input.checked ? 1 : 0;
+      });
+    }
+
+    function getSelectedMonth() {
+      const bulan = Array.from(document.querySelectorAll('input[name="bulan"]'));
+      const idx = bulan.findIndex(r => r.checked);
+      return idx >= 0 ? idx + 1 : 1;
+    }
+
+    function setSelectedMonth(bl) {
+      const radios = Array.from(document.querySelectorAll('input[name="bulan"]'));
+      const target = radios[Number(bl || 1) - 1];
+      if (target) target.checked = true;
+    }
+
+    function getYearlyValue() {
+      const yearlyInput = document.querySelector('.yearly-box input[type="checkbox"]');
+      return yearlyInput ? yearlyInput.checked : true;
+    }
+
+    function setYearlyValue(value) {
+      const yearlyInput = document.querySelector('.yearly-box input[type="checkbox"]');
+      if (yearlyInput) yearlyInput.checked = !!value;
+    }
+
+    function escapeHtml(str) {
+      return String(str || "").replace(/[&<>"']/g, ch => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+      }[ch]));
+    }
+
+    function fmtBadge(ev) {
+      const hr = Number(ev.hr);
+      const bl = Number(ev.bl);
+      return '<div><strong>' + hr + '</strong><span>' + bulanPendek[bl - 1] + '</span></div>';
+    }
+
+    function fmtTitle(ev) {
+      const hr = Number(ev.hr);
+      const sd = Number(ev.sd || ev.hr);
+      const title = String(ev.jd || "");
+      if (sd && sd !== hr) return hr + "–" + sd + " " + title;
+      return title;
+    }
+
+    function renderEvents() {
+      const list = document.getElementById("eventList");
+      if (!list) return;
+
+      if (!settings.personal_events.length) {
+        list.innerHTML = '<div class="empty-list">' + T[getLang()].empty_personal + '</div>';
+        return;
+      }
+
+      list.innerHTML = settings.personal_events.map(ev => {
+        const repeatText = ev.ut ? T[getLang()].yearly_short : T[getLang()].one_time;
+        return `
+          <div class="event-item" data-id="${escapeHtml(ev.pid)}">
+            <div class="date-badge">${fmtBadge(ev)}</div>
+            <div class="event-main">
+              <strong>${escapeHtml(fmtTitle(ev))}</strong>
+              <span>${escapeHtml(repeatText)}</span> <span class="tag">PRIB</span>
+            </div>
+            <div class="event-actions">
+              <button class="tiny btn-edit" aria-label="Edit">
+                <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1l1-4z"/></svg>
+              </button>
+              <button class="tiny delete btn-delete" aria-label="Hapus">
+                <svg viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v5"/><path d="M14 11v5"/></svg>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      list.querySelectorAll(".btn-delete").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = btn.closest(".event-item").getAttribute("data-id");
+          settings.personal_events = settings.personal_events.filter(ev => String(ev.pid) !== String(id));
+          settings.personal_events_dirty = 1;
+          saveSettingsLocal();
+          renderEvents();
+        });
+      });
+
+      list.querySelectorAll(".btn-edit").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = btn.closest(".event-item").getAttribute("data-id");
+          const ev = settings.personal_events.find(item => String(item.pid) === String(id));
+          if (!ev) return;
+
+          editingId = ev.pid;
+          document.getElementById("judul_event").value = ev.jd || "";
+          document.getElementById("tgl_mulai").value = ev.hr || "";
+          document.getElementById("tgl_selesai").value = ev.sd || ev.hr || "";
+          setSelectedMonth(ev.bl || 1);
+          setYearlyValue(!!ev.ut);
+
+          const btnTambah = document.getElementById("btnTambahEvent");
+          if (btnTambah) btnTambah.textContent = T[getLang()].save_personal;
+        });
+      });
+    }
+
+    function resetForm() {
+      editingId = null;
+      document.getElementById("judul_event").value = "";
+      document.getElementById("tgl_mulai").value = "";
+      document.getElementById("tgl_selesai").value = "";
+      setYearlyValue(true);
+      const btnTambah = document.getElementById("btnTambahEvent");
+      if (btnTambah) btnTambah.textContent = T[getLang()].add_personal;
+    }
+
+    function addOrUpdatePersonalEvent() {
+      const title = document.getElementById("judul_event").value.trim();
+      const hr = parseInt(document.getElementById("tgl_mulai").value, 10);
+      let sd = parseInt(document.getElementById("tgl_selesai").value, 10);
+      const bl = getSelectedMonth();
+
+      if (!title || !hr || hr < 1 || hr > 31) {
+        showInfoModal(T[getLang()].fill_event_title, T[getLang()].fill_event_alert);
+        return;
+      }
+
+      if (!sd || sd < 1 || sd > 31) sd = hr;
+      if (sd < hr) sd = hr;
+
+      const item = {
+        pid: editingId || ("p" + Date.now()),
+        bl: bl,
+        hr: hr,
+        bs: bl,
+        sd: sd,
+        tp: 7,
+        jd: title,
+        ut: getYearlyValue() ? 1 : 0
+      };
+
+      const idx = settings.personal_events.findIndex(ev => String(ev.pid) === String(item.pid));
+      if (idx >= 0) settings.personal_events[idx] = item;
+      else settings.personal_events.unshift(item);
+
+      settings.personal_events_dirty = 1;
+      saveSettingsLocal();
+      resetForm();
+      renderEvents();
+    }
+
+
+
+    function buatPayloadBackup() {
+      const events = Array.isArray(settings.personal_events)
+        ? settings.personal_events.map(ev => ({
+            pid: String(ev.pid || ("p" + Date.now())),
+            bl: Number(ev.bl || 1),
+            hr: Number(ev.hr || 1),
+            bs: Number(ev.bs || ev.bl || 1),
+            sd: Number(ev.sd || ev.hr || 1),
+            tp: 7,
+            jd: String(ev.jd || "").trim(),
+            ut: ev.ut ? 1 : 0
+          })).filter(ev => ev.jd && ev.bl >= 1 && ev.bl <= 12 && ev.hr >= 1 && ev.hr <= 31)
+        : [];
+
+      return {
+        app: "Kalender Indonesia",
+        schema: 1,
+        type: "personal_events_backup",
+        created_at: new Date().toISOString(),
+        events: events
+      };
+    }
+
+    function normalisasiEventBackup(ev, index) {
+      const title = String(ev.jd || ev.title || "").trim();
+      const bl = Number(ev.bl || ev.month || 0);
+      const hr = Number(ev.hr || ev.day || 0);
+      let bs = Number(ev.bs || ev.end_month || bl);
+      let sd = Number(ev.sd || ev.until || hr);
+
+      if (!title || bl < 1 || bl > 12 || hr < 1 || hr > 31) return null;
+      if (!bs || bs < 1 || bs > 12) bs = bl;
+      if (!sd || sd < 1 || sd > 31) sd = hr;
+
+      return {
+        pid: String(ev.pid || ("imp" + Date.now() + "_" + index)),
+        bl: bl,
+        hr: hr,
+        bs: bs,
+        sd: sd,
+        tp: 7,
+        jd: title,
+        ut: ev.ut || ev.repeat_yearly ? 1 : 0
+      };
+    }
+
+    function terapkanBackupJson(obj) {
+      if (!obj || typeof obj !== "object") return false;
+      if (obj.app !== "Kalender Indonesia") return false;
+      if (obj.type !== "personal_events_backup") return false;
+      if (!Array.isArray(obj.events)) return false;
+
+      const imported = obj.events
+        .map((ev, idx) => normalisasiEventBackup(ev, idx))
+        .filter(Boolean);
+
+      settings.personal_events = imported;
+      settings.personal_events_dirty = 1;
+      saveSettingsLocal();
+      resetForm();
+      renderEvents();
+      return true;
+    }
+
+    function setBackupTextAreaValue(value) {
+      const area = document.getElementById("backupTextArea");
+      if (area) {
+        area.value = value || "";
+        setTimeout(function () {
+          try { area.focus(); area.select(); } catch (e) {}
+        }, 120);
+      }
+    }
+
+    function copyBackupText() {
+      const area = document.getElementById("backupTextArea");
+      if (!area) return;
+
+      const text = area.value || "";
+
+      function fallbackCopy() {
+        try {
+          area.focus();
+          area.select();
+          if (document.execCommand && document.execCommand("copy")) {
+            showInfoModal(T[getLang()].backup_copy_ok_title, T[getLang()].backup_copy_ok_desc);
+          } else {
+            showInfoModal(T[getLang()].backup_copy_fail_title, T[getLang()].backup_copy_fail_desc);
+          }
+        } catch (e) {
+          showInfoModal(T[getLang()].backup_copy_fail_title, T[getLang()].backup_copy_fail_desc);
+        }
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text)
+          .then(function () {
+            showInfoModal(T[getLang()].backup_copy_ok_title, T[getLang()].backup_copy_ok_desc);
+          })
+          .catch(fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+    }
+
+    function showBackupExportModal() {
+      readUiToSettings();
+      saveSettingsLocal();
+
+      const payload = buatPayloadBackup();
+      const text = JSON.stringify(payload, null, 2);
+
+      if (!payload.events.length) {
+        showInfoModal(T[getLang()].backup_empty_title, T[getLang()].backup_empty_desc);
+        return;
+      }
+
+      showStatusModal(T[getLang()].backup_export_title, T[getLang()].backup_export_desc, {
+        noSpinner: true,
+        extraHtml: '<textarea id="backupTextArea" class="backup-textarea" spellcheck="false"></textarea>',
+        buttons: [
+          { label: T[getLang()].backup_copy, className: "primary", onClick: copyBackupText },
+          { label: T[getLang()].backup_close, className: "ghost", onClick: hideStatusModal }
+        ]
+      });
+
+      setBackupTextAreaValue(text);
+    }
+
+    function showBackupImportModal() {
+      showStatusModal(T[getLang()].backup_import_title, T[getLang()].backup_import_desc, {
+        noSpinner: true,
+        extraHtml: '<textarea id="backupTextArea" class="backup-textarea" spellcheck="false"></textarea>',
+        buttons: [
+          { label: T[getLang()].backup_apply, className: "primary", onClick: function () {
+              const area = document.getElementById("backupTextArea");
+              try {
+                const obj = JSON.parse(area ? area.value : "");
+                if (!terapkanBackupJson(obj)) {
+                  showInfoModal(T[getLang()].backup_import_fail_title, T[getLang()].backup_import_fail_desc);
+                  return;
+                }
+
+                showStatusModal(T[getLang()].backup_import_ok_title, T[getLang()].backup_import_ok_desc, {
+                  noSpinner: true,
+                  buttons: [
+                    { label: T[getLang()].backup_save, className: "primary", onClick: function () { closePebble("save"); } },
+                    { label: T[getLang()].backup_close, className: "ghost", onClick: hideStatusModal }
+                  ]
+                });
+              } catch (e) {
+                showInfoModal(T[getLang()].backup_import_fail_title, T[getLang()].backup_import_fail_desc);
+              }
+            } },
+          { label: T[getLang()].backup_close, className: "ghost", onClick: hideStatusModal }
+        ]
+      });
+
+      setBackupTextAreaValue("");
+    }
+
+    function showBackupModal() {
+      showStatusModal(T[getLang()].backup_title, T[getLang()].backup_panel_desc, {
+        noSpinner: true,
+        buttons: [
+          { label: T[getLang()].backup_export, className: "ghost", onClick: function () { hideStatusModal(); showBackupExportModal(); } },
+          { label: T[getLang()].backup_import, className: "ghost", onClick: function () { hideStatusModal(); showBackupImportModal(); } }
+        ]
+      });
+    }
+
+
+    function showStatusModal(title, desc, options) {
+      const modal = document.getElementById("statusModal");
+      const titleEl = document.getElementById("modalTitle");
+      const descEl = document.getElementById("modalDesc");
+      const spinner = document.getElementById("modalSpinner");
+      const actions = document.getElementById("modalActions");
+
+      const oldArea = document.getElementById("backupTextArea");
+      if (oldArea && oldArea.parentNode) oldArea.parentNode.removeChild(oldArea);
+      titleEl.textContent = title;
+      descEl.textContent = desc;
+      if (options && options.extraHtml) {
+        descEl.insertAdjacentHTML("afterend", options.extraHtml);
+      }
+      spinner.style.display = options && options.noSpinner ? "none" : "block";
+      actions.innerHTML = "";
+      actions.style.display = "none";
+      actions.className = "modal-actions";
+
+      if (options && options.buttons && options.buttons.length) {
+        actions.style.display = "grid";
+        if (options.buttons.length === 1) actions.className = "modal-actions one";
+        options.buttons.forEach(btn => {
+          const el = document.createElement("button");
+          el.textContent = btn.label;
+          el.className = btn.className || "ghost";
+          el.addEventListener("click", btn.onClick);
+          actions.appendChild(el);
+        });
+      }
+
+      modal.className = "modal-overlay show";
+    }
+
+    function hideStatusModal() {
+      const modal = document.getElementById("statusModal");
+      const oldArea = document.getElementById("backupTextArea");
+      if (oldArea && oldArea.parentNode) oldArea.parentNode.removeChild(oldArea);
+      if (modal) modal.className = "modal-overlay";
+    }
+
+    function closePebbleWithStatus(action) {
+      readUiToSettings();
+      saveSettingsLocal();
+
+      if (action === "sync") {
+        showStatusModal(T[getLang()].sync_progress, T[getLang()].sync_progress_desc);
+      } else if (action === "reset") {
+        showStatusModal(T[getLang()].reset_progress, T[getLang()].reset_progress_desc);
+      }
+
+      setTimeout(() => closePebble(action), 1500);
+    }
+
+    function showInfoModal(title, desc) {
+      showStatusModal(title, desc, {
+        noSpinner: true,
+        buttons: [
+          { label: "OK", className: "primary", onClick: hideStatusModal }
+        ]
+      });
+    }
+
+    function closePebble(action) {
+      readUiToSettings();
+      settings.action = action;
+      saveSettingsLocal();
+
+      const payload = encodeURIComponent(JSON.stringify(settings));
+      if (location.protocol === "file:" || location.hostname === "") {
+        showInfoModal(T[getLang()].saved_notice, "[" + action + "]");
+      } else {
+        document.location = "pebblejs://close#" + payload;
+      }
+    }
+
+    document.querySelectorAll('input[name="bahasa"]').forEach(radio => {
+      radio.addEventListener("change", () => {
+        settings.bahasa = radio.value;
+        setLang(radio.value);
+        saveSettingsLocal();
+      });
+    });
+
+    document.querySelectorAll("[data-setting]").forEach(input => {
+      input.addEventListener("change", () => {
+        readUiToSettings();
+        saveSettingsLocal();
+      });
+    });
+
+    const mulai = document.getElementById("tgl_mulai");
+    const selesai = document.getElementById("tgl_selesai");
+    let selesaiAuto = true;
+
+    selesai.addEventListener("input", () => {
+      selesaiAuto = selesai.value === "" || selesai.value === mulai.value;
+    });
+
+    mulai.addEventListener("input", () => {
+      if (selesaiAuto) selesai.value = mulai.value;
+    });
+
+    document.getElementById("btnTambahEvent").addEventListener("click", addOrUpdatePersonalEvent);
+    document.getElementById("btnSave").addEventListener("click", () => closePebble("save"));
+    document.getElementById("btnSync").addEventListener("click", () => closePebbleWithStatus("sync"));
+    document.getElementById("btnReset").addEventListener("click", () => closePebbleWithStatus("reset"));
+    document.getElementById("btnBackup").addEventListener("click", showBackupModal);
+    const btnSupport = document.getElementById("btnSupport");
+    if (btnSupport) {
+      btnSupport.addEventListener("click", (e) => {
+        e.preventDefault();
+        showInfoModal(T[getLang()].support_title, T[getLang()].support_desc);
+      });
+    }
+
+    settings = loadSettings();
+    applySettingsToUi();
+    saveSettingsLocal();
+  </script>
+</body>
+</html>
