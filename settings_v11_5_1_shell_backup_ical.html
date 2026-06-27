@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kalender Indonesia v11.5.1</title>
+<style>
+  html,body{margin:0;width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f4f1e5;color:#111827;overflow:hidden}
+  .screen{position:fixed;inset:0;display:grid;place-items:center;padding:22px;box-sizing:border-box;background:radial-gradient(circle at top left,rgba(217,40,63,.10),transparent 38%),radial-gradient(circle at bottom right,rgba(116,69,216,.13),transparent 36%),#f4f1e5}
+  .box{width:min(82vw,280px);padding:20px 18px;border-radius:20px;border:1px solid rgba(229,224,210,.90);background:rgba(255,253,248,.96);box-shadow:0 16px 40px rgba(66,55,36,.14);text-align:center;transform:translateZ(0)}
+  .spin{width:28px;height:28px;margin:0 auto 12px;border-radius:50%;border:3px solid #eadfca;border-top-color:#e11d48;animation:s .8s linear infinite}
+  h1{margin:0 0 4px;font-size:16px;line-height:1.2}
+  p{margin:0;font-size:12px;line-height:1.45;color:#667085}
+  .err{display:none;margin-top:12px;font-size:12px;color:#b42318}
+  .link{display:none;margin-top:10px;font-size:12px}
+  a{color:#2563eb;text-decoration:none}
+  @keyframes s{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+  <main class="screen">
+    <section class="box">
+      <div class="spin"></div>
+      <h1>Kalender Indonesia</h1>
+      <p>Memuat pengaturan...</p>
+      <div id="err" class="err">Gagal memuat halaman pengaturan.</div>
+      <div id="link" class="link"><a href="settings_v11_5_1_full_backup_ical.html?v=1">Buka manual</a></div>
+    </section>
+  </main>
+<script>
+(function(){
+  var full="settings_v11_5_1_full_backup_ical.html?v=1";
+  var start=Date.now();
+  var minShow=500;
+
+  try{
+    var warm=new Image();
+    warm.src="header-banner_mobile_560_q58.jpg";
+  }catch(e){}
+
+  function showError(){
+    var e=document.getElementById("err"),l=document.getElementById("link");
+    if(e)e.style.display="block";
+    if(l)l.style.display="block";
+  }
+
+  function writeFull(text){
+    var wait=Math.max(0,minShow-(Date.now()-start));
+    setTimeout(function(){
+      document.open();
+      document.write(text);
+      document.close();
+    },wait);
+  }
+
+  try{
+    var xhr=new XMLHttpRequest();
+    xhr.open("GET",full,true);
+    xhr.onreadystatechange=function(){
+      if(xhr.readyState===4){
+        if((xhr.status>=200&&xhr.status<300)||xhr.status===0){
+          writeFull(xhr.responseText);
+        }else{
+          showError();
+        }
+      }
+    };
+    xhr.onerror=showError;
+    xhr.send(null);
+  }catch(e){
+    showError();
+  }
+})();
+</script>
+</body>
+</html>
