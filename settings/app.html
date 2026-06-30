@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Kalender Indonesia — Settings v11.5.3</title>
+  <title>Kalender Indonesia — Settings v11.5.5</title>
   <style>
     :root {
       --bg: #f4f1e5;
@@ -890,7 +890,7 @@
     <div class="modal-box">
       <div id="modalSpinner" class="modal-spinner"></div>
       <div id="modalTitle" class="modal-title">Sinkron data...</div>
-      <p id="modalDesc" class="modal-desc">Mohon tunggu sebentar.</p>
+      <p id="modalDesc" class="modal-desc">Mohon tunggu sebentar</p>
       <div id="modalActions" class="modal-actions" style="display:none"></div>
     </div>
   </div>
@@ -903,7 +903,7 @@
         </div>
         <div class="top-title">
           <h1 data-i18n="settings_title">Pengaturan</h1>
-          <p data-i18n="settings_sub">Pratinjau halaman pengaturan. Belum terhubung ke Pebble.</p>
+          <p data-i18n="settings_sub">Pratinjau halaman pengaturan, belum terhubung ke Pebble</p>
         </div>
       </div>
     </header>
@@ -931,7 +931,7 @@
         <div class="icon">
           <svg viewBox="0 0 24 24"><path d="M4 5h16l-6 7v5l-4 2v-7z"/></svg>
         </div>
-        <div><h2 data-i18n="filter_event">Filter Event</h2><p data-i18n="filter_hint">Pilih kategori yang tampil di jam</p></div>
+        <div><h2 data-i18n="filter_event">Filter Peristiwa</h2><p data-i18n="filter_hint">Pilih kategori yang tampil di jam</p></div>
       </div>
 
       <div class="filter-box">
@@ -977,7 +977,7 @@
         <div class="icon">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21c.8-5 3.4-7 7-7s6.2 2 7 7"/></svg>
         </div>
-        <div><h2 data-i18n="personal_event">Event Pribadi</h2><p data-i18n="personal_hint">Tersimpan lokal untuk pengguna ini</p></div>
+        <div><h2 data-i18n="personal_event">Peristiwa Pribadi</h2><p data-i18n="personal_hint">Tersimpan lokal untuk pengguna ini</p></div>
       </div>
 
       <div id="eventList" class="event-list"></div>
@@ -1017,7 +1017,7 @@
           </div>
         </div>
 
-        <button id="btnTambahEvent" class="primary" style="width: 100%;" data-i18n="add_personal">Tambah Event Pribadi</button>
+        <button id="btnTambahEvent" class="primary" style="width: 100%;" data-i18n="add_personal">Tambah Peristiwa Pribadi</button>
       </div>
 
     </section>
@@ -1033,19 +1033,19 @@
       <div class="action-grid">
         <button id="btnSave" class="action-btn save">
           <span class="aicon"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5l5-5"/><path d="M5 21h14"/></svg></span>
-          <span><strong data-i18n="save">Simpan</strong><span data-i18n="save_desc">Menyimpan filter dan event pribadi.</span></span>
+          <span><strong data-i18n="save">Simpan</strong><span data-i18n="save_desc">Menyimpan konfigurasi bahasa, filter, dan peristiwa pribadi</span></span>
         </button>
         <button id="btnSync" class="action-btn sync">
           <span class="aicon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-9 9a9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/><path d="M3 12a9 9 0 0 1 9-9a9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 8h5V3"/></svg></span>
-          <span><strong data-i18n="sync">Sync</strong><span data-i18n="sync_desc">Mengunduh ulang kalender publik terbaru.</span></span>
+          <span><strong data-i18n="sync">Sinkronkan</strong><span data-i18n="sync_desc">Mengunduh ulang kalender publik terbaru</span></span>
         </button>
         <button id="btnReset" class="action-btn danger">
           <span class="aicon"><svg viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v5"/><path d="M14 11v5"/></svg></span>
-          <span><strong data-i18n="reset">Reset</strong><span data-i18n="reset_desc">Hapus cache kalender lokal, lalu sync ulang.</span></span>
+          <span><strong data-i18n="reset">Reset</strong><span data-i18n="reset_desc">Hapus cache kalender lokal lalu sinkronkan ulang</span></span>
         </button>
         <button id="btnBackup" class="action-btn backup">
           <span class="aicon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15l3 3l3-3"/></svg></span>
-          <span><strong data-i18n="backup">Backup</strong><span data-i18n="backup_desc">Export/import event pribadi pengguna.</span></span>
+          <span><strong data-i18n="backup">Backup</strong><span data-i18n="backup_desc">Ekspor/impor peristiwa pribadi pengguna</span></span>
         </button>
       </div>
     </section>
@@ -1062,7 +1062,7 @@
       </div>
     </section>
 
-    <footer data-i18n="footer">Pengaturan akan dikirim ke Kalender Indonesia.</footer>
+    <footer data-i18n="footer">Pengaturan akan dikirim ke Kalender Indonesia</footer>
   </main>
 
   <script>
@@ -1104,10 +1104,10 @@
     const T = {
       id: {
         settings_title: "Pengaturan",
-        settings_sub: "Pengaturan filter, sinkronisasi, dan event pribadi.",
+        settings_sub: "Pengaturan bahasa, filter, sinkronisasi, dan peristiwa pribadi",
         language: "Bahasa",
         language_hint: "Pilih bahasa tampilan",
-        filter_event: "Filter Event",
+        filter_event: "Filter Peristiwa",
         filter_hint: "Pilih kategori yang tampil di jam",
         libn: "Libur Nasional",
         libn_hint: "Hari libur nasional",
@@ -1118,89 +1118,89 @@
         akdm: "Akademik",
         akdm_hint: "Kalender sekolah/kampus",
         umum: "Umum",
-        umum_hint: "Event umum non-libur",
+        umum_hint: "Peristiwa umum nonlibur",
         intl: "Internasional",
         intl_hint: "Peristiwa internasional",
         prib: "Pribadi",
         prib_hint: "Catatan lokal pengguna",
-        personal_event: "Event Pribadi",
+        personal_event: "Peristiwa Pribadi",
         personal_hint: "Tersimpan lokal untuk pengguna ini",
-        event_title_ph: "Judul event, contoh: Ulang Tahun Ibu",
+        event_title_ph: "Judul peristiwa, contoh: Ulang Tahun Ibu",
         month_title: "Bulan",
         date_ph: "Tgl",
         until_ph: "s.d.",
         yearly: "Berulang Tahunan",
         yearly_hint: "Muncul otomatis tiap tahun",
-        add_personal: "Tambah Event Pribadi",
+        add_personal: "Tambah Peristiwa Pribadi",
         sample_birthday: "Ulang Tahun Ibu",
         sample_note: "17–18 Catatan keluarga panjang",
         yearly_short: "Setiap tahun",
         sync_backup: "Sinkronisasi & Backup",
         sync_hint: "Kelola data lokal dan kalender publik",
         save: "Simpan",
-        save_desc: "Menyimpan filter dan event pribadi.",
-        sync: "Sync",
-        sync_desc: "Mengunduh ulang kalender publik terbaru.",
+        save_desc: "Menyimpan konfigurasi bahasa, filter, dan peristiwa pribadi",
+        sync: "Sinkronkan",
+        sync_desc: "Mengunduh ulang kalender publik terbaru",
         reset: "Reset",
-        reset_desc: "Hapus cache kalender lokal, lalu sync ulang.",
+        reset_desc: "Hapus cache kalender lokal lalu sinkronkan ulang",
         backup: "Backup",
-        backup_desc: "Export/import event pribadi pengguna.",
-        backup_panel_desc: "Export atau import backup JSON dan ICAL/ICS.",
-        backup_export: "Export",
-        backup_import: "Import",
+        backup_desc: "Ekspor/impor peristiwa pribadi pengguna",
+        backup_panel_desc: "Ekspor atau impor backup JSON dan ICS/iCalendar",
+        backup_export: "Ekspor",
+        backup_import: "Impor",
         backup_close: "Tutup",
-        backup_copy_json: "Copy JSON",
-        backup_copy_ical: "Copy ICAL/ICS",
-        backup_apply: "Import",
+        backup_copy_json: "Salin JSON",
+        backup_copy_ical: "Salin ICS",
+        backup_apply: "Impor",
         backup_save: "Simpan ke Jam",
-        backup_export_title: "Export event pribadi",
-        backup_export_desc: "Salin backup event pribadi dalam format JSON atau ICAL/ICS.",
-        backup_import_title: "Import event pribadi",
-        backup_import_desc: "Tempel backup JSON atau isi ICAL/ICS ke kotak berikut.",
-        backup_copy_ok_title: "Data tersalin",
-        backup_copy_ok_desc: "Data backup sudah disalin ke clipboard.",
-        backup_copy_fail_title: "Copy manual",
-        backup_copy_fail_desc: "Clipboard diblokir webview. Pilih semua teks, lalu salin manual.",
-        backup_import_ok_title: "Import berhasil",
-        backup_import_ok_desc: "Event pribadi sudah dipulihkan. Tekan Simpan ke Jam untuk mengirim ke Pebble.",
-        backup_import_fail_title: "Import gagal",
-        backup_import_fail_desc: "Format JSON atau ICAL/ICS tidak valid.",
-        backup_import_empty_title: "Data import kosong",
-        backup_import_empty_desc: "Tempel atau isi backup JSON/ICAL/ICS sebelum menekan Import.",
-        backup_no_events_title: "Tidak ada peristiwa yang dapat diimpor",
-        backup_no_events_desc: "Data tidak berisi peristiwa sepanjang hari yang valid.",
-        backup_empty_title: "Backup kosong",
-        backup_empty_desc: "Belum ada event pribadi untuk diexport.",
-        backup_duplicate_title: "Data peristiwa sama dengan sebelumnya",
-        backup_duplicate_desc: "Hasil import sama dengan data peristiwa saat halaman dibuka.",
+        backup_export_title: "Ekspor Peristiwa Pribadi",
+        backup_export_desc: "Salin backup peristiwa pribadi dalam format JSON atau ICS/iCalendar",
+        backup_import_title: "Impor Peristiwa Pribadi",
+        backup_import_desc: "Tempel backup JSON atau isi ICS/iCalendar ke kotak berikut:",
+        backup_copy_ok_title: "Data Tersalin",
+        backup_copy_ok_desc: "Data backup sudah disalin ke clipboard",
+        backup_copy_fail_title: "Salin Manual",
+        backup_copy_fail_desc: "Clipboard diblokir webview, pilih semua teks lalu salin manual",
+        backup_import_ok_title: "Impor Berhasil",
+        backup_import_ok_desc: "Peristiwa pribadi sudah dipulihkan, tekan Simpan ke Jam untuk mengirim ke Pebble",
+        backup_import_fail_title: "Impor Gagal",
+        backup_import_fail_desc: "Format JSON atau ICS/iCalendar tidak valid",
+        backup_import_empty_title: "Data Impor Kosong",
+        backup_import_empty_desc: "Tempel backup JSON atau isi ICS/iCalendar sebelum menekan Impor",
+        backup_no_events_title: "Tidak Ada Peristiwa yang Dapat Diimpor",
+        backup_no_events_desc: "Data tidak berisi peristiwa sepanjang hari yang valid",
+        backup_empty_title: "Backup Kosong",
+        backup_empty_desc: "Belum ada peristiwa pribadi untuk diekspor",
+        backup_duplicate_title: "Data Peristiwa Sama dengan Sebelumnya",
+        backup_duplicate_desc: "Hasil impor sama dengan data peristiwa saat halaman dibuka",
         support_dev: "Dukung Developer",
         support_hint: "Dukungan sukarela membantu perawatan data kalender, server statis, pengembangan fitur, dan mungkin hanya untuk segelas kopi dan roti! :)",
         support_button: "Support Developer",
-        empty_personal: "Belum ada event pribadi.",
+        empty_personal: "Belum ada peristiwa pribadi",
         one_time: "Sekali",
-        save_personal: "Simpan Event Pribadi",
-        fill_event_title: "Event belum lengkap",
-        fill_event_alert: "Isi judul dan tanggal dulu.",
-        saved_notice: "Pengaturan disimpan.",
-        backup_notice: "Backup JSON akan diaktifkan pada tahap berikutnya.",
-        sync_progress: "Sinkron data...",
-        sync_progress_desc: "Perintah sync akan dikirim ke Kalender Indonesia.",
-        reset_progress: "Reset cache...",
-        reset_progress_desc: "Cache lokal akan dihapus, lalu data akan disinkronkan ulang.",
-        backup_title: "Backup Event Pribadi",
-        backup_desc: "Export atau import backup JSON dan ICAL/ICS.",
+        save_personal: "Simpan Peristiwa Pribadi",
+        fill_event_title: "Peristiwa Belum Lengkap",
+        fill_event_alert: "Isi judul dan tanggal terlebih dahulu",
+        saved_notice: "Pengaturan Disimpan",
+        backup_notice: "Backup JSON akan diaktifkan pada tahap berikutnya",
+        sync_progress: "Menyinkronkan data...",
+        sync_progress_desc: "Perintah sinkronisasi akan dikirim ke Kalender Indonesia",
+        reset_progress: "Mereset cache...",
+        reset_progress_desc: "Cache lokal akan dihapus lalu data akan disinkronkan ulang",
+        backup_title: "Backup Peristiwa Pribadi",
+        backup_desc: "Ekspor atau impor backup JSON dan ICS/iCalendar",
         support_title: "Support Developer",
-        support_desc: "Pilih jalur dukungan. Tautan final akan ditambahkan kemudian.",
+        support_desc: "Pilih platform dukungan yang ingin digunakan",
         support_international: "Ko-fi (Internasional)",
         support_local: "Saweria (Indonesia)",
         support_close: "Tutup",
-        support_pending_title: "Tautan belum tersedia",
-        support_pending_desc: "Halaman dukungan akan ditambahkan pada tahap berikutnya.",
-        footer: "Pengaturan akan dikirim ke Kalender Indonesia."
+        support_pending_title: "Tautan Belum Tersedia",
+        support_pending_desc: "Halaman dukungan akan ditambahkan pada tahap berikutnya",
+        footer: "Pengaturan akan dikirim ke Kalender Indonesia"
       },
       en: {
         settings_title: "Settings",
-        settings_sub: "Settings for filters, sync, and personal events.",
+        settings_sub: "Language, filter, sync, and personal event settings",
         language: "Language",
         language_hint: "Choose display language",
         filter_event: "Event Filter",
@@ -1234,65 +1234,65 @@
         sync_backup: "Sync & Backup",
         sync_hint: "Manage local data and public calendar",
         save: "Save",
-        save_desc: "Save filters and personal events.",
+        save_desc: "Save language, filter, and personal event settings",
         sync: "Sync",
-        sync_desc: "Download the latest public calendar data.",
+        sync_desc: "Download the latest public calendar data",
         reset: "Reset",
-        reset_desc: "Clear local calendar cache, then sync again.",
+        reset_desc: "Clear local calendar cache, then sync again",
         backup: "Backup",
-        backup_desc: "Export/import personal events.",
-        backup_panel_desc: "Export or import JSON and ICAL/ICS backups.",
+        backup_desc: "Export/import personal events",
+        backup_panel_desc: "Export or import JSON and ICS/iCalendar backups",
         backup_export: "Export",
         backup_import: "Import",
         backup_close: "Close",
         backup_copy_json: "Copy JSON",
-        backup_copy_ical: "Copy ICAL/ICS",
+        backup_copy_ical: "Copy ICS",
         backup_apply: "Import",
         backup_save: "Save to Watch",
-        backup_export_title: "Export personal events",
-        backup_export_desc: "Copy personal event backups in JSON or ICAL/ICS format.",
-        backup_import_title: "Import personal events",
-        backup_import_desc: "Paste a JSON backup or ICAL/ICS content into the box below.",
+        backup_export_title: "Export Personal Events",
+        backup_export_desc: "Copy personal event backups in JSON or ICS/iCalendar format",
+        backup_import_title: "Import Personal Events",
+        backup_import_desc: "Paste a JSON backup or ICS/iCalendar content into the box below:",
         backup_copy_ok_title: "Copied",
-        backup_copy_ok_desc: "Backup data has been copied to clipboard.",
-        backup_copy_fail_title: "Copy manually",
-        backup_copy_fail_desc: "Clipboard is blocked by the webview. Select all text, then copy manually.",
-        backup_import_ok_title: "Import complete",
-        backup_import_ok_desc: "Personal events have been restored. Tap Save to Watch to send them to Pebble.",
-        backup_import_fail_title: "Import failed",
-        backup_import_fail_desc: "Invalid JSON or ICAL/ICS format.",
-        backup_import_empty_title: "Import data is empty",
-        backup_import_empty_desc: "Paste or enter a JSON/ICAL/ICS backup before pressing Import.",
-        backup_no_events_title: "No events can be imported",
-        backup_no_events_desc: "The data contains no valid all-day events.",
-        backup_empty_title: "Empty backup",
-        backup_empty_desc: "There are no personal events to export yet.",
-        backup_duplicate_title: "Event data matches the previous state",
-        backup_duplicate_desc: "The import result matches the event data from when the page was opened.",
+        backup_copy_ok_desc: "Backup data has been copied to clipboard",
+        backup_copy_fail_title: "Copy Manually",
+        backup_copy_fail_desc: "Clipboard is blocked by the webview, select all text then copy manually",
+        backup_import_ok_title: "Import Complete",
+        backup_import_ok_desc: "Personal events have been restored, tap Save to Watch to send them to Pebble",
+        backup_import_fail_title: "Import Failed",
+        backup_import_fail_desc: "Invalid JSON or ICS/iCalendar format",
+        backup_import_empty_title: "Import Data Is Empty",
+        backup_import_empty_desc: "Paste a JSON backup or ICS/iCalendar content before pressing Import",
+        backup_no_events_title: "No Events Can Be Imported",
+        backup_no_events_desc: "The data contains no valid all-day events",
+        backup_empty_title: "Empty Backup",
+        backup_empty_desc: "There are no personal events to export yet",
+        backup_duplicate_title: "Event Data Matches the Previous State",
+        backup_duplicate_desc: "The import result matches the event data from when the page was opened",
         support_dev: "Support Developer",
         support_hint: "Voluntary support helps maintain calendar data, static hosting, feature development, and maybe just a cup of coffee and bread! :)",
         support_button: "Support Developer",
-        empty_personal: "No personal events yet.",
+        empty_personal: "No personal events yet",
         one_time: "One time",
         save_personal: "Save Personal Event",
-        fill_event_title: "Incomplete event",
-        fill_event_alert: "Fill title and date first.",
-        saved_notice: "Settings saved.",
-        backup_notice: "JSON backup will be enabled in the next stage.",
+        fill_event_title: "Incomplete Event",
+        fill_event_alert: "Fill in the title and date first",
+        saved_notice: "Settings Saved",
+        backup_notice: "JSON backup will be enabled in the next stage",
         sync_progress: "Syncing data...",
-        sync_progress_desc: "The sync command will be sent to Kalender Indonesia.",
+        sync_progress_desc: "The sync command will be sent to Kalender Indonesia",
         reset_progress: "Resetting cache...",
-        reset_progress_desc: "Local cache will be cleared, then data will be synced again.",
+        reset_progress_desc: "Local cache will be cleared, then data will be synced again",
         backup_title: "Personal Event Backup",
-        backup_desc: "Export or import JSON and ICAL/ICS backups.",
+        backup_desc: "Export or import JSON and ICS/iCalendar backups",
         support_title: "Support Developer",
-        support_desc: "Choose a support option. Final links will be added later.",
+        support_desc: "Choose the support platform you want to use",
         support_international: "Ko-fi (International)",
         support_local: "Saweria (Indonesia)",
         support_close: "Close",
-        support_pending_title: "Link not available yet",
-        support_pending_desc: "The support page will be added in a later stage.",
-        footer: "Settings will be sent to Kalender Indonesia."
+        support_pending_title: "Link Not Available Yet",
+        support_pending_desc: "The support page will be added in a later stage",
+        footer: "Settings will be sent to Kalender Indonesia"
       }
     };
 
@@ -1300,8 +1300,8 @@
 
     // v11.5.2: tautan dukungan disiapkan sebagai konstanta agar aktivasi nanti
     // cukup mengubah satu baris tanpa mengubah struktur modal.
-    const URL_SUPPORT_KOFI = "";
-    const URL_SUPPORT_SAWERIA = "";
+    const URL_SUPPORT_KOFI = "https://ko-fi.com/ramabary";
+    const URL_SUPPORT_SAWERIA = "https://saweria.co/ramabary";
     // v11.5.3: nama bulan settings ikut bahasa UI, tetapi data event tidak diterjemahkan.
     const bulanPendek = {
       id: ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"],
@@ -1310,12 +1310,12 @@
     let editingId = null;
 
     // v11.5.2: menyimpan kondisi awal dari PebbleKit JS saat webview dibuka.
-    // Baseline ini mencegah webview ditutup jika hasil import hanya mengembalikan
+    // Baseline ini mencegah webview ditutup jika hasil impor hanya mengembalikan
     // daftar event ke kondisi awal sebelum edit/hapus sementara di settings.
     let daftarEventPribadiAwal = [];
     let sidikJariAwalEventPribadi = "[]";
 
-    // v11.5.1: menandai bahwa perubahan terakhir berasal dari modal Import.
+    // v11.5.4: menandai bahwa perubahan terakhir berasal dari modal Impor.
     // Penanda ini menentukan pesan yang tampil pada jendela 1 saat data dikirim.
     let perubahanImportMenunggu = false;
     let settings = defaultSettings();
@@ -1587,7 +1587,7 @@
 
 
     // =========================================================================
-    // v11.5.3 - BACKUP JSON + ICAL/ICS MELALUI COPY-PASTE
+    // v11.5.4 - BACKUP JSON + ICS/iCalendar MELALUI COPY-PASTE
     // =========================================================================
     // Satu textarea dipakai untuk dua format. Jalur file picker tidak digunakan
     // karena dukungan upload/download tidak konsisten pada webview Pebble/Rebble.
@@ -1722,7 +1722,7 @@
       return terapkanDaftarImport(imported);
     }
 
-    // Baris ICAL dapat dilipat dengan spasi/tab pada awal baris berikutnya.
+    // Baris ICS/iCalendar dapat dilipat dengan spasi/tab pada awal baris berikutnya.
     function bukaLipatBarisIcal(teks) {
       const baris = String(teks || "")
         .replace(/\r\n/g, "\n")
@@ -1894,7 +1894,7 @@
 
       const hasil = parseIcalKeEventPribadi(teks);
 
-      // v11.5.3: file ICAL/ICS dapat valid tetapi seluruh VEVENT memiliki jam,
+      // v11.5.4: file ICS/iCalendar dapat valid tetapi seluruh VEVENT memiliki jam,
       // tanggal salah, atau range yang belum didukung.
       if (!hasil.events.length) return "no_events";
 
@@ -1908,7 +1908,7 @@
       const baris = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//Kalender Indonesia Pebble//Personal Events v11.5.3//ID",
+        "PRODID:-//Kalender Indonesia Pebble//Personal Events v11.5.4//ID",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH"
       ];
@@ -1919,8 +1919,8 @@
 
         if (selesai.getTime() < mulai.getTime()) selesai.setTime(mulai.getTime());
 
-        // DTEND ICAL sepanjang hari bersifat eksklusif, sehingga tanggal akhir
-        // internal ditambah satu hari saat diexport.
+        // DTEND ICS/iCalendar sepanjang hari bersifat eksklusif, sehingga tanggal akhir
+        // internal ditambah satu hari saat diekspor.
         const selesaiEksklusif = tambahHariIcal(selesai, 1);
         const pid = String(ev.pid || ("p" + index));
 
@@ -1936,8 +1936,8 @@
           baris.push("RRULE:FREQ=YEARLY");
         }
 
-        // DESCRIPTION belum diexport karena watch belum mempunyai struktur
-        // penyimpanan keterangan panjang untuk event pribadi.
+        // DESCRIPTION belum diekspor karena watch belum mempunyai struktur
+        // penyimpanan keterangan panjang untuk peristiwa pribadi.
         baris.push("END:VEVENT");
       });
 
@@ -2069,7 +2069,7 @@
         noSpinner: true,
         extraHtml: '<textarea id="backupTextArea" class="backup-textarea" spellcheck="false"></textarea>',
         buttons: [
-          // v11.5.1: tombol Import berwarna krim; merah hanya untuk Tutup.
+          // v11.5.4: tombol Impor berwarna krim; merah hanya untuk Tutup.
           { label: T[getLang()].backup_apply, className: "ghost", onClick: function () {
               const area = document.getElementById("backupTextArea");
               const raw = String(area ? area.value : "").trim();
@@ -2103,7 +2103,7 @@
       showStatusModal(T[getLang()].backup_title, T[getLang()].backup_panel_desc, {
         noSpinner: true,
         buttons: [
-          // v11.5.1: Export/Import krim; Tutup merah sebagai aksi keluar modal.
+          // v11.5.4: Ekspor/Impor krim; Tutup merah sebagai aksi keluar modal.
           { label: T[getLang()].backup_export, className: "ghost", onClick: function () { hideStatusModal(); showBackupExportModal(); } },
           { label: T[getLang()].backup_import, className: "ghost", onClick: function () { hideStatusModal(); showBackupImportModal(); } },
           { label: T[getLang()].backup_close, className: "primary", onClick: hideStatusModal }
@@ -2218,8 +2218,8 @@
 
     document.getElementById("btnTambahEvent").addEventListener("click", addOrUpdatePersonalEvent);
 
-    // v11.5.1: Simpan utama tetap mengirim status Import jika data terakhir
-    // berasal dari modal Import dan belum dikirim ke watch.
+    // v11.5.4: Simpan utama tetap mengirim status impor jika data terakhir
+    // berasal dari modal Impor dan belum dikirim ke watch.
     document.getElementById("btnSave").addEventListener("click", () => {
       closePebble(perubahanImportMenunggu ? "import" : "save");
     });
@@ -2234,6 +2234,10 @@
         return;
       }
 
+      // v11.5.5: simpan perubahan halaman secara lokal sebelum berpindah
+      // ke platform dukungan agar isian yang belum dikirim ke watch tidak hilang.
+      readUiToSettings();
+      saveSettingsLocal();
       window.location.href = url;
     }
 
