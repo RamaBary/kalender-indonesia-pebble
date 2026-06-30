@@ -106,7 +106,6 @@ Aturan tahun dan tanggal:
 - bulan selesai kosong atau `0` berarti sama dengan bulan mulai
 - hari selesai kosong atau `0` berarti sama dengan hari mulai
 - jika bulan dan hari selesai tidak diisi, peristiwa dianggap berlangsung satu hari
-- field `ut` tidak digunakan
 
 *Year and date rules:*
 
@@ -116,7 +115,6 @@ Aturan tahun dan tanggal:
 - *an empty or `0` end month uses the start month*
 - *an empty or `0` end day uses the start day*
 - *when the end month and end day are omitted, the event is treated as a one-day event*
-- *the `ut` field is not used*
 
 ### Arti field
 
@@ -237,6 +235,10 @@ Baris `1` digunakan sebagai judul kolom dan pengisian data dimulai dari baris `2
 
 *One Excel sheet is used for each event category in type order. Row `1` contains the column headings and data entry begins on row `2`.*
 
+Subtipe hanya digunakan di Excel untuk mengelompokkan dan memfilter data, misalnya `pbb`, `ksa`, `ugm`, atau `itb`. Subtipe tidak dimasukkan ke JSON, tidak dikirim ke watch, dan tidak memengaruhi skema data.
+
+*The subtype is used only in Excel to group and filter records, such as `pbb`, `ksa`, `ugm`, or `itb`. It is not included in JSON, sent to the watch, or used by the data schema.*
+
 ### Susunan kolom
 
 *Column Layout*
@@ -249,53 +251,55 @@ Baris `1` digunakan sebagai judul kolom dan pengisian data dimulai dari baris `2
 | D | `hm` | Hari Mulai | Angka 1–31; wajib diisi dan tidak boleh `0` |
 | E | `hs` | Hari Selesai | Kosong atau `0` untuk mengikuti hari mulai |
 | F | `tp` | Tipe | Angka 1–6 |
-| G | — | Nomor Urut ID | Angka 1–3999 dan tidak boleh dipakai ulang |
-| H | `id` | ID | Dibentuk otomatis dari tipe dan nomor urut |
-| I | `jd` | Judul Pendek | Maksimal 39 karakter |
-| J | `ket` | Keterangan | Opsional dan boleh dikosongkan |
-| K | — | JSON Peristiwa | Dibentuk otomatis |
-| L | — | JSON Keterangan | Dibentuk otomatis jika kolom J terisi |
+| G | — | Subtipe | Opsional; hanya untuk pengelompokan dan filter Excel |
+| H | — | Nomor Urut ID | Angka 1–3999 dan tidak boleh dipakai ulang |
+| I | `id` | ID | Dibentuk otomatis dari tipe dan nomor urut |
+| J | `jd` | Judul Pendek | Maksimal 39 karakter |
+| K | `ket` | Keterangan | Opsional dan boleh dikosongkan |
+| L | — | JSON Peristiwa | Dibentuk otomatis |
+| M | — | JSON Keterangan | Dibentuk otomatis jika kolom K terisi |
 
-*Columns A–J contain the maintained source data. Columns H, K, and L use formulas to generate the stable ID, event JSON, and description JSON.*
+*Columns A–K contain the maintained source data. Columns I, L, and M use formulas to generate the stable ID, event JSON, and description JSON. Column G is an Excel-only grouping field.*
 
-### Formula ID pada H2
+### Formula ID pada I2
 
-*ID Formula in H2*
+*ID Formula in I2*
 
 Versi pemisah titik koma:
 
 ```excel
-=IF(OR(F2="";G2="");"";F2*4000+G2)
+=IF(OR(F2="";H2="");"";F2*4000+H2)
 ```
 
 Versi pemisah koma:
 
 ```excel
-=IF(OR(F2="",G2=""),"",F2*4000+G2)
+=IF(OR(F2="",H2=""),"",F2*4000+H2)
 ```
 
-Salin formula H2 ke bawah sampai baris data terakhir.
+Salin formula I2 ke bawah sampai baris data terakhir.
 
-*Copy the H2 formula down to the last data row.*
+*Copy the I2 formula down to the last data row.*
 
-### Formula JSON peristiwa pada K2
+### Formula JSON peristiwa pada L2
 
-*Event JSON Formula in K2*
+*Event JSON Formula in L2*
 
 Versi pemisah titik koma:
 
 ```excel
-=IF(OR(B2="";B2=0;D2="";D2=0;F2="";H2="";I2="");"ERROR: Data wajib belum lengkap";IF(OR(B2<1;B2>12;D2<1;D2>31;AND(C2<>"";C2<>0;OR(C2<1;C2>12));AND(E2<>"";E2<>0;OR(E2<1;E2>31)));"ERROR: Bulan atau hari tidak valid";IF(LEN(I2)>39;"ERROR: Judul lebih dari 39 karakter";"{""th"":"&IF(A2="";0;A2)&",""bm"":"&B2&",""bs"":"&IF(OR(C2="";C2=0);B2;C2)&",""hm"":"&D2&",""hs"":"&IF(OR(E2="";E2=0);D2;E2)&",""tp"":"&F2&",""id"":"&H2&",""jd"":"""&SUBSTITUTE(SUBSTITUTE(I2;CHAR(92);CHAR(92)&CHAR(92));CHAR(34);CHAR(92)&CHAR(34))&"""}"&IF(COUNTIF(H3:H$1000;"<>")>0;",";""))))
+=IF(OR(B2="";B2=0;D2="";D2=0;F2="";I2="";J2="");"ERROR: Data wajib belum lengkap";IF(OR(B2<1;B2>12;D2<1;D2>31;AND(C2<>"";C2<>0;OR(C2<1;C2>12));AND(E2<>"";E2<>0;OR(E2<1;E2>31)));"ERROR: Bulan atau hari tidak valid";IF(LEN(J2)>39;"ERROR: Judul lebih dari 39 karakter";"{""th"":"&IF(A2="";0;A2)&",""bm"":"&B2&",""bs"":"&IF(OR(C2="";C2=0);B2;C2)&",""hm"":"&D2&",""hs"":"&IF(OR(E2="";E2=0);D2;E2)&",""tp"":"&F2&",""id"":"&I2&",""jd"":"""&SUBSTITUTE(SUBSTITUTE(J2;CHAR(92);CHAR(92)&CHAR(92));CHAR(34);CHAR(92)&CHAR(34))&"""}"&IF(COUNTIF(I3:I$1000;"<>")>0;",";""))))
 ```
 
 Versi pemisah koma:
 
 ```excel
-=IF(OR(B2="",B2=0,D2="",D2=0,F2="",H2="",I2=""),"ERROR: Data wajib belum lengkap",IF(OR(B2<1,B2>12,D2<1,D2>31,AND(C2<>"",C2<>0,OR(C2<1,C2>12)),AND(E2<>"",E2<>0,OR(E2<1,E2>31))),"ERROR: Bulan atau hari tidak valid",IF(LEN(I2)>39,"ERROR: Judul lebih dari 39 karakter","{""th"":"&IF(A2="",0,A2)&",""bm"":"&B2&",""bs"":"&IF(OR(C2="",C2=0),B2,C2)&",""hm"":"&D2&",""hs"":"&IF(OR(E2="",E2=0),D2,E2)&",""tp"":"&F2&",""id"":"&H2&",""jd"":"""&SUBSTITUTE(SUBSTITUTE(I2,CHAR(92),CHAR(92)&CHAR(92)),CHAR(34),CHAR(92)&CHAR(34))&"""}"&IF(COUNTIF(H3:H$1000,"<>")>0,",",""))))
+=IF(OR(B2="",B2=0,D2="",D2=0,F2="",I2="",J2=""),"ERROR: Data wajib belum lengkap",IF(OR(B2<1,B2>12,D2<1,D2>31,AND(C2<>"",C2<>0,OR(C2<1,C2>12)),AND(E2<>"",E2<>0,OR(E2<1,E2>31))),"ERROR: Bulan atau hari tidak valid",IF(LEN(J2)>39,"ERROR: Judul lebih dari 39 karakter","{""th"":"&IF(A2="",0,A2)&",""bm"":"&B2&",""bs"":"&IF(OR(C2="",C2=0),B2,C2)&",""hm"":"&D2&",""hs"":"&IF(OR(E2="",E2=0),D2,E2)&",""tp"":"&F2&",""id"":"&I2&",""jd"":"""&SUBSTITUTE(SUBSTITUTE(J2,CHAR(92),CHAR(92)&CHAR(92)),CHAR(34),CHAR(92)&CHAR(34))&"""}"&IF(COUNTIF(I3:I$1000,"<>")>0,",",""))))
 ```
 
 Formula tersebut:
 
+- tidak memasukkan kolom Subtipe ke JSON
 - mengubah tahun kosong menjadi `th:0`
 - menolak bulan mulai atau hari mulai yang kosong atau `0`
 - menggunakan bulan mulai jika bulan selesai kosong atau `0`
@@ -305,22 +309,22 @@ Formula tersebut:
 - mengamankan tanda `\` dan tanda kutip dalam judul
 - menambahkan koma jika masih ada data di bawah baris aktif
 
-*The formula converts an empty year to `th:0`, rejects an empty or zero start month or day, defaults missing end values to the start values, checks basic month and day ranges, validates the title length, escapes special characters, and adds a comma when more records follow.*
+*The formula does not include the Subtype column in JSON. It converts an empty year to `th:0`, rejects an empty or zero start month or day, defaults missing end values to the start values, checks basic month and day ranges, validates the title length, escapes special characters, and adds a comma when more records follow.*
 
-### Formula JSON keterangan pada L2
+### Formula JSON keterangan pada M2
 
-*Description JSON Formula in L2*
+*Description JSON Formula in M2*
 
 Versi pemisah titik koma:
 
 ```excel
-=IF(OR(H2="";J2="");"";""""&H2&""":{""ket"":"""&SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(J2;CHAR(92);CHAR(92)&CHAR(92));CHAR(34);CHAR(92)&CHAR(34));CHAR(13);"");CHAR(10);CHAR(92)&"n")&"""}"&IF(COUNTIF(J3:J$1000;"<>")>0;",";""))
+=IF(OR(I2="";K2="");"";""""&I2&""":{""ket"":"""&SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(K2;CHAR(92);CHAR(92)&CHAR(92));CHAR(34);CHAR(92)&CHAR(34));CHAR(13);"");CHAR(10);CHAR(92)&"n")&"""}"&IF(COUNTIF(K3:K$1000;"<>")>0;",";""))
 ```
 
 Versi pemisah koma:
 
 ```excel
-=IF(OR(H2="",J2=""),"",""""&H2&""":{""ket"":"""&SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(J2,CHAR(92),CHAR(92)&CHAR(92)),CHAR(34),CHAR(92)&CHAR(34)),CHAR(13),""),CHAR(10),CHAR(92)&"n")&"""}"&IF(COUNTIF(J3:J$1000,"<>")>0,",",""))
+=IF(OR(I2="",K2=""),"",""""&I2&""":{""ket"":"""&SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(K2,CHAR(92),CHAR(92)&CHAR(92)),CHAR(34),CHAR(92)&CHAR(34)),CHAR(13),""),CHAR(10),CHAR(92)&"n")&"""}"&IF(COUNTIF(K3:K$1000,"<>")>0,",",""))
 ```
 
 Formula tersebut:
@@ -344,16 +348,17 @@ Formula memeriksa data sampai baris `1000`. Sesuaikan batas `$1000` jika jumlah 
 
 1. Buka sheet kategori yang akan diperbarui
 2. Isi data mulai dari baris `2`
-3. Salin formula H2, K2, dan L2 ke seluruh baris data
-4. Pastikan kolom K menampilkan JSON dan bukan pesan error
-5. Salin hasil kolom K
-6. Buka file JSON kategori yang sesuai pada GitHub
-7. Pilih **Edit this file**
-8. Tempel hasil kolom K di antara tanda `[` dan `]` pada bagian `peristiwa`
-9. Periksa agar objek terakhir tidak memiliki koma
-10. Pilih **Commit changes** atau ajukan pull request jika tidak memiliki akses tulis
+3. Salin formula I2, L2, dan M2 ke seluruh baris data
+4. Gunakan kolom G untuk memfilter atau mengelompokkan Subtipe jika diperlukan
+5. Pastikan kolom L menampilkan JSON dan bukan pesan error
+6. Salin hasil kolom L
+7. Buka file JSON kategori yang sesuai pada GitHub
+8. Pilih **Edit this file**
+9. Tempel hasil kolom L di antara tanda `[` dan `]` pada bagian `peristiwa`
+10. Periksa agar objek terakhir tidak memiliki koma
+11. Pilih **Commit changes** atau ajukan pull request jika tidak memiliki akses tulis
 
-*Open the required category sheet, enter data from row `2`, fill the formulas down, copy column K, edit the matching category JSON file on GitHub, paste the generated rows into the `peristiwa` array, verify the final comma, and commit the change or submit a pull request.*
+*Open the required category sheet, enter data from row `2`, fill the formulas down, optionally filter records by Subtype in column G, copy column L, edit the matching category JSON file on GitHub, paste the generated rows into the `peristiwa` array, verify the final comma, and commit the change or submit a pull request.*
 
 ### Lokasi penempelan
 
@@ -363,7 +368,7 @@ Formula memeriksa data sampai baris `1000`. Sesuaikan batas `$1000` jika jumlah 
 {
   "kategori": "internasional",
   "peristiwa": [
-    TEMPEL HASIL KOLOM K DI SINI
+    TEMPEL HASIL KOLOM L DI SINI
   ]
 }
 ```
@@ -388,9 +393,9 @@ Contoh setelah ditempel:
 
 *Merging Descriptions from All Categories*
 
-Buat satu sheet tambahan bernama `Keterangan Universal`. Sheet ini hanya digunakan untuk menyatukan hasil kolom L dari seluruh sheet kategori.
+Buat satu sheet tambahan bernama `Keterangan`. Sheet ini hanya digunakan untuk menyatukan hasil kolom M dari seluruh sheet kategori.
 
-*Create one additional sheet named `Keterangan Universal`. This sheet is used only to combine the values generated in column L from every category sheet.*
+*Create one additional sheet named `Keterangan`. This sheet is used only to combine the values generated in column M from every category sheet.*
 
 Urutan penggabungan:
 
@@ -403,17 +408,17 @@ Urutan penggabungan:
 
 Langkah:
 
-1. Pada setiap sheet kategori, salin sel kolom L yang tidak kosong
-2. Tempel sebagai nilai secara berurutan mulai dari `A2` pada sheet `Keterangan Universal`
+1. Pada setiap sheet kategori, salin sel kolom M yang tidak kosong
+2. Tempel sebagai nilai secara berurutan mulai dari `A2` pada sheet `Keterangan`
 3. Jangan menambahkan baris kosong di antara kategori
 4. Periksa agar tidak terdapat ID ganda
 5. Pastikan hanya baris terakhir yang tidak memiliki koma
-6. Salin seluruh hasil dari sheet `Keterangan Universal`
+6. Salin seluruh hasil dari sheet `Keterangan`
 7. Buka `data/keterangan.json` pada GitHub
 8. Tempel hasilnya ke dalam objek `keterangan`
 9. Pilih **Commit changes** atau ajukan pull request jika tidak memiliki akses tulis
 
-*Copy every non-empty value from column L of each category sheet, paste the values in type order into the `Keterangan Universal` sheet, check for duplicate IDs and the final comma, then paste the combined result into the `keterangan` object in `data/keterangan.json`.*
+*Copy every non-empty value from column M of each category sheet, paste the values in type order into the `Keterangan` sheet, check for duplicate IDs and the final comma, then paste the combined result into the `keterangan` object in `data/keterangan.json`.*
 
 ### Lokasi penempelan
 
@@ -422,7 +427,7 @@ Langkah:
 ```text
 {
   "keterangan": {
-    TEMPEL HASIL SHEET KETERANGAN UNIVERSAL DI SINI
+    TEMPEL HASIL SHEET KETERANGAN DI SINI
   }
 }
 ```
@@ -440,9 +445,9 @@ Contoh setelah ditempel:
 }
 ```
 
-Jika kolom J pada sheet kategori kosong, kolom L juga kosong dan ID tersebut tidak perlu dimasukkan ke `keterangan.json`. Aplikasi cukup menampilkan judul pendek.
+Jika kolom K pada sheet kategori kosong, kolom M juga kosong dan ID tersebut tidak perlu dimasukkan ke `keterangan.json`. Aplikasi cukup menampilkan judul pendek.
 
-*When column J is empty, column L also remains empty and the ID does not need to be included in `keterangan.json`. The app displays only the short title.*
+*When column K is empty, column M also remains empty and the ID does not need to be included in `keterangan.json`. The app displays only the short title.*
 
 ---
 
