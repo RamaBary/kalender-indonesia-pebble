@@ -20,7 +20,7 @@ kalender-indonesia-pebble/
 │   ├── keterangan.json
 │   ├── examples/
 │   │   └── international.xlsx
-│   └── katalog/
+│   └── catalogs/
 │       ├── libur-nasional.json
 │       ├── libur-daerah.json
 │       ├── hijriah.json
@@ -41,7 +41,7 @@ kalender-indonesia-pebble/
 Keterangan:
 
 - `data/kalender.json`: indeks tetap yang mencantumkan file data yang dibaca aplikasi
-- `data/katalog/*.json`: data peristiwa menurut kategori
+- `data/catalogs/*.json`: data peristiwa menurut kategori
 - `data/keterangan.json`: keterangan panjang berdasarkan ID peristiwa
 - `data/examples/international.xlsx`: contoh pengelolaan kategori Internasional dengan Excel
 - `settings/indeks.html`: halaman pembuka pengaturan
@@ -52,7 +52,7 @@ Keterangan:
 *Notes:*
 
 - *`data/kalender.json`: a stable index listing the data files read by the app*
-- *`data/katalog/*.json`: event data grouped by category*
+- *`data/catalogs/*.json`: event data grouped by category*
 - *`data/keterangan.json`: long descriptions linked by event ID*
 - *`data/examples/international.xlsx`: an Excel example for managing the International category*
 - *`settings/indeks.html`: the settings entry page*
@@ -74,12 +74,12 @@ Keterangan:
 {
   "skema": 3,
   "berkas": [
-    "katalog/libur-nasional.json",
-    "katalog/libur-daerah.json",
-    "katalog/hijriah.json",
-    "katalog/akademik.json",
-    "katalog/umum.json",
-    "katalog/international.json"
+    "catalogs/libur-nasional.json",
+    "catalogs/libur-daerah.json",
+    "catalogs/hijriah.json",
+    "catalogs/akademik.json",
+    "catalogs/umum.json",
+    "catalogs/international.json"
   ],
   "keterangan": "keterangan.json"
 }
@@ -514,7 +514,7 @@ Nama file aktif tidak memuat nomor versi. Setiap pembaruan dilakukan dengan meng
 Benar:
 
 ```text
-data/katalog/umum.json
+data/catalogs/umum.json
 data/keterangan.json
 settings/aplikasi.html
 ```
@@ -522,8 +522,8 @@ settings/aplikasi.html
 Salah:
 
 ```text
-data/katalog/umum-v2.json
-data/katalog/umum-final.json
+data/catalogs/umum-v2.json
+data/catalogs/umum-final.json
 data/keterangan-revisi-2027.json
 settings/aplikasi-v12-final.html
 ```
