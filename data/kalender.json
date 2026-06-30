@@ -1,12 +1,7 @@
 {
   "skema": 3,
   "berkas": [
-    /*"katalog/libur-nasional.json",
-    "katalog/libur-daerah.json",
-    "katalog/hijriah.json",
-    "katalog/akademik.json",
-    "katalog/umum.json",*/
-    "katalog/international.json"
+    "catalogs/international.json"
   ],
   "keterangan": "keterangan.json"
 }
