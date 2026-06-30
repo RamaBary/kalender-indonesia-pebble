@@ -18,8 +18,8 @@ kalender-indonesia-pebble/
 ├── data/
 │   ├── kalender.json
 │   ├── keterangan.json
-│   ├── contoh/
-│   │   └── contoh-internasional.xlsx
+│   ├── examples/
+│   │   └── internasional.xlsx
 │   └── katalog/
 │       ├── libur-nasional.json
 │       ├── libur-daerah.json
@@ -43,7 +43,7 @@ Keterangan:
 - `data/kalender.json`: indeks tetap yang mencantumkan file data yang dibaca aplikasi
 - `data/katalog/*.json`: data peristiwa menurut kategori
 - `data/keterangan.json`: keterangan panjang berdasarkan ID peristiwa
-- `data/contoh/contoh-internasional.xlsx`: contoh pengelolaan satu kategori dengan Excel
+- `data/examples/internasional.xlsx`: contoh pengelolaan kategori Internasional dengan Excel
 - `settings/index.html`: halaman pembuka pengaturan
 - `settings/app.html`: halaman lengkap pengaturan
 - `settings/assets/`: gambar yang digunakan halaman pengaturan
@@ -54,7 +54,7 @@ Keterangan:
 - *`data/kalender.json`: a stable index listing the data files read by the app*
 - *`data/katalog/*.json`: event data grouped by category*
 - *`data/keterangan.json`: long descriptions linked by event ID*
-- *`data/contoh/contoh-internasional.xlsx`: an Excel example for managing one event category*
+- *`data/examples/internasional.xlsx`: an Excel example for managing the International category*
 - *`settings/index.html`: the settings entry page*
 - *`settings/app.html`: the complete settings page*
 - *`settings/assets/`: images used by the settings page*
@@ -541,3 +541,23 @@ Riwayat perubahan tersedia melalui commit Git. Jangan membuat file baru hanya un
 Folder `timeline/` masih berada dalam tahap pengembangan. Data Timeline dirancang menggunakan sumber peristiwa yang sama dari JSON kategori agar tidak memerlukan pemeliharaan daftar kalender kedua.
 
 *The `timeline/` folder is still under development. Timeline data is designed to use the same category JSON source, avoiding maintenance of a second calendar list.*
+
+
+---
+
+## L. Dukung Pengembang
+
+*Support the Developer*
+
+Pengembangan Kalender Indonesia untuk Pebble dilakukan secara mandiri. Dukungan dapat diberikan melalui platform berikut:
+
+- [Ko-fi](https://ko-fi.com/ramabary) untuk dukungan internasional
+- [Saweria](https://saweria.co/ramabary) untuk dukungan dari Indonesia
+
+Dukungan bersifat sukarela dan membantu pengembangan fitur, pemeliharaan data, serta pengujian pada perangkat Pebble.
+
+Terima kasih atas segala dukungan terhadap aplikasi ini! :)
+
+*Kalender Indonesia for Pebble is independently developed. Voluntary support helps fund feature development, data maintenance, and testing on Pebble devices.*
+
+*Thank you for supporting this application! :)*
