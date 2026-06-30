@@ -6,7 +6,7 @@
     "katalog/hijriah.json",
     "katalog/akademik.json",
     "katalog/umum.json",
-    "katalog/internasional.json"
+    "katalog/international.json"
   ],
   "keterangan": "keterangan.json"
 }

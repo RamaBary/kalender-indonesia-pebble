@@ -19,20 +19,20 @@ kalender-indonesia-pebble/
 │   ├── kalender.json
 │   ├── keterangan.json
 │   ├── examples/
-│   │   └── internasional.xlsx
+│   │   └── international.xlsx
 │   └── katalog/
 │       ├── libur-nasional.json
 │       ├── libur-daerah.json
 │       ├── hijriah.json
 │       ├── akademik.json
 │       ├── umum.json
-│       └── internasional.json
+│       └── international.json
 ├── settings/
-│   ├── index.html
-│   ├── app.html
+│   ├── indeks.html
+│   ├── aplikasi.html
 │   └── assets/
-│       ├── banner-large.jpg
-│       └── banner-small.jpg
+│       ├── banner-besar.jpg
+│       └── banner-kecil.jpg
 └── timeline/
     ├── README.md
     └── template-pin.json
@@ -43,9 +43,9 @@ Keterangan:
 - `data/kalender.json`: indeks tetap yang mencantumkan file data yang dibaca aplikasi
 - `data/katalog/*.json`: data peristiwa menurut kategori
 - `data/keterangan.json`: keterangan panjang berdasarkan ID peristiwa
-- `data/examples/internasional.xlsx`: contoh pengelolaan kategori Internasional dengan Excel
-- `settings/index.html`: halaman pembuka pengaturan
-- `settings/app.html`: halaman lengkap pengaturan
+- `data/examples/international.xlsx`: contoh pengelolaan kategori Internasional dengan Excel
+- `settings/indeks.html`: halaman pembuka pengaturan
+- `settings/aplikasi.html`: halaman lengkap pengaturan
 - `settings/assets/`: gambar yang digunakan halaman pengaturan
 - `timeline/`: dokumentasi Timeline dan contoh format pin
 
@@ -54,9 +54,9 @@ Keterangan:
 - *`data/kalender.json`: a stable index listing the data files read by the app*
 - *`data/katalog/*.json`: event data grouped by category*
 - *`data/keterangan.json`: long descriptions linked by event ID*
-- *`data/examples/internasional.xlsx`: an Excel example for managing the International category*
-- *`settings/index.html`: the settings entry page*
-- *`settings/app.html`: the complete settings page*
+- *`data/examples/international.xlsx`: an Excel example for managing the International category*
+- *`settings/indeks.html`: the settings entry page*
+- *`settings/aplikasi.html`: the complete settings page*
 - *`settings/assets/`: images used by the settings page*
 - *`timeline/`: Timeline documentation and a pin-format example*
 
@@ -79,7 +79,7 @@ Keterangan:
     "katalog/hijriah.json",
     "katalog/akademik.json",
     "katalog/umum.json",
-    "katalog/internasional.json"
+    "katalog/international.json"
   ],
   "keterangan": "keterangan.json"
 }
@@ -102,7 +102,7 @@ Field `skema` menandai kontrak struktur data. Nomornya berubah hanya jika nama f
 | 3 | Hijriah | `hijriah` | `hijriah.json` | *Hijri* |
 | 4 | Akademik | `akademik` | `akademik.json` | *Academic* |
 | 5 | Umum | `umum` | `umum.json` | *General* |
-| 6 | Internasional | `internasional` | `internasional.json` | *International* |
+| 6 | Internasional | `international` | `international.json` | *International* |
 | 7 | Pribadi | — | — | *Personal* |
 
 Tipe `7` tidak disimpan dalam repositori publik. Peristiwa pribadi dikelola melalui halaman pengaturan pada perangkat pengguna.
@@ -121,7 +121,7 @@ Setiap file kategori hanya memuat nilai `kategori` dan array `peristiwa`. Metada
 
 ```json
 {
-  "kategori": "internasional",
+  "kategori": "international",
   "peristiwa": []
 }
 ```
@@ -270,7 +270,7 @@ Agar dapat digabung otomatis melalui Power Query, ubah setiap rentang kategori m
 | Hijriah | `tblHijriah` |
 | Akademik | `tblAkademik` |
 | Umum | `tblUmum` |
-| Internasional | `tblInternasional` |
+| Internasional | `tblInternational` |
 
 *Convert each category range into an Excel Table using the names listed above so Power Query can combine the description rows automatically.*
 
@@ -370,7 +370,7 @@ Salin formula I2, L2, dan M2 sampai baris terakhir. Formula memeriksa data sampa
 3. Salin formula I2, L2, dan M2 ke seluruh baris data
 4. Pastikan kolom L menampilkan JSON dan bukan pesan error
 5. Salin hasil kolom L
-6. Buka file JSON kategori yang sesuai pada GitHub
+6. Buka file JSON kategori yang sesuai pada GitHub (contoh international.json)
 7. Pilih **Edit this file**
 8. Tempel hasil di antara tanda `[` dan `]` pada bagian `peristiwa`
 9. Pastikan objek terakhir tidak memiliki koma
@@ -380,9 +380,9 @@ Salin formula I2, L2, dan M2 sampai baris terakhir. Formula memeriksa data sampa
 
 ```text
 {
-  "kategori": "internasional",
+  "kategori": "international",
   "peristiwa": [
-    TEMPEL HASIL KOLOM L DI SINI
+    TEMPEL-HASIL-KOLOM-L-DI-SINI
   ]
 }
 ```
@@ -393,7 +393,7 @@ Contoh:
 
 ```json
 {
-  "kategori": "internasional",
+  "kategori": "international",
   "peristiwa": [
     {"th":0,"bm":1,"bs":1,"hm":4,"hs":4,"tp":6,"sub":"pbb","id":24001,"jd":"World Braille Day"},
     {"th":0,"bm":1,"bs":1,"hm":24,"hs":24,"tp":6,"sub":"pbb","id":24002,"jd":"International Day of Education"}
@@ -431,7 +431,7 @@ let
         "tblHijriah",
         "tblAkademik",
         "tblUmum",
-        "tblInternasional"
+        "tblInternational"
     },
     Sumber = Excel.CurrentWorkbook(),
     PilihTabel = Table.SelectRows(
@@ -474,7 +474,7 @@ let
         TambahIndeks,
         "Hasil",
         each [JSON Keterangan]
-            & if [Index] < JumlahBaris - 1 then "," else "",
+            & (if [Index] < JumlahBaris - 1 then "," else ""),
         type text
     ),
     HasilAkhir = Table.SelectColumns(
@@ -492,7 +492,7 @@ Lokasi penempelan:
 ```text
 {
   "keterangan": {
-    TEMPEL HASIL POWER QUERY DI SINI
+    TEMPEL-HASIL-POWER-QUERY-DI-SINI
   }
 }
 ```
@@ -516,7 +516,7 @@ Benar:
 ```text
 data/katalog/umum.json
 data/keterangan.json
-settings/app.html
+settings/aplikasi.html
 ```
 
 Salah:
@@ -525,7 +525,7 @@ Salah:
 data/katalog/umum-v2.json
 data/katalog/umum-final.json
 data/keterangan-revisi-2027.json
-settings/app-v12-final.html
+settings/aplikasi-v12-final.html
 ```
 
 Riwayat perubahan tersedia melalui commit Git. Jangan membuat file baru hanya untuk mengganti versi dari file aktif yang sama.
@@ -551,7 +551,7 @@ Folder `timeline/` masih berada dalam tahap pengembangan. Data Timeline dirancan
 
 Pengembangan Kalender Indonesia untuk Pebble dilakukan secara mandiri. Dukungan dapat diberikan melalui platform berikut:
 
-- [Ko-fi](https://ko-fi.com/ramabary) untuk dukungan internasional
+- [Ko-fi](https://ko-fi.com/ramabary) for international support
 - [Saweria](https://saweria.co/ramabary) untuk dukungan dari Indonesia
 
 Dukungan bersifat sukarela dan membantu pengembangan fitur, pemeliharaan data, serta pengujian pada perangkat Pebble.
