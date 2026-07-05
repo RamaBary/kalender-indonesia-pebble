@@ -3,6 +3,7 @@
   "berkas": [
     "catalogs/libur-nasional.json",
     "catalogs/hijriah.json",
+    "catalogs/akademik.json",
     "catalogs/international.json"
   ],
   "keterangan": "keterangan.json"
