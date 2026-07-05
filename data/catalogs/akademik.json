@@ -1,236 +1,236 @@
 {
   "kategori": "akademik",
   "peristiwa": [
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936848,"jd":"Awal Tahun Ajaran TK"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936808,"jd":"Awal Tahun Ajaran SD"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907660336,"jd":"Awal Tahun Ajaran SMP"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907660321,"jd":"Awal Tahun Ajaran SMA"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907660331,"jd":"Awal Tahun Ajaran SMK"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":1826531666,"jd":"Pengenalan Lingkungan Sekolah TK"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":1826531626,"jd":"Pengenalan Lingkungan Sekolah SD"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":146001919,"jd":"Pengenalan Lingkungan Sekolah SMP"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":146001904,"jd":"Pengenalan Lingkungan Sekolah SMA"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":146001914,"jd":"Pengenalan Lingkungan Sekolah SMK"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936772,"jd":"Awal Tahun Ajaran RA"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936615,"jd":"Awal Tahun Ajaran MI"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907654036,"jd":"Awal Tahun Ajaran MTs"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936607,"jd":"Awal Tahun Ajaran MA"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907653401,"jd":"Awal Tahun Ajaran MAK"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1006540476,"jd":"Penerimaan Murid Baru Madrasah RA"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1006540319,"jd":"Penerimaan Murid Baru Madrasah MI"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1003576268,"jd":"Penerimaan Murid Baru Madrasah MTs"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1006540311,"jd":"Penerimaan Murid Baru Madrasah MA"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1003575633,"jd":"Penerimaan Murid Baru Madrasah MAK"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":947636112,"jd":"Daftar Ulang Murid Madrasah RA"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":947635955,"jd":"Daftar Ulang Murid Madrasah MI"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1207215903,"jd":"Daftar Ulang Murid Madrasah MTs"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":947635947,"jd":"Daftar Ulang Murid Madrasah MA"}
-{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1207215268,"jd":"Daftar Ulang Murid Madrasah MAK"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":1501399415,"jd":"Pengenalan Lingkungan Madrasah RA"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":1501399258,"jd":"Pengenalan Lingkungan Madrasah MI"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":154052079,"jd":"Pengenalan Lingkungan Madrasah MTs"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":1501399250,"jd":"Pengenalan Lingkungan Madrasah MA"}
-{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":154051444,"jd":"Pengenalan Lingkungan Madrasah MAK"}
-{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":261565726,"jd":"Asesmen Semester Gasal RA"}
-{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":261565569,"jd":"Asesmen Semester Gasal MI"}
-{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":41729635,"jd":"Asesmen Semester Gasal MTs"}
-{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":261565561,"jd":"Asesmen Semester Gasal MA"}
-{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":41729000,"jd":"Asesmen Semester Gasal MAK"}
-{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":2029286091,"jd":"Laporan Hasil Belajar Gasal RA"}
-{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":2029285934,"jd":"Laporan Hasil Belajar Gasal MI"}
-{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":394443211,"jd":"Laporan Hasil Belajar Gasal MTs"}
-{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":2029285926,"jd":"Laporan Hasil Belajar Gasal MA"}
-{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":394442576,"jd":"Laporan Hasil Belajar Gasal MAK"}
+{"th":2026,"bm":1,"bs":1,"hm":1,"hs":15,"tp":4,"sub":"akademik","id":465237636,"jd":"Masa Sanggah Kuota Sekolah SNBP"},
+{"th":2026,"bm":1,"bs":1,"hm":1,"hs":22,"tp":4,"sub":"beasiswa-luar-negeri","id":1322568928,"jd":"Pendaftaran MEXT Studi Jepang"},
+{"th":2026,"bm":1,"bs":2,"hm":1,"hs":8,"tp":4,"sub":"beasiswa-luar-negeri","id":1616358099,"jd":"Pendaftaran CSC Tiongkok"},
+{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":82495581,"jd":"Sertifikat Hasil TKA PKPPS Ulya"},
+{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":531133192,"jd":"Sertifikat Hasil TKA SPM Ulya"},
+{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":785645231,"jd":"Sertifikat Hasil TKA PDF Ulya"},
+{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":1475464250,"jd":"Sertifikat Hasil TKA Paket C"},
+{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":1967450958,"jd":"Sertifikat Hasil TKA SMALB"},
+{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":2020320328,"jd":"Sertifikat Hasil TKA Sekolah Rumah SMA"},
+{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":2105002812,"jd":"Sertifikat Hasil TKA Jenjang Menengah"},
+{"th":2026,"bm":1,"bs":1,"hm":5,"hs":26,"tp":4,"sub":"akademik","id":1095382761,"jd":"Registrasi Akun Sekolah SNBP"},
+{"th":2026,"bm":1,"bs":2,"hm":5,"hs":2,"tp":4,"sub":"akademik","id":1109006941,"jd":"Pengisian PDSS SNBP"},
+{"th":2026,"bm":1,"bs":2,"hm":5,"hs":9,"tp":4,"sub":"akademik","id":490329438,"jd":"Pendaftaran PDSS SPAN-PTKIN"},
+{"th":2026,"bm":1,"bs":2,"hm":5,"hs":10,"tp":4,"sub":"akademik","id":1207968763,"jd":"Pengisian PDSS SPAN-PTKIN"},
+{"th":2026,"bm":1,"bs":1,"hm":8,"hs":10,"tp":4,"sub":"akademik","id":840485415,"jd":"Imtihan Wathani PDF Ulya"},
+{"th":2026,"bm":1,"bs":1,"hm":9,"hs":9,"tp":4,"sub":"beasiswa-luar-negeri","id":137693335,"jd":"Hasil Akhir GKS Sarjana"},
+{"th":2026,"bm":1,"bs":2,"hm":10,"hs":20,"tp":4,"sub":"beasiswa-luar-negeri","id":104237779,"jd":"Pendaftaran T\u00fcrkiye Scholarships"},
+{"th":2026,"bm":1,"bs":1,"hm":12,"hs":14,"tp":4,"sub":"akademik","id":549334898,"jd":"Imtihan Wathani PDF Wustha"},
+{"th":2026,"bm":1,"bs":2,"hm":12,"hs":18,"tp":4,"sub":"akademik","id":1027009054,"jd":"Registrasi Akun Siswa SNBP"},
+{"th":2026,"bm":1,"bs":4,"hm":12,"hs":7,"tp":4,"sub":"akademik","id":1027009058,"jd":"Registrasi Akun Siswa SNBT"},
+{"th":2026,"bm":1,"bs":1,"hm":15,"hs":15,"tp":4,"sub":"beasiswa-luar-negeri","id":1521602818,"jd":"Batas Pendaftaran Stipendium"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":408745970,"jd":"Pendaftaran TKA Paket A"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":408745971,"jd":"Pendaftaran TKA Paket B"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":518895416,"jd":"Pendaftaran TKA PDF Ula"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":576258192,"jd":"Pendaftaran TKA SPM Ula"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":702382413,"jd":"Pendaftaran TKA PKPPS Wustha"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":895522741,"jd":"Pendaftaran TKA SPM Wustha"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1033742749,"jd":"Pendaftaran TKA PDF Wustha"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1293394762,"jd":"Pendaftaran TKA SMP dan MTs"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1410932569,"jd":"Pendaftaran TKA SD dan MI"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1688713643,"jd":"Pendaftaran TKA Sekolah Rumah SD"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1790981744,"jd":"Pendaftaran TKA SMPLB"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":2022130724,"jd":"Pendaftaran TKA PKPPS Ula"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":2040459421,"jd":"Pendaftaran TKA Sekolah Rumah SMP"},
+{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":2071595352,"jd":"Pendaftaran TKA SDLB"},
+{"th":2026,"bm":2,"bs":2,"hm":1,"hs":28,"tp":4,"sub":"beasiswa-luar-negeri","id":1074378632,"jd":"Daftar Pendek Wawancara Chevening"},
+{"th":2026,"bm":2,"bs":4,"hm":1,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":1537934133,"jd":"Pendaftaran Australia Awards"},
+{"th":2026,"bm":2,"bs":2,"hm":3,"hs":18,"tp":4,"sub":"akademik","id":1222232456,"jd":"Pendaftaran SNBP"},
+{"th":2026,"bm":2,"bs":4,"hm":3,"hs":30,"tp":4,"sub":"akademik","id":126884235,"jd":"Unduh Kartu Peserta SNBP"},
+{"th":2026,"bm":2,"bs":10,"hm":3,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":349563161,"jd":"Pendaftaran Akun KIP Kuliah"},
+{"th":2026,"bm":2,"bs":2,"hm":6,"hs":6,"tp":4,"sub":"beasiswa-luar-negeri","id":1902965075,"jd":"Hasil Seleksi Dokumen MEXT Studi Jepang"},
+{"th":2026,"bm":2,"bs":2,"hm":10,"hs":18,"tp":4,"sub":"beasiswa-nasional","id":189933163,"jd":"Jalur SNBP KIP Kuliah"},
+{"th":2026,"bm":2,"bs":3,"hm":11,"hs":4,"tp":4,"sub":"akademik","id":597575934,"jd":"Pendaftaran SPAN-PTKIN"},
+{"th":2026,"bm":2,"bs":2,"hm":12,"hs":25,"tp":4,"sub":"beasiswa-luar-negeri","id":1510915448,"jd":"Pendaftaran GKS Pascasarjana"},
+{"th":2026,"bm":2,"bs":2,"hm":15,"hs":15,"tp":4,"sub":"beasiswa-luar-negeri","id":1337953177,"jd":"Batas Pendaftaran Fulbright"},
+{"th":2026,"bm":2,"bs":3,"hm":15,"hs":15,"tp":4,"sub":"beasiswa-nasional","id":499978961,"jd":"Pendaftaran Gelombang I Garuda"},
+{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":200932647,"jd":"Simulasi TKA Sekolah Rumah SMP"},
+{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":300352479,"jd":"Simulasi TKA SPM Wustha"},
+{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":438572487,"jd":"Simulasi TKA PDF Wustha"},
+{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":980128939,"jd":"Simulasi TKA SMP dan MTs"},
+{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":1102028489,"jd":"Simulasi TKA PKPPS Wustha"},
+{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":1908821399,"jd":"Simulasi TKA SMPLB"},
+{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":2034595093,"jd":"Simulasi TKA Paket B"},
+{"th":2026,"bm":2,"bs":3,"hm":26,"hs":5,"tp":4,"sub":"beasiswa-luar-negeri","id":1129913233,"jd":"Seleksi Dokumen GKS Pascasarjana"},
+{"th":2026,"bm":2,"bs":5,"hm":27,"hs":22,"tp":4,"sub":"beasiswa-nasional","id":1221574926,"jd":"Pendaftaran ADik"},
+{"th":2026,"bm":3,"bs":4,"hm":1,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":2013168180,"jd":"Wawancara Chevening"},
+{"th":2026,"bm":3,"bs":5,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":145415394,"jd":"Ujian Masuk Stipendium"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":947635947,"jd":"Daftar Ulang Murid Madrasah MA"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":947635955,"jd":"Daftar Ulang Murid Madrasah MI"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":947636112,"jd":"Daftar Ulang Murid Madrasah RA"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1003575633,"jd":"Penerimaan Murid Baru Madrasah MAK"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1003576268,"jd":"Penerimaan Murid Baru Madrasah MTs"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1006540311,"jd":"Penerimaan Murid Baru Madrasah MA"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1006540319,"jd":"Penerimaan Murid Baru Madrasah MI"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1006540476,"jd":"Penerimaan Murid Baru Madrasah RA"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1207215268,"jd":"Daftar Ulang Murid Madrasah MAK"},
+{"th":2026,"bm":3,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"akademik","id":1207215903,"jd":"Daftar Ulang Murid Madrasah MTs"},
+{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":54623667,"jd":"Simulasi TKA SPM Ula"},
+{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":286617652,"jd":"Simulasi TKA SD dan MI"},
+{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":708585748,"jd":"Simulasi TKA SDLB"},
+{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":721916739,"jd":"Simulasi TKA Sekolah Rumah SD"},
+{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":897815807,"jd":"Simulasi TKA PKPPS Ula"},
+{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":2034595092,"jd":"Simulasi TKA Paket A"},
+{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":2144744538,"jd":"Simulasi TKA PDF Ula"},
+{"th":2026,"bm":3,"bs":3,"hm":5,"hs":5,"tp":4,"sub":"beasiswa-luar-negeri","id":1463427948,"jd":"Hasil Seleksi Dokumen GKS Pascasarjana"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":12,"tp":4,"sub":"beasiswa-luar-negeri","id":611934411,"jd":"Wawancara GKS Pascasarjana"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":17771928,"jd":"Gladi Bersih TKA PKPPS Ula"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":48265161,"jd":"Gladi Bersih TKA Sekolah Rumah SMP"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":69164711,"jd":"Gladi Bersih TKA SMPLB"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":103220864,"jd":"Gladi Bersih TKA Paket A"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":103220865,"jd":"Gladi Bersih TKA Paket B"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":213370310,"jd":"Gladi Bersih TKA PDF Ula"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":270733086,"jd":"Gladi Bersih TKA SPM Ula"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":390051270,"jd":"Gladi Bersih TKA SMP dan MTs"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":956818235,"jd":"Gladi Bersih TKA PKPPS Wustha"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1323675530,"jd":"Gladi Bersih TKA SPM Wustha"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1433741720,"jd":"Gladi Bersih TKA SDLB"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1461895538,"jd":"Gladi Bersih TKA PDF Wustha"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1554057420,"jd":"Gladi Bersih TKA SD dan MI"},
+{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1693419382,"jd":"Gladi Bersih TKA Sekolah Rumah SD"},
+{"th":2026,"bm":3,"bs":3,"hm":15,"hs":15,"tp":4,"sub":"beasiswa-luar-negeri","id":1884773267,"jd":"Pernyataan Pembimbing Stipendium"},
+{"th":2026,"bm":3,"bs":3,"hm":16,"hs":16,"tp":4,"sub":"beasiswa-luar-negeri","id":590349844,"jd":"Hasil Tahap I GKS Pascasarjana"},
+{"th":2026,"bm":3,"bs":3,"hm":16,"hs":30,"tp":4,"sub":"beasiswa-nasional","id":1925977466,"jd":"Administrasi Gelombang I Garuda"},
+{"th":2026,"bm":3,"bs":4,"hm":25,"hs":7,"tp":4,"sub":"akademik","id":1222232460,"jd":"Pendaftaran SNBT"},
+{"th":2026,"bm":3,"bs":4,"hm":25,"hs":7,"tp":4,"sub":"beasiswa-nasional","id":783107091,"jd":"Jalur UTBK-SNBT KIP Kuliah"},
+{"th":2026,"bm":3,"bs":4,"hm":25,"hs":8,"tp":4,"sub":"akademik","id":114532012,"jd":"Pembayaran Biaya UTBK SNBT"},
+{"th":2026,"bm":3,"bs":3,"hm":30,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":204173350,"jd":"Batas Dokumen GKS Pascasarjana"},
+{"th":2026,"bm":3,"bs":3,"hm":31,"hs":31,"tp":4,"sub":"akademik","id":848380445,"jd":"Pengumuman Hasil Seleksi SNBP"},
+{"th":2026,"bm":4,"bs":4,"hm":1,"hs":19,"tp":4,"sub":"beasiswa-luar-negeri","id":1278229778,"jd":"Pendaftaran MEXT Gakubu"},
+{"th":2026,"bm":4,"bs":5,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":913648928,"jd":"Seleksi Tahap II GKS Pascasarjana"},
+{"th":2026,"bm":4,"bs":5,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":622696025,"jd":"Pendaftaran BIB"},
+{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":201636354,"jd":"Pelaksanaan TKA Sekolah Rumah SMP"},
+{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":277641965,"jd":"Pelaksanaan TKA SMP dan MTs"},
+{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":409215519,"jd":"Pelaksanaan TKA SPM Wustha"},
+{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":547435527,"jd":"Pelaksanaan TKA PDF Wustha"},
+{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":1542278464,"jd":"Pelaksanaan TKA PKPPS Wustha"},
+{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":1583441470,"jd":"Pelaksanaan TKA SMPLB"},
+{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":2030654167,"jd":"Pelaksanaan TKA Paket B"},
+{"th":2026,"bm":4,"bs":4,"hm":7,"hs":7,"tp":4,"sub":"akademik","id":1196326063,"jd":"Pengumuman Hasil Seleksi SPAN-PTKIN"},
+{"th":2026,"bm":4,"bs":4,"hm":10,"hs":20,"tp":4,"sub":"beasiswa-nasional","id":1573758467,"jd":"Tes Bakat Gelombang I Garuda"},
+{"th":2026,"bm":4,"bs":4,"hm":11,"hs":15,"tp":4,"sub":"akademik","id":126884239,"jd":"Unduh Kartu Peserta SNBT"},
+{"th":2026,"bm":4,"bs":5,"hm":13,"hs":30,"tp":4,"sub":"akademik","id":1394975914,"jd":"Pendaftaran dan Pembayaran UM-PTKIN"},
+{"th":2026,"bm":4,"bs":6,"hm":13,"hs":3,"tp":4,"sub":"akademik","id":1231458811,"jd":"Finalisasi Pendaftaran UM-PTKIN"},
+{"th":2026,"bm":4,"bs":4,"hm":19,"hs":19,"tp":4,"sub":"beasiswa-luar-negeri","id":196149071,"jd":"Tambah Pilihan Study in Saudi"},
+{"th":2026,"bm":4,"bs":5,"hm":19,"hs":21,"tp":4,"sub":"beasiswa-luar-negeri","id":1374567211,"jd":"Pendaftaran UIM Sarjana"},
+{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":50682741,"jd":"Pelaksanaan TKA SPM Ula"},
+{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":289916532,"jd":"Pelaksanaan TKA SD dan MI"},
+{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":373349440,"jd":"Pelaksanaan TKA SDLB"},
+{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":901114687,"jd":"Pelaksanaan TKA PKPPS Ula"},
+{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":1893292780,"jd":"Pelaksanaan TKA Sekolah Rumah SD"},
+{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":2030654166,"jd":"Pelaksanaan TKA Paket A"},
+{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":2140803612,"jd":"Pelaksanaan TKA PDF Ula"},
+{"th":2026,"bm":4,"bs":5,"hm":20,"hs":10,"tp":4,"sub":"beasiswa-luar-negeri","id":1752704009,"jd":"Pendaftaran MEXT Senshu"},
+{"th":2026,"bm":4,"bs":5,"hm":20,"hs":10,"tp":4,"sub":"beasiswa-luar-negeri","id":1931171830,"jd":"Pendaftaran MEXT Kosen"},
+{"th":2026,"bm":4,"bs":4,"hm":21,"hs":30,"tp":4,"sub":"akademik","id":3273137,"jd":"Pelaksanaan UTBK SNBT"},
+{"th":2026,"bm":4,"bs":4,"hm":22,"hs":22,"tp":4,"sub":"beasiswa-luar-negeri","id":1439885348,"jd":"Batas Pendaftaran MEXT Research"},
+{"th":2026,"bm":4,"bs":4,"hm":30,"hs":30,"tp":4,"sub":"beasiswa-nasional","id":167902870,"jd":"Hasil Gelombang I Garuda"},
+{"th":2026,"bm":5,"bs":5,"hm":1,"hs":1,"tp":4,"sub":"akademik","id":1656387562,"jd":"Cetak Kartu Peserta UM-PTKIN"},
+{"th":2026,"bm":5,"bs":6,"hm":1,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":719923910,"jd":"Seleksi Tahap III GKS Pascasarjana"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":275842327,"jd":"TKA Susulan SDLB"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":463362542,"jd":"TKA Susulan Paket A"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":463362543,"jd":"TKA Susulan Paket B"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":513190388,"jd":"TKA Susulan SMPLB"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":573511988,"jd":"TKA Susulan PDF Ula"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":630874764,"jd":"TKA Susulan SPM Ula"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":758837361,"jd":"TKA Susulan SD dan MI"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":851217347,"jd":"TKA Susulan SPM Wustha"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":989437355,"jd":"TKA Susulan PDF Wustha"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":1370035516,"jd":"TKA Susulan PKPPS Ula"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":1845932228,"jd":"TKA Susulan PKPPS Wustha"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":1883467641,"jd":"TKA Susulan Sekolah Rumah SD"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":1978800407,"jd":"TKA Susulan SMP dan MTs"},
+{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":2024890414,"jd":"TKA Susulan Sekolah Rumah SMP"},
+{"th":2026,"bm":5,"bs":5,"hm":20,"hs":20,"tp":4,"sub":"beasiswa-luar-negeri","id":1931960473,"jd":"Pengiriman Pilihan Study in Saudi"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":245673340,"jd":"Pengumuman Hasil TKA SDLB"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":759718458,"jd":"Pengumuman Hasil TKA Paket A"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":759718459,"jd":"Pengumuman Hasil TKA Paket B"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":848380449,"jd":"Pengumuman Hasil Seleksi SNBT"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":869867904,"jd":"Pengumuman Hasil TKA PDF Ula"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":927230680,"jd":"Pengumuman Hasil TKA SPM Ula"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1131848153,"jd":"Pengumuman Hasil TKA Sekolah Rumah SMP"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1205653134,"jd":"Pengumuman Hasil TKA Sekolah Rumah SD"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1367882835,"jd":"Pengumuman Hasil TKA SD dan MI"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1622365166,"jd":"Pengumuman Hasil TKA SPM Wustha"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1656874670,"jd":"Pengumuman Hasil TKA SMP dan MTs"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1665097464,"jd":"Pengumuman Hasil TKA SMPLB"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1760585174,"jd":"Pengumuman Hasil TKA PDF Wustha"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1959801142,"jd":"Pengumuman Hasil TKA PKPPS Wustha"},
+{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1979080990,"jd":"Pengumuman Hasil TKA PKPPS Ula"},
+{"th":2026,"bm":5,"bs":6,"hm":25,"hs":25,"tp":4,"sub":"beasiswa-nasional","id":1016169291,"jd":"Pendaftaran Gelombang II Garuda"},
+{"th":2026,"bm":5,"bs":7,"hm":25,"hs":6,"tp":4,"sub":"beasiswa-nasional","id":1675374064,"jd":"Pendaftaran PMDSU"},
+{"th":2026,"bm":5,"bs":7,"hm":26,"hs":31,"tp":4,"sub":"akademik","id":32850248,"jd":"Unduh Sertifikat UTBK SNBT"},
+{"th":2026,"bm":5,"bs":5,"hm":31,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":845143580,"jd":"Batas Pendaftaran Study in Saudi"},
+{"th":2026,"bm":6,"bs":6,"hm":1,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":1379483916,"jd":"Hasil Akhir Chevening"},
+{"th":2026,"bm":6,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":856439915,"jd":"Hasil Akhir Stipendium"},
+{"th":2026,"bm":6,"bs":6,"hm":8,"hs":14,"tp":4,"sub":"akademik","id":2141352934,"jd":"Pelaksanaan Ujian UM-PTKIN"},
+{"th":2026,"bm":6,"bs":6,"hm":12,"hs":12,"tp":4,"sub":"beasiswa-luar-negeri","id":367017031,"jd":"Hasil Seleksi Dokumen MEXT Gakubu"},
+{"th":2026,"bm":6,"bs":6,"hm":12,"hs":12,"tp":4,"sub":"beasiswa-luar-negeri","id":797279868,"jd":"Hasil Seleksi Dokumen MEXT Kosen"},
+{"th":2026,"bm":6,"bs":6,"hm":12,"hs":12,"tp":4,"sub":"beasiswa-luar-negeri","id":841491262,"jd":"Hasil Seleksi Dokumen MEXT Senshu"},
+{"th":2026,"bm":6,"bs":10,"hm":15,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":1692967765,"jd":"Seleksi Mandiri PTS KIP Kuliah"},
+{"th":2026,"bm":6,"bs":10,"hm":15,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":1937032004,"jd":"Seleksi Mandiri PTN KIP Kuliah"},
+{"th":2026,"bm":6,"bs":7,"hm":25,"hs":10,"tp":4,"sub":"beasiswa-nasional","id":788106649,"jd":"Administrasi Gelombang II Garuda"},
+{"th":2026,"bm":6,"bs":7,"hm":27,"hs":25,"tp":4,"sub":"profesi","id":647493153,"jd":"Pendaftaran PPG Calon Guru"},
+{"th":2026,"bm":6,"bs":6,"hm":30,"hs":30,"tp":4,"sub":"akademik","id":439525185,"jd":"Pengumuman Hasil Seleksi UM-PTKIN"},
+{"th":2026,"bm":6,"bs":6,"hm":30,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":1063799471,"jd":"Hasil Akhir GKS Pascasarjana"},
+{"th":2026,"bm":6,"bs":7,"hm":30,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":1221983141,"jd":"Pendaftaran LPDP"},
+{"th":2026,"bm":7,"bs":8,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":2103077657,"jd":"Hasil Akhir CSC Tiongkok"},
+{"th":2026,"bm":7,"bs":7,"hm":9,"hs":9,"tp":4,"sub":"beasiswa-luar-negeri","id":631645784,"jd":"Batas Penyerahan LoA Chevening"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936607,"jd":"Awal Tahun Ajaran MA"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936615,"jd":"Awal Tahun Ajaran MI"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936772,"jd":"Awal Tahun Ajaran RA"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936808,"jd":"Awal Tahun Ajaran SD"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1033936848,"jd":"Awal Tahun Ajaran TK"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907653401,"jd":"Awal Tahun Ajaran MAK"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907654036,"jd":"Awal Tahun Ajaran MTs"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907660321,"jd":"Awal Tahun Ajaran SMA"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907660331,"jd":"Awal Tahun Ajaran SMK"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":13,"tp":4,"sub":"akademik","id":1907660336,"jd":"Awal Tahun Ajaran SMP"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":146001904,"jd":"Pengenalan Lingkungan Sekolah SMA"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":146001914,"jd":"Pengenalan Lingkungan Sekolah SMK"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":146001919,"jd":"Pengenalan Lingkungan Sekolah SMP"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":1826531626,"jd":"Pengenalan Lingkungan Sekolah SD"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":17,"tp":4,"sub":"akademik","id":1826531666,"jd":"Pengenalan Lingkungan Sekolah TK"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":154051444,"jd":"Pengenalan Lingkungan Madrasah MAK"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":154052079,"jd":"Pengenalan Lingkungan Madrasah MTs"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":1501399250,"jd":"Pengenalan Lingkungan Madrasah MA"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":1501399258,"jd":"Pengenalan Lingkungan Madrasah MI"},
+{"th":2026,"bm":7,"bs":7,"hm":13,"hs":18,"tp":4,"sub":"akademik","id":1501399415,"jd":"Pengenalan Lingkungan Madrasah RA"},
+{"th":2026,"bm":7,"bs":7,"hm":25,"hs":30,"tp":4,"sub":"beasiswa-nasional","id":1865668930,"jd":"Tes Bakat Gelombang II Garuda"},
+{"th":2026,"bm":7,"bs":7,"hm":26,"hs":28,"tp":4,"sub":"profesi","id":496140732,"jd":"Hasil Administrasi PPG Calon Guru"},
+{"th":2026,"bm":7,"bs":8,"hm":28,"hs":2,"tp":4,"sub":"profesi","id":7355444,"jd":"Cetak Kartu PPG Calon Guru"},
+{"th":2026,"bm":8,"bs":8,"hm":3,"hs":3,"tp":4,"sub":"beasiswa-nasional","id":153067031,"jd":"Batas Seleksi Administrasi LPDP"},
+{"th":2026,"bm":8,"bs":8,"hm":3,"hs":7,"tp":4,"sub":"profesi","id":1494547449,"jd":"Tes Substantif PPG Calon Guru"},
+{"th":2026,"bm":8,"bs":8,"hm":5,"hs":5,"tp":4,"sub":"beasiswa-nasional","id":1861280624,"jd":"Hasil Gelombang II Garuda"},
+{"th":2026,"bm":8,"bs":8,"hm":26,"hs":26,"tp":4,"sub":"profesi","id":1356503470,"jd":"Hasil Substantif PPG Calon Guru"},
+{"th":2026,"bm":8,"bs":8,"hm":28,"hs":28,"tp":4,"sub":"beasiswa-nasional","id":139967945,"jd":"Hasil Seleksi Administrasi LPDP"},
+{"th":2026,"bm":8,"bs":8,"hm":29,"hs":29,"tp":4,"sub":"profesi","id":585409271,"jd":"Jadwal Wawancara PPG Calon Guru"},
+{"th":2026,"bm":8,"bs":9,"hm":31,"hs":16,"tp":4,"sub":"profesi","id":119256384,"jd":"Tes Wawancara PPG Calon Guru"},
+{"th":2026,"bm":9,"bs":9,"hm":21,"hs":21,"tp":4,"sub":"profesi","id":1466464909,"jd":"Hasil Akhir PPG Calon Guru"},
+{"th":2026,"bm":9,"bs":9,"hm":22,"hs":22,"tp":4,"sub":"beasiswa-nasional","id":2093103364,"jd":"Hasil Sanggah Administrasi LPDP"},
+{"th":2026,"bm":9,"bs":9,"hm":27,"hs":28,"tp":4,"sub":"beasiswa-nasional","id":720069720,"jd":"Simulasi Bakat Skolastik LPDP"},
+{"th":2026,"bm":9,"bs":10,"hm":29,"hs":4,"tp":4,"sub":"beasiswa-nasional","id":62620912,"jd":"Seleksi Bakat Skolastik LPDP"},
+{"th":2026,"bm":10,"bs":10,"hm":9,"hs":9,"tp":4,"sub":"beasiswa-nasional","id":218968514,"jd":"Hasil Bakat Skolastik LPDP"},
+{"th":2026,"bm":10,"bs":11,"hm":14,"hs":20,"tp":4,"sub":"beasiswa-nasional","id":993910177,"jd":"Seleksi Substansi LPDP"},
+{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":41729000,"jd":"Asesmen Semester Gasal MAK"},
+{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":41729635,"jd":"Asesmen Semester Gasal MTs"},
+{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":261565561,"jd":"Asesmen Semester Gasal MA"},
+{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":261565569,"jd":"Asesmen Semester Gasal MI"},
+{"th":2026,"bm":11,"bs":12,"hm":23,"hs":5,"tp":4,"sub":"akademik","id":261565726,"jd":"Asesmen Semester Gasal RA"},
+{"th":2026,"bm":11,"bs":11,"hm":30,"hs":30,"tp":4,"sub":"beasiswa-nasional","id":1322770682,"jd":"Hasil Seleksi Substansi LPDP"},
+{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":394442576,"jd":"Laporan Hasil Belajar Gasal MAK"},
+{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":394443211,"jd":"Laporan Hasil Belajar Gasal MTs"},
+{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":2029285926,"jd":"Laporan Hasil Belajar Gasal MA"},
+{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":2029285934,"jd":"Laporan Hasil Belajar Gasal MI"},
+{"th":2026,"bm":12,"bs":12,"hm":18,"hs":19,"tp":4,"sub":"akademik","id":2029286091,"jd":"Laporan Hasil Belajar Gasal RA"},
+{"th":2026,"bm":12,"bs":12,"hm":21,"hs":31,"tp":4,"sub":"akademik","id":1942052420,"jd":"Libur Semester Gasal MAK"},
+{"th":2026,"bm":12,"bs":12,"hm":21,"hs":31,"tp":4,"sub":"akademik","id":1942053055,"jd":"Libur Semester Gasal MTs"},
+{"th":2026,"bm":12,"bs":12,"hm":21,"hs":31,"tp":4,"sub":"akademik","id":2076183194,"jd":"Libur Semester Gasal MA"},
+{"th":2026,"bm":12,"bs":12,"hm":21,"hs":31,"tp":4,"sub":"akademik","id":2076183202,"jd":"Libur Semester Gasal MI"},
 {"th":2026,"bm":12,"bs":12,"hm":21,"hs":31,"tp":4,"sub":"akademik","id":2076183359,"jd":"Libur Semester Gasal RA"}
-{"th":2026,"bm":12,"bs":12,"hm":21,"hs":31,"tp":4,"sub":"akademik","id":2076183202,"jd":"Libur Semester Gasal MI"}
-{"th":2026,"bm":12,"bs":12,"hm":21,"hs":31,"tp":4,"sub":"akademik","id":1942053055,"jd":"Libur Semester Gasal MTs"}
-{"th":2026,"bm":12,"bs":12,"hm":21,"hs":31,"tp":4,"sub":"akademik","id":2076183194,"jd":"Libur Semester Gasal MA"}
-{"th":2026,"bm":12,"bs":12,"hm":21,"hs":31,"tp":4,"sub":"akademik","id":1942052420,"jd":"Libur Semester Gasal MAK"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1410932569,"jd":"Pendaftaran TKA SD dan MI"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":408745970,"jd":"Pendaftaran TKA Paket A"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":2022130724,"jd":"Pendaftaran TKA PKPPS Ula"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":2071595352,"jd":"Pendaftaran TKA SDLB"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":518895416,"jd":"Pendaftaran TKA PDF Ula"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":576258192,"jd":"Pendaftaran TKA SPM Ula"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1688713643,"jd":"Pendaftaran TKA Sekolah Rumah SD"}
-{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":286617652,"jd":"Simulasi TKA SD dan MI"}
-{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":2034595092,"jd":"Simulasi TKA Paket A"}
-{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":897815807,"jd":"Simulasi TKA PKPPS Ula"}
-{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":708585748,"jd":"Simulasi TKA SDLB"}
-{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":2144744538,"jd":"Simulasi TKA PDF Ula"}
-{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":54623667,"jd":"Simulasi TKA SPM Ula"}
-{"th":2026,"bm":3,"bs":3,"hm":2,"hs":8,"tp":4,"sub":"akademik","id":721916739,"jd":"Simulasi TKA Sekolah Rumah SD"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1554057420,"jd":"Gladi Bersih TKA SD dan MI"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":103220864,"jd":"Gladi Bersih TKA Paket A"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":17771928,"jd":"Gladi Bersih TKA PKPPS Ula"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1433741720,"jd":"Gladi Bersih TKA SDLB"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":213370310,"jd":"Gladi Bersih TKA PDF Ula"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":270733086,"jd":"Gladi Bersih TKA SPM Ula"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1693419382,"jd":"Gladi Bersih TKA Sekolah Rumah SD"}
-{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":289916532,"jd":"Pelaksanaan TKA SD dan MI"}
-{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":2030654166,"jd":"Pelaksanaan TKA Paket A"}
-{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":901114687,"jd":"Pelaksanaan TKA PKPPS Ula"}
-{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":373349440,"jd":"Pelaksanaan TKA SDLB"}
-{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":2140803612,"jd":"Pelaksanaan TKA PDF Ula"}
-{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":50682741,"jd":"Pelaksanaan TKA SPM Ula"}
-{"th":2026,"bm":4,"bs":4,"hm":20,"hs":30,"tp":4,"sub":"akademik","id":1893292780,"jd":"Pelaksanaan TKA Sekolah Rumah SD"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":758837361,"jd":"TKA Susulan SD dan MI"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":463362542,"jd":"TKA Susulan Paket A"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":1370035516,"jd":"TKA Susulan PKPPS Ula"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":275842327,"jd":"TKA Susulan SDLB"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":573511988,"jd":"TKA Susulan PDF Ula"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":630874764,"jd":"TKA Susulan SPM Ula"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":1883467641,"jd":"TKA Susulan Sekolah Rumah SD"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1367882835,"jd":"Pengumuman Hasil TKA SD dan MI"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":759718458,"jd":"Pengumuman Hasil TKA Paket A"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1979080990,"jd":"Pengumuman Hasil TKA PKPPS Ula"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":245673340,"jd":"Pengumuman Hasil TKA SDLB"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":869867904,"jd":"Pengumuman Hasil TKA PDF Ula"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":927230680,"jd":"Pengumuman Hasil TKA SPM Ula"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1205653134,"jd":"Pengumuman Hasil TKA Sekolah Rumah SD"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1293394762,"jd":"Pendaftaran TKA SMP dan MTs"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":408745971,"jd":"Pendaftaran TKA Paket B"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":702382413,"jd":"Pendaftaran TKA PKPPS Wustha"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1790981744,"jd":"Pendaftaran TKA SMPLB"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":1033742749,"jd":"Pendaftaran TKA PDF Wustha"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":895522741,"jd":"Pendaftaran TKA SPM Wustha"}
-{"th":2026,"bm":1,"bs":2,"hm":19,"hs":28,"tp":4,"sub":"akademik","id":2040459421,"jd":"Pendaftaran TKA Sekolah Rumah SMP"}
-{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":980128939,"jd":"Simulasi TKA SMP dan MTs"}
-{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":2034595093,"jd":"Simulasi TKA Paket B"}
-{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":1102028489,"jd":"Simulasi TKA PKPPS Wustha"}
-{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":1908821399,"jd":"Simulasi TKA SMPLB"}
-{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":438572487,"jd":"Simulasi TKA PDF Wustha"}
-{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":300352479,"jd":"Simulasi TKA SPM Wustha"}
-{"th":2026,"bm":2,"bs":3,"hm":23,"hs":1,"tp":4,"sub":"akademik","id":200932647,"jd":"Simulasi TKA Sekolah Rumah SMP"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":390051270,"jd":"Gladi Bersih TKA SMP dan MTs"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":103220865,"jd":"Gladi Bersih TKA Paket B"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":956818235,"jd":"Gladi Bersih TKA PKPPS Wustha"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":69164711,"jd":"Gladi Bersih TKA SMPLB"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1461895538,"jd":"Gladi Bersih TKA PDF Wustha"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":1323675530,"jd":"Gladi Bersih TKA SPM Wustha"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":17,"tp":4,"sub":"akademik","id":48265161,"jd":"Gladi Bersih TKA Sekolah Rumah SMP"}
-{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":277641965,"jd":"Pelaksanaan TKA SMP dan MTs"}
-{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":2030654167,"jd":"Pelaksanaan TKA Paket B"}
-{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":1542278464,"jd":"Pelaksanaan TKA PKPPS Wustha"}
-{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":1583441470,"jd":"Pelaksanaan TKA SMPLB"}
-{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":547435527,"jd":"Pelaksanaan TKA PDF Wustha"}
-{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":409215519,"jd":"Pelaksanaan TKA SPM Wustha"}
-{"th":2026,"bm":4,"bs":4,"hm":6,"hs":16,"tp":4,"sub":"akademik","id":201636354,"jd":"Pelaksanaan TKA Sekolah Rumah SMP"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":1978800407,"jd":"TKA Susulan SMP dan MTs"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":463362543,"jd":"TKA Susulan Paket B"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":1845932228,"jd":"TKA Susulan PKPPS Wustha"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":513190388,"jd":"TKA Susulan SMPLB"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":989437355,"jd":"TKA Susulan PDF Wustha"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":851217347,"jd":"TKA Susulan SPM Wustha"}
-{"th":2026,"bm":5,"bs":5,"hm":11,"hs":19,"tp":4,"sub":"akademik","id":2024890414,"jd":"TKA Susulan Sekolah Rumah SMP"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1656874670,"jd":"Pengumuman Hasil TKA SMP dan MTs"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":759718459,"jd":"Pengumuman Hasil TKA Paket B"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1959801142,"jd":"Pengumuman Hasil TKA PKPPS Wustha"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1665097464,"jd":"Pengumuman Hasil TKA SMPLB"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1760585174,"jd":"Pengumuman Hasil TKA PDF Wustha"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1622365166,"jd":"Pengumuman Hasil TKA SPM Wustha"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":1131848153,"jd":"Pengumuman Hasil TKA Sekolah Rumah SMP"}
-{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":2105002812,"jd":"Sertifikat Hasil TKA Jenjang Menengah"}
-{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":1475464250,"jd":"Sertifikat Hasil TKA Paket C"}
-{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":82495581,"jd":"Sertifikat Hasil TKA PKPPS Ulya"}
-{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":1967450958,"jd":"Sertifikat Hasil TKA SMALB"}
-{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":785645231,"jd":"Sertifikat Hasil TKA PDF Ulya"}
-{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":531133192,"jd":"Sertifikat Hasil TKA SPM Ulya"}
-{"th":2026,"bm":1,"bs":1,"hm":5,"hs":5,"tp":4,"sub":"akademik","id":2020320328,"jd":"Sertifikat Hasil TKA Sekolah Rumah SMA"}
-{"th":2026,"bm":1,"bs":1,"hm":1,"hs":15,"tp":4,"sub":"akademik","id":465237636,"jd":"Masa Sanggah Kuota Sekolah SNBP"}
-{"th":2026,"bm":1,"bs":1,"hm":5,"hs":26,"tp":4,"sub":"akademik","id":1095382761,"jd":"Registrasi Akun Sekolah SNBP"}
-{"th":2026,"bm":1,"bs":2,"hm":5,"hs":2,"tp":4,"sub":"akademik","id":1109006941,"jd":"Pengisian PDSS SNBP"}
-{"th":2026,"bm":1,"bs":2,"hm":12,"hs":18,"tp":4,"sub":"akademik","id":1027009054,"jd":"Registrasi Akun Siswa SNBP"}
-{"th":2026,"bm":2,"bs":2,"hm":3,"hs":18,"tp":4,"sub":"akademik","id":1222232456,"jd":"Pendaftaran SNBP"}
-{"th":2026,"bm":3,"bs":3,"hm":31,"hs":31,"tp":4,"sub":"akademik","id":848380445,"jd":"Pengumuman Hasil Seleksi SNBP"}
-{"th":2026,"bm":2,"bs":4,"hm":3,"hs":30,"tp":4,"sub":"akademik","id":126884235,"jd":"Unduh Kartu Peserta SNBP"}
-{"th":2026,"bm":1,"bs":2,"hm":5,"hs":10,"tp":4,"sub":"akademik","id":1207968763,"jd":"Pengisian PDSS SPAN-PTKIN"}
-{"th":2026,"bm":2,"bs":3,"hm":11,"hs":4,"tp":4,"sub":"akademik","id":597575934,"jd":"Pendaftaran SPAN-PTKIN"}
-{"th":2026,"bm":4,"bs":4,"hm":7,"hs":7,"tp":4,"sub":"akademik","id":1196326063,"jd":"Pengumuman Hasil Seleksi SPAN-PTKIN"}
-{"th":2026,"bm":1,"bs":2,"hm":5,"hs":9,"tp":4,"sub":"akademik","id":490329438,"jd":"Pendaftaran PDSS SPAN-PTKIN"}
-{"th":2026,"bm":1,"bs":4,"hm":12,"hs":7,"tp":4,"sub":"akademik","id":1027009058,"jd":"Registrasi Akun Siswa SNBT"}
-{"th":2026,"bm":3,"bs":4,"hm":25,"hs":7,"tp":4,"sub":"akademik","id":1222232460,"jd":"Pendaftaran SNBT"}
-{"th":2026,"bm":5,"bs":5,"hm":25,"hs":25,"tp":4,"sub":"akademik","id":848380449,"jd":"Pengumuman Hasil Seleksi SNBT"}
-{"th":2026,"bm":4,"bs":4,"hm":11,"hs":15,"tp":4,"sub":"akademik","id":126884239,"jd":"Unduh Kartu Peserta SNBT"}
-{"th":2026,"bm":3,"bs":4,"hm":25,"hs":8,"tp":4,"sub":"akademik","id":114532012,"jd":"Pembayaran Biaya UTBK SNBT"}
-{"th":2026,"bm":4,"bs":4,"hm":21,"hs":30,"tp":4,"sub":"akademik","id":3273137,"jd":"Pelaksanaan UTBK SNBT"}
-{"th":2026,"bm":5,"bs":7,"hm":26,"hs":31,"tp":4,"sub":"akademik","id":32850248,"jd":"Unduh Sertifikat UTBK SNBT"}
-{"th":2026,"bm":6,"bs":7,"hm":30,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":1221983141,"jd":"Pendaftaran LPDP"}
-{"th":2026,"bm":5,"bs":7,"hm":25,"hs":6,"tp":4,"sub":"beasiswa-nasional","id":1675374064,"jd":"Pendaftaran PMDSU"}
-{"th":2026,"bm":4,"bs":4,"hm":1,"hs":19,"tp":4,"sub":"beasiswa-luar-negeri","id":1278229778,"jd":"Pendaftaran MEXT Gakubu"}
-{"th":2026,"bm":4,"bs":5,"hm":20,"hs":10,"tp":4,"sub":"beasiswa-luar-negeri","id":1931171830,"jd":"Pendaftaran MEXT Kosen"}
-{"th":2026,"bm":4,"bs":5,"hm":20,"hs":10,"tp":4,"sub":"beasiswa-luar-negeri","id":1752704009,"jd":"Pendaftaran MEXT Senshu"}
-{"th":2026,"bm":1,"bs":1,"hm":1,"hs":22,"tp":4,"sub":"beasiswa-luar-negeri","id":1322568928,"jd":"Pendaftaran MEXT Studi Jepang"}
-{"th":2026,"bm":2,"bs":4,"hm":1,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":1537934133,"jd":"Pendaftaran Australia Awards"}
-{"th":2026,"bm":1,"bs":2,"hm":10,"hs":20,"tp":4,"sub":"beasiswa-luar-negeri","id":104237779,"jd":"Pendaftaran T\u00fcrkiye Scholarships"}
-{"th":2026,"bm":6,"bs":6,"hm":30,"hs":30,"tp":4,"sub":"akademik","id":439525185,"jd":"Pengumuman Hasil Seleksi UM-PTKIN"}
-{"th":2026,"bm":4,"bs":5,"hm":13,"hs":30,"tp":4,"sub":"akademik","id":1394975914,"jd":"Pendaftaran dan Pembayaran UM-PTKIN"}
-{"th":2026,"bm":4,"bs":6,"hm":13,"hs":3,"tp":4,"sub":"akademik","id":1231458811,"jd":"Finalisasi Pendaftaran UM-PTKIN"}
-{"th":2026,"bm":5,"bs":5,"hm":1,"hs":1,"tp":4,"sub":"akademik","id":1656387562,"jd":"Cetak Kartu Peserta UM-PTKIN"}
-{"th":2026,"bm":6,"bs":6,"hm":8,"hs":14,"tp":4,"sub":"akademik","id":2141352934,"jd":"Pelaksanaan Ujian UM-PTKIN"}
-{"th":2026,"bm":6,"bs":7,"hm":27,"hs":25,"tp":4,"sub":"profesi","id":647493153,"jd":"Pendaftaran PPG Calon Guru"}
-{"th":2026,"bm":7,"bs":7,"hm":26,"hs":28,"tp":4,"sub":"profesi","id":496140732,"jd":"Hasil Administrasi PPG Calon Guru"}
-{"th":2026,"bm":7,"bs":8,"hm":28,"hs":2,"tp":4,"sub":"profesi","id":7355444,"jd":"Cetak Kartu PPG Calon Guru"}
-{"th":2026,"bm":8,"bs":8,"hm":3,"hs":7,"tp":4,"sub":"profesi","id":1494547449,"jd":"Tes Substantif PPG Calon Guru"}
-{"th":2026,"bm":8,"bs":8,"hm":26,"hs":26,"tp":4,"sub":"profesi","id":1356503470,"jd":"Hasil Substantif PPG Calon Guru"}
-{"th":2026,"bm":8,"bs":8,"hm":29,"hs":29,"tp":4,"sub":"profesi","id":585409271,"jd":"Jadwal Wawancara PPG Calon Guru"}
-{"th":2026,"bm":8,"bs":9,"hm":31,"hs":16,"tp":4,"sub":"profesi","id":119256384,"jd":"Tes Wawancara PPG Calon Guru"}
-{"th":2026,"bm":9,"bs":9,"hm":21,"hs":21,"tp":4,"sub":"profesi","id":1466464909,"jd":"Hasil Akhir PPG Calon Guru"}
-{"th":2026,"bm":2,"bs":10,"hm":3,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":349563161,"jd":"Pendaftaran Akun KIP Kuliah"}
-{"th":2026,"bm":2,"bs":2,"hm":10,"hs":18,"tp":4,"sub":"beasiswa-nasional","id":189933163,"jd":"Jalur SNBP KIP Kuliah"}
-{"th":2026,"bm":3,"bs":4,"hm":25,"hs":7,"tp":4,"sub":"beasiswa-nasional","id":783107091,"jd":"Jalur UTBK-SNBT KIP Kuliah"}
-{"th":2026,"bm":6,"bs":10,"hm":15,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":1937032004,"jd":"Seleksi Mandiri PTN KIP Kuliah"}
-{"th":2026,"bm":6,"bs":10,"hm":15,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":1692967765,"jd":"Seleksi Mandiri PTS KIP Kuliah"}
-{"th":2026,"bm":8,"bs":8,"hm":3,"hs":3,"tp":4,"sub":"beasiswa-nasional","id":153067031,"jd":"Batas Seleksi Administrasi LPDP"}
-{"th":2026,"bm":8,"bs":8,"hm":28,"hs":28,"tp":4,"sub":"beasiswa-nasional","id":139967945,"jd":"Hasil Seleksi Administrasi LPDP"}
-{"th":2026,"bm":9,"bs":9,"hm":22,"hs":22,"tp":4,"sub":"beasiswa-nasional","id":2093103364,"jd":"Hasil Sanggah Administrasi LPDP"}
-{"th":2026,"bm":9,"bs":9,"hm":27,"hs":28,"tp":4,"sub":"beasiswa-nasional","id":720069720,"jd":"Simulasi Bakat Skolastik LPDP"}
-{"th":2026,"bm":9,"bs":10,"hm":29,"hs":4,"tp":4,"sub":"beasiswa-nasional","id":62620912,"jd":"Seleksi Bakat Skolastik LPDP"}
-{"th":2026,"bm":10,"bs":10,"hm":9,"hs":9,"tp":4,"sub":"beasiswa-nasional","id":218968514,"jd":"Hasil Bakat Skolastik LPDP"}
-{"th":2026,"bm":10,"bs":11,"hm":14,"hs":20,"tp":4,"sub":"beasiswa-nasional","id":993910177,"jd":"Seleksi Substansi LPDP"}
-{"th":2026,"bm":11,"bs":11,"hm":30,"hs":30,"tp":4,"sub":"beasiswa-nasional","id":1322770682,"jd":"Hasil Seleksi Substansi LPDP"}
-{"th":2026,"bm":2,"bs":3,"hm":15,"hs":15,"tp":4,"sub":"beasiswa-nasional","id":499978961,"jd":"Pendaftaran Gelombang I Garuda"}
-{"th":2026,"bm":3,"bs":3,"hm":16,"hs":30,"tp":4,"sub":"beasiswa-nasional","id":1925977466,"jd":"Administrasi Gelombang I Garuda"}
-{"th":2026,"bm":4,"bs":4,"hm":10,"hs":20,"tp":4,"sub":"beasiswa-nasional","id":1573758467,"jd":"Tes Bakat Gelombang I Garuda"}
-{"th":2026,"bm":4,"bs":4,"hm":30,"hs":30,"tp":4,"sub":"beasiswa-nasional","id":167902870,"jd":"Hasil Gelombang I Garuda"}
-{"th":2026,"bm":5,"bs":6,"hm":25,"hs":25,"tp":4,"sub":"beasiswa-nasional","id":1016169291,"jd":"Pendaftaran Gelombang II Garuda"}
-{"th":2026,"bm":6,"bs":7,"hm":25,"hs":10,"tp":4,"sub":"beasiswa-nasional","id":788106649,"jd":"Administrasi Gelombang II Garuda"}
-{"th":2026,"bm":7,"bs":7,"hm":25,"hs":30,"tp":4,"sub":"beasiswa-nasional","id":1865668930,"jd":"Tes Bakat Gelombang II Garuda"}
-{"th":2026,"bm":8,"bs":8,"hm":5,"hs":5,"tp":4,"sub":"beasiswa-nasional","id":1861280624,"jd":"Hasil Gelombang II Garuda"}
-{"th":2026,"bm":4,"bs":4,"hm":22,"hs":22,"tp":4,"sub":"beasiswa-luar-negeri","id":1439885348,"jd":"Batas Pendaftaran MEXT Research"}
-{"th":2026,"bm":1,"bs":1,"hm":15,"hs":15,"tp":4,"sub":"beasiswa-luar-negeri","id":1521602818,"jd":"Batas Pendaftaran Stipendium"}
-{"th":2026,"bm":6,"bs":6,"hm":12,"hs":12,"tp":4,"sub":"beasiswa-luar-negeri","id":367017031,"jd":"Hasil Seleksi Dokumen MEXT Gakubu"}
-{"th":2026,"bm":6,"bs":6,"hm":12,"hs":12,"tp":4,"sub":"beasiswa-luar-negeri","id":797279868,"jd":"Hasil Seleksi Dokumen MEXT Kosen"}
-{"th":2026,"bm":6,"bs":6,"hm":12,"hs":12,"tp":4,"sub":"beasiswa-luar-negeri","id":841491262,"jd":"Hasil Seleksi Dokumen MEXT Senshu"}
-{"th":2026,"bm":2,"bs":2,"hm":6,"hs":6,"tp":4,"sub":"beasiswa-luar-negeri","id":1902965075,"jd":"Hasil Seleksi Dokumen MEXT Studi Jepang"}
-{"th":2026,"bm":3,"bs":3,"hm":15,"hs":15,"tp":4,"sub":"beasiswa-luar-negeri","id":1884773267,"jd":"Pernyataan Pembimbing Stipendium"}
-{"th":2026,"bm":3,"bs":5,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":145415394,"jd":"Ujian Masuk Stipendium"}
-{"th":2026,"bm":6,"bs":7,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":856439915,"jd":"Hasil Akhir Stipendium"}
-{"th":2026,"bm":2,"bs":2,"hm":15,"hs":15,"tp":4,"sub":"beasiswa-luar-negeri","id":1337953177,"jd":"Batas Pendaftaran Fulbright"}
-{"th":2026,"bm":1,"bs":2,"hm":1,"hs":8,"tp":4,"sub":"beasiswa-luar-negeri","id":1616358099,"jd":"Pendaftaran CSC Tiongkok"}
-{"th":2026,"bm":7,"bs":8,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":2103077657,"jd":"Hasil Akhir CSC Tiongkok"}
-{"th":2026,"bm":2,"bs":2,"hm":1,"hs":28,"tp":4,"sub":"beasiswa-luar-negeri","id":1074378632,"jd":"Daftar Pendek Wawancara Chevening"}
-{"th":2026,"bm":3,"bs":4,"hm":1,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":2013168180,"jd":"Wawancara Chevening"}
-{"th":2026,"bm":6,"bs":6,"hm":1,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":1379483916,"jd":"Hasil Akhir Chevening"}
-{"th":2026,"bm":7,"bs":7,"hm":9,"hs":9,"tp":4,"sub":"beasiswa-luar-negeri","id":631645784,"jd":"Batas Penyerahan LoA Chevening"}
-{"th":2026,"bm":2,"bs":2,"hm":12,"hs":25,"tp":4,"sub":"beasiswa-luar-negeri","id":1510915448,"jd":"Pendaftaran GKS Pascasarjana"}
-{"th":2026,"bm":2,"bs":3,"hm":26,"hs":5,"tp":4,"sub":"beasiswa-luar-negeri","id":1129913233,"jd":"Seleksi Dokumen GKS Pascasarjana"}
-{"th":2026,"bm":3,"bs":3,"hm":5,"hs":5,"tp":4,"sub":"beasiswa-luar-negeri","id":1463427948,"jd":"Hasil Seleksi Dokumen GKS Pascasarjana"}
-{"th":2026,"bm":3,"bs":3,"hm":9,"hs":12,"tp":4,"sub":"beasiswa-luar-negeri","id":611934411,"jd":"Wawancara GKS Pascasarjana"}
-{"th":2026,"bm":3,"bs":3,"hm":16,"hs":16,"tp":4,"sub":"beasiswa-luar-negeri","id":590349844,"jd":"Hasil Tahap I GKS Pascasarjana"}
-{"th":2026,"bm":3,"bs":3,"hm":30,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":204173350,"jd":"Batas Dokumen GKS Pascasarjana"}
-{"th":2026,"bm":4,"bs":5,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":913648928,"jd":"Seleksi Tahap II GKS Pascasarjana"}
-{"th":2026,"bm":5,"bs":6,"hm":1,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":719923910,"jd":"Seleksi Tahap III GKS Pascasarjana"}
-{"th":2026,"bm":6,"bs":6,"hm":30,"hs":30,"tp":4,"sub":"beasiswa-luar-negeri","id":1063799471,"jd":"Hasil Akhir GKS Pascasarjana"}
-{"th":2026,"bm":1,"bs":1,"hm":8,"hs":10,"tp":4,"sub":"akademik","id":840485415,"jd":"Imtihan Wathani PDF Ulya"}
-{"th":2026,"bm":1,"bs":1,"hm":12,"hs":14,"tp":4,"sub":"akademik","id":549334898,"jd":"Imtihan Wathani PDF Wustha"}
-{"th":2026,"bm":2,"bs":5,"hm":27,"hs":22,"tp":4,"sub":"beasiswa-nasional","id":1221574926,"jd":"Pendaftaran ADik"}
-{"th":2026,"bm":4,"bs":5,"hm":1,"hs":31,"tp":4,"sub":"beasiswa-nasional","id":622696025,"jd":"Pendaftaran BIB"}
-{"th":2026,"bm":1,"bs":1,"hm":9,"hs":9,"tp":4,"sub":"beasiswa-luar-negeri","id":137693335,"jd":"Hasil Akhir GKS Sarjana"}
-{"th":2026,"bm":4,"bs":5,"hm":19,"hs":21,"tp":4,"sub":"beasiswa-luar-negeri","id":1374567211,"jd":"Pendaftaran UIM Sarjana"}
-{"th":2026,"bm":4,"bs":4,"hm":19,"hs":19,"tp":4,"sub":"beasiswa-luar-negeri","id":196149071,"jd":"Tambah Pilihan Study in Saudi"}
-{"th":2026,"bm":5,"bs":5,"hm":20,"hs":20,"tp":4,"sub":"beasiswa-luar-negeri","id":1931960473,"jd":"Pengiriman Pilihan Study in Saudi"}
-{"th":2026,"bm":5,"bs":5,"hm":31,"hs":31,"tp":4,"sub":"beasiswa-luar-negeri","id":845143580,"jd":"Batas Pendaftaran Study in Saudi"}
 
 
   ]
