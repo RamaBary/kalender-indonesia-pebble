@@ -1,6 +1,8 @@
 {
   "skema": 3,
   "berkas": [
+    "catalogs/libur-nasional.json",
+    "catalogs/hijriah.json",
     "catalogs/international.json"
   ],
   "keterangan": "keterangan.json"
