@@ -1,0 +1,20 @@
+{
+  "kategori": "libur-daerah",
+  "peristiwa": [
+{"th":0,"bm":12,"bs":12,"hm":26,"hs":26,"tp":2,"sub":"aceh","id":8001,"jd":"Peringatan Gempa dan Tsunami Aceh"},
+{"th":0,"bm":2,"bs":2,"hm":5,"hs":5,"tp":2,"sub":"papua","id":8002,"jd":"Hari Pekabaran Injil di Tanah Papua"},
+{"th":0,"bm":10,"bs":10,"hm":26,"hs":26,"tp":2,"sub":"papua","id":8003,"jd":"HUT GKI di Tanah Papua"},
+{"th":0,"bm":12,"bs":12,"hm":26,"hs":26,"tp":2,"sub":"papua","id":8004,"jd":"Natal Hari Kedua"},
+{"th":0,"bm":12,"bs":12,"hm":27,"hs":27,"tp":2,"sub":"papua","id":8005,"jd":"Hari Jadi Provinsi Papua"},
+{"th":0,"bm":8,"bs":8,"hm":15,"hs":15,"tp":2,"sub":"aceh","id":9001,"jd":"Hari Damai Aceh"},
+{"th":0,"bm":9,"bs":9,"hm":2,"hs":2,"tp":2,"sub":"aceh","id":9002,"jd":"Hari Pendidikan Daerah Aceh"},
+{"th":0,"bm":4,"bs":5,"hm":1,"hs":31,"tp":2,"sub":"aceh","id":9008,"jd":"Khanduri Laot"},
+{"th":0,"bm":6,"bs":7,"hm":1,"hs":31,"tp":2,"sub":"aceh","id":9009,"jd":"Khanduri Blang"},
+{"th":0,"bm":8,"bs":8,"hm":1,"hs":31,"tp":2,"sub":"aceh","id":9010,"jd":"Pacu Kude Gayo"},
+{"th":0,"bm":6,"bs":8,"hm":1,"hs":31,"tp":2,"sub":"aceh","id":9011,"jd":"Aceh Culinary Festival"},
+{"th":0,"bm":8,"bs":8,"hm":1,"hs":31,"tp":2,"sub":"aceh","id":9012,"jd":"Banda Aceh Colossal Coffee Experience"},
+{"th":0,"bm":9,"bs":10,"hm":1,"hs":31,"tp":2,"sub":"aceh","id":9013,"jd":"Festival Saman Gayo Alas"},
+{"th":0,"bm":10,"bs":11,"hm":1,"hs":30,"tp":2,"sub":"aceh","id":9014,"jd":"Aceh International Diving Festival"}
+
+  ]
+}
