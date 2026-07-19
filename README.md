@@ -564,18 +564,17 @@ Terima kasih atas segala dukungan terhadap aplikasi ini! :)
 
 ## Relasi Duplikat dan Prioritas Nasional
 
-File runtime:
+File runtime permanen:
 
 ```text
 data/duplikat.json
 ```
 
-File ini bukan daftar error, bukan hasil pembersihan data otomatis, dan
-bukan cache sementara. File ini adalah artefak runtime permanen yang
-menghubungkan dua ID dari kategori berbeda ketika keduanya mewakili
-peristiwa publik yang sama.
+File ini bukan daftar error, bukan cache sementara, dan bukan hasil
+penghapusan duplikat otomatis. File ini menyimpan relasi dua ID dari kategori
+berbeda yang mewakili peristiwa publik yang sama.
 
-Saat ini relasi yang digunakan adalah pasangan:
+Saat ini relasi yang digunakan adalah:
 
 ```text
 ID Hijriah ↔ ID Nasional
@@ -596,9 +595,9 @@ tblPrioritasNasional
 → data/duplikat.json
 ```
 
-`data/duplikat.json` adalah file generated. Jangan mengeditnya secara
-manual. Perubahan pasangan, status aktif, atau catatan pemeliharaan
-dilakukan di `tblPrioritasNasional`, lalu Power Query dijalankan ulang.
+`data/duplikat.json` adalah file generated. Jangan mengeditnya secara manual.
+Perubahan pasangan, status aktif, atau catatan pemeliharaan dilakukan pada
+`tblPrioritasNasional`, lalu Power Query dijalankan ulang.
 
 Struktur runtime:
 
@@ -614,26 +613,45 @@ Struktur runtime:
 }
 ```
 
-Kolom `Catatan` tetap dipelihara di Excel agar alasan setiap pasangan
-dapat diaudit, tetapi tidak dimasukkan ke JSON untuk menjaga payload
-runtime tetap kecil.
+Kolom `Catatan` tetap dipelihara di Excel agar alasan setiap pasangan dapat
+diaudit, tetapi tidak dimasukkan ke JSON untuk menjaga payload tetap kecil.
 
-Aturan prioritas runtime:
+### Urutan prioritas runtime
 
 ```text
-1. Event Hijriah diselesaikan menjadi occurrence.
-2. Koreksi tanggal berdasarkan field bh diterapkan.
-3. Runtime memeriksa relasi pada duplikat.json.
-4. Jika filter Nasional aktif dan event Nasional pasangannya tersedia
-   pada tanggal hasil koreksi, occurrence Hijriah ditekan.
-5. Jika filter Nasional tidak aktif, occurrence Hijriah tetap tampil.
+1. Katalog aktif dibaca dan occurrence dibentuk.
+2. Koreksi tanggal Hijriah berdasarkan field bh diterapkan.
+3. Tahun occurrence efektif diambil dari tanggal hasil koreksi.
+4. Runtime membaca pasangan ID pada duplikat.json.
+5. Jika filter Nasional dan Hijriah sama-sama aktif, runtime memeriksa apakah
+   ID Nasional pasangan tersedia untuk tahun occurrence efektif.
+6. Jika tersedia, occurrence Hijriah ditekan dan event Nasional dipertahankan.
+7. Jika Nasional tidak aktif, occurrence Hijriah tetap ditampilkan.
 ```
 
-Dengan demikian, `duplikat.json` hanya menyatakan relasi ID. Keputusan
-kategori mana yang diprioritaskan tetap berada pada logika runtime dan
-didokumentasikan sebagai Prioritas Nasional.
+Tanggal Hijriah dan tanggal Nasional tidak wajib sama. Relasi dinilai dari
+pasangan ID dan ketersediaan ID Nasional pada tahun occurrence efektif. Hal
+ini diperlukan karena tanggal hasil konversi Hijriah dapat berbeda satu hari
+dari tanggal libur nasional yang telah ditetapkan.
 
-Koreksi Hijriah disimpan per bulan Hijriah dalam array 12 nilai:
+Contoh 2026:
+
+```text
+12013 Hari Raya Idulfitri dari katalog Hijriah : 20 Maret 2026
+4009  Hari Raya Idulfitri Nasional             : 21 Maret 2026
+```
+
+Saat kedua filter aktif, ID 12013 tetap ditekan karena ID Nasional 4009
+tersedia pada tahun 2026, walaupun tanggalnya berbeda.
+
+Jika `duplikat.json` gagal diambil dan cache valid tidak tersedia, runtime
+menggunakan kebijakan fail-open: tidak ada event Hijriah yang ditekan. Ini
+lebih aman daripada menghilangkan event akibat data relasi yang tidak siap.
+Kondisi tersebut dicatat pada log `CP-DUPLIKAT-NONE`.
+
+### Koreksi bulan Hijriah
+
+Koreksi disimpan sebagai 12 nilai independen:
 
 ```text
 Muharam, Safar, Rabiulawal, Rabiulakhir,
@@ -641,9 +659,9 @@ Jumadilawal, Jumadilakhir, Rajab, Syakban,
 Ramadan, Syawal, Zulkaidah, Zulhijah
 ```
 
-Setiap bulan dapat memiliki nilai sendiri dari `-2` sampai `+2`.
-Pemilihan beberapa bulan pada settings hanya mempermudah pengeditan
-paralel dan tidak mengubah struktur 12 nilai independen.
+Setiap bulan dapat memiliki nilai sendiri dari `-2` sampai `+2`. Pemilihan
+beberapa bulan pada settings hanya mempermudah pengeditan paralel dan tidak
+mengubah struktur 12 nilai tersebut.
 
 Contoh yang valid:
 
@@ -653,6 +671,5 @@ Safar         0
 Rabiulawal   +1
 ```
 
-Nilai tersebut berlaku pada seluruh occurrence dengan `bh` terkait
-selama konfigurasi pengguna masih aktif, termasuk lintas tahun yang
-berada dalam cakupan runtime.
+Nilai berlaku pada seluruh occurrence dengan `bh` terkait selama konfigurasi
+pengguna masih aktif, termasuk occurrence lintas tahun dalam cakupan runtime.
