@@ -673,3 +673,108 @@ Rabiulawal   +1
 
 Nilai berlaku pada seluruh occurrence dengan `bh` terkait selama konfigurasi
 pengguna masih aktif, termasuk occurrence lintas tahun dalam cakupan runtime.
+
+## Import iCalendar dan Storage `cal_ical`
+
+Checkpoint runtime:
+
+```text
+v14a.27.0
+```
+
+Event impor iCalendar tetap berada pada kategori Pribadi (`tp: 7`) dan
+tidak memiliki filter terpisah.
+
+Storage phone:
+
+```text
+cal_ical
+└── skema_ical
+└── event_impor
+```
+
+Event manual tetap disimpan terpisah:
+
+```text
+cal_pribadi
+└── event_manual
+```
+
+Kontrak import:
+
+- hanya event all-day;
+- `SUMMARY` menjadi judul;
+- `DESCRIPTION` dipertahankan sebagai keterangan;
+- bahasa judul dan keterangan mengikuti sumber;
+- `DTEND` bersifat eksklusif dan dikonversi menjadi akhir inklusif;
+- `RRULE:FREQ=YEARLY` menjadi event tahunan;
+- `RRULE` lain ditolak;
+- event bertanggal waktu ditolak;
+- occurrence exception seperti `RECURRENCE-ID`, `RDATE`, dan `EXDATE`
+  belum didukung;
+- range lintas tahun belum didukung pada jalur legacy watch;
+- event `STATUS:CANCELLED` tidak diimpor.
+
+Struktur internal event impor:
+
+```json
+{
+  "iid": "i01234567",
+  "uid": "event@example.com",
+  "id": 61234,
+  "th": 2026,
+  "ts": 2026,
+  "bm": 7,
+  "bs": 7,
+  "hm": 20,
+  "hs": 23,
+  "ut": 0,
+  "jd": "Judul dari SUMMARY",
+  "ket": "Keterangan dari DESCRIPTION",
+  "sumber": "ical"
+}
+```
+
+Untuk event tahunan:
+
+```text
+th = 0
+ts = 0
+ut = 1
+```
+
+ID numerik event impor memakai rentang terpisah:
+
+```text
+60000–89999
+```
+
+Event manual tetap memakai rentang lama:
+
+```text
+30000–59999
+```
+
+Operasi import yang didukung oleh response settings:
+
+```text
+replace
+append
+clear
+```
+
+Kebijakan storage:
+
+- fingerprint mencakup judul, tanggal, status tahunan, UID, dan DESCRIPTION;
+- data sama tidak ditulis ulang;
+- sesudah menulis, phone membaca ulang `cal_ical`;
+- kegagalan parser atau storage tidak menghapus data lama;
+- field import dibuang sebelum settings disimpan ke `cal_konfig`,
+  `cal_pribadi`, atau key legacy.
+
+Pada jalur legacy watch, event manual dan ICS digabung sebelum AppMessage.
+Watch baru menerima judul dan tanggal. `DESCRIPTION` sudah tersimpan dan dapat
+dicari berdasarkan ID, tetapi transport detail on-demand baru diaktifkan pada
+milestone AppMessage/C.
+
+Jangan menerjemahkan `SUMMARY` atau `DESCRIPTION` secara otomatis.
