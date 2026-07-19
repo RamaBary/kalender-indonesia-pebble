@@ -1298,45 +1298,6 @@
 
     const LOCAL_SETTINGS_KEY = "kalender_indonesia_settings_v11";
 
-    // =========================================================================
-    // v14a.27.1 - UJI RUNTIME ICALENDAR SEMENTARA
-    // =========================================================================
-    // true  = setiap Simpan/Sinkron/Impor mengirim tiga event ICS uji.
-    // false = settings kembali bekerja tanpa injeksi event ICS uji.
-    //
-    // Data uji hanya ditambahkan ke payload yang dikirim ke PebbleKit JS.
-    // Field ical_action dan ical_text TIDAK disimpan ke localStorage settings.
-    const AKTIFKAN_UJI_ICAL_V14A27 = true;
-
-    const TEKS_UJI_ICAL_V14A27 = [
-      "BEGIN:VCALENDAR",
-      "VERSION:2.0",
-      "PRODID:-//Kalender Indonesia Pebble//v14a.27.1 Test//ID",
-      "CALSCALE:GREGORIAN",
-      "BEGIN:VEVENT",
-      "UID:test-single-v14a27@example.com",
-      "DTSTART;VALUE=DATE:20260721",
-      "DTEND;VALUE=DATE:20260722",
-      "SUMMARY:Uji ICS Tunggal",
-      "DESCRIPTION:Keterangan event tunggal dari file ICS.",
-      "END:VEVENT",
-      "BEGIN:VEVENT",
-      "UID:test-range-v14a27@example.com",
-      "DTSTART;VALUE=DATE:20260724",
-      "DTEND;VALUE=DATE:20260727",
-      "SUMMARY:Uji ICS Rentang",
-      "DESCRIPTION:Event rentang tiga hari dari 24 sampai 26 Juli 2026.",
-      "END:VEVENT",
-      "BEGIN:VEVENT",
-      "UID:test-yearly-v14a27@example.com",
-      "DTSTART;VALUE=DATE:20260101",
-      "RRULE:FREQ=YEARLY;INTERVAL=1",
-      "SUMMARY:Uji ICS Tahunan",
-      "DESCRIPTION:Keterangan tahunan dengan koma\\, titik koma\\; dan baris baru\\nBaris kedua.",
-      "END:VEVENT",
-      "END:VCALENDAR"
-    ].join("\r\n");
-
     // v11.5.2: tautan dukungan disiapkan sebagai konstanta agar aktivasi nanti
     // cukup mengubah satu baris tanpa mengubah struktur modal.
     const URL_SUPPORT_KOFI = "https://ko-fi.com/ramabary";
@@ -2220,23 +2181,9 @@
       settings.action = action;
       saveSettingsLocal();
 
-      // Buat salinan khusus payload agar field uji ICS tidak ikut tersimpan
-      // pada localStorage settings dan tidak mencemari pembukaan berikutnya.
-      const payloadSettings = JSON.parse(JSON.stringify(settings));
-
-      // Reset sengaja tidak mengirim ulang data uji.
-      if (AKTIFKAN_UJI_ICAL_V14A27 && action !== "reset") {
-        payloadSettings.ical_action = "replace";
-        payloadSettings.ical_text = TEKS_UJI_ICAL_V14A27;
-      }
-
-      const payload = encodeURIComponent(JSON.stringify(payloadSettings));
-
+      const payload = encodeURIComponent(JSON.stringify(settings));
       if (location.protocol === "file:" || location.hostname === "") {
-        const suffix = AKTIFKAN_UJI_ICAL_V14A27 && action !== "reset"
-          ? " | ICS test=3"
-          : "";
-        showInfoModal(T[getLang()].saved_notice, "[" + action + "]" + suffix);
+        showInfoModal(T[getLang()].saved_notice, "[" + action + "]");
       } else {
         document.location = "pebblejs://close#" + payload;
       }
