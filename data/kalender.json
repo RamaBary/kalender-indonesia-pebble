@@ -8,5 +8,6 @@
     "catalogs/umum.json",
     "catalogs/international.json"
   ],
-  "keterangan": "keterangan.json"
+  "keterangan": "keterangan.json",
+  "duplikat": "duplikat.json"
 }

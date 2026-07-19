@@ -1,0 +1,10 @@
+{
+    "skema":1,
+    "pasangan":[
+        {"id_hijriah":12005,"id_nasional":4006},
+        {"id_hijriah":12013,"id_nasional":4009},
+        {"id_hijriah":12020,"id_nasional":4014},
+        {"id_hijriah":12022,"id_nasional":4016},
+        {"id_hijriah":12025,"id_nasional":4017}
+    ]
+}

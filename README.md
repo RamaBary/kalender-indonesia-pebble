@@ -561,3 +561,98 @@ Terima kasih atas segala dukungan terhadap aplikasi ini! :)
 *Kalender Indonesia for Pebble is independently developed. Voluntary support helps fund feature development, data maintenance, and testing on Pebble devices.*
 
 *Thank you for supporting this application! :)*
+
+## Relasi Duplikat dan Prioritas Nasional
+
+File runtime:
+
+```text
+data/duplikat.json
+```
+
+File ini bukan daftar error, bukan hasil pembersihan data otomatis, dan
+bukan cache sementara. File ini adalah artefak runtime permanen yang
+menghubungkan dua ID dari kategori berbeda ketika keduanya mewakili
+peristiwa publik yang sama.
+
+Saat ini relasi yang digunakan adalah pasangan:
+
+```text
+ID Hijriah ↔ ID Nasional
+```
+
+Source of truth tetap berada di workbook:
+
+```text
+Kalender.xlsx
+└── tblPrioritasNasional
+```
+
+Alur pemeliharaan:
+
+```text
+tblPrioritasNasional
+→ qryDuplikatJSON
+→ data/duplikat.json
+```
+
+`data/duplikat.json` adalah file generated. Jangan mengeditnya secara
+manual. Perubahan pasangan, status aktif, atau catatan pemeliharaan
+dilakukan di `tblPrioritasNasional`, lalu Power Query dijalankan ulang.
+
+Struktur runtime:
+
+```json
+{
+  "skema": 1,
+  "pasangan": [
+    {
+      "id_hijriah": 12005,
+      "id_nasional": 4006
+    }
+  ]
+}
+```
+
+Kolom `Catatan` tetap dipelihara di Excel agar alasan setiap pasangan
+dapat diaudit, tetapi tidak dimasukkan ke JSON untuk menjaga payload
+runtime tetap kecil.
+
+Aturan prioritas runtime:
+
+```text
+1. Event Hijriah diselesaikan menjadi occurrence.
+2. Koreksi tanggal berdasarkan field bh diterapkan.
+3. Runtime memeriksa relasi pada duplikat.json.
+4. Jika filter Nasional aktif dan event Nasional pasangannya tersedia
+   pada tanggal hasil koreksi, occurrence Hijriah ditekan.
+5. Jika filter Nasional tidak aktif, occurrence Hijriah tetap tampil.
+```
+
+Dengan demikian, `duplikat.json` hanya menyatakan relasi ID. Keputusan
+kategori mana yang diprioritaskan tetap berada pada logika runtime dan
+didokumentasikan sebagai Prioritas Nasional.
+
+Koreksi Hijriah disimpan per bulan Hijriah dalam array 12 nilai:
+
+```text
+Muharam, Safar, Rabiulawal, Rabiulakhir,
+Jumadilawal, Jumadilakhir, Rajab, Syakban,
+Ramadan, Syawal, Zulkaidah, Zulhijah
+```
+
+Setiap bulan dapat memiliki nilai sendiri dari `-2` sampai `+2`.
+Pemilihan beberapa bulan pada settings hanya mempermudah pengeditan
+paralel dan tidak mengubah struktur 12 nilai independen.
+
+Contoh yang valid:
+
+```text
+Muharam      +1
+Safar         0
+Rabiulawal   +1
+```
+
+Nilai tersebut berlaku pada seluruh occurrence dengan `bh` terkait
+selama konfigurasi pengguna masih aktif, termasuk lintas tahun yang
+berada dalam cakupan runtime.
